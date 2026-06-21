@@ -8,22 +8,25 @@ const translations = {
         "nav_config": "الإعدادات والنسخ",
         "title_main": "مخزن شريكة <span style='color: var(--accent-color);'>شڤیار</span>",
         "title_desc": "النظام المتكامل لإدارة المخازن وحركة المواد والمشاريع الإنشائية",
-        
+        "home": "الرئيسية",
+
         // Portal Cards
         "portal_storage_title": "تخزين وإدخال المواد",
         "portal_storage_desc": "إدخال وتوثيق الشحنات الجديدة وحساب الإجماليات تلقائياً وتعديل الجرد وأرشفة المواد.",
         "portal_storage_btn": "إدارة وتخزين المواد",
-        
+
         "portal_output_title": "إخراج وصرف المواد",
         "portal_output_desc": "تسجيل صرف الكميات للمشاريع، وإرجاع المواد للشركات وحساب سعر التحميل والتوصيل.",
         "portal_output_btn": "صرف وإخراج المواد",
-        
+
         "portal_dashboard_title": "لوحة التحكم والتحليلات",
         "portal_dashboard_desc": "متابعة الأداء المالي وقيمة المخزن وجرد الكميات والمصروفات والشركات الأكثر توريداً.",
         "portal_dashboard_btn": "دخول لوحة التحكم",
 
-        "portal_alerts_title": "مركز التنبيهات الذكي",
-        "portal_alerts_desc": "مراقبة مستويات العجز والأصناف الراكدة.",
+        "portal_alerts_title": "مركز التنبيهات وإشعارات المخزون",
+        "active_alerts_badge": "تنبيه نشط",
+        "no_alerts_badge": "لا توجد تنبيهات",
+        "portal_alerts_desc": "مراقبة فورية للمخزون الحرج، المواد النافدة، والأصناف الراكدة التي لم تستخدم",
         "portal_config_title": "إعدادات النظام والنسخ",
         "portal_config_desc": "النسخ الاحتياطي، الموظفين، وسجل العمليات.",
         "enter_btn": "دخول",
@@ -84,10 +87,10 @@ const translations = {
         "success": "نجاح",
         "error": "خطأ",
         "warning": "تنبيه",
-        
+
         "print_date": "تاريخ الطباعة",
         "print_report": "تقرير",
-        
+
         // Dashboard & Tables
         "dash_title": "لوحة التحكم والتحليلات الإحصائية",
         "dash_desc": "تحليلات جرد المخزن، الأداء المالي والمصروفات",
@@ -119,7 +122,7 @@ const translations = {
         "export_full_inv": "تصدير الجرد كاملاً",
         "print_cat": "طباعة قسم",
         "export_cat_excel": "تصدير قسم Excel",
-        
+
         // Transaction Types
         "tx_in": "إدخال مواد",
         "tx_out": "صرف مشروع",
@@ -145,7 +148,7 @@ const translations = {
         "delivery": "التوصيل",
         "status_h": "الحالة",
         "actions_h": "إجراءات",
-        
+
         // Output Tab
         "output_title": "إخراج وصرف المواد للمشاريع",
         "output_desc": "قم بتسجيل حركات الصرف والاستهلاك، وحالات الإرجاع للموردين",
@@ -161,7 +164,7 @@ const translations = {
         "resp_buyer": "المسؤول / المشتري",
         "rec_del": "المستلم / المسلّم",
         "reason_det": "السبب والتفاصيل",
-        
+
         // Dashboard
         "comp_table_title": "جدول مقارنة إحصائيات الأقسام الشاملة",
         "dashboard_title_alt": "لوحة التحكم والتحليلات الإحصائية",
@@ -169,7 +172,7 @@ const translations = {
         "back_to_cats": "العودة للأقسام الفرعية",
 
         // Alerts & Config
-        "alerts_title": "مركز التنبيهات وإشعارات المخزون الذكي",
+        "alerts_title": "مركز التنبيهات وإشعارات المخزون",
         "alerts_desc": "مراقبة فورية للمخزون الحرج، المواد النافدة، والأصناف الراكدة التي لم تستخدم",
         "no_alerts": "لا توجد تنبيهات",
         "users_title": "إدارة مستخدمي المنظومة",
@@ -188,9 +191,9 @@ const translations = {
 
         // Modals
         "add_modal_title": "إدخال وتخزين شحنة مواد جديدة",
-        "mat_name_req": "اسم المادة *",
+        "mat_name_req": "اسم المادة",
         "mat_name_ph": "مثال: حديد تسليح 12 ملم تركيا",
-        "mat_cat_req": "قسم المادة *",
+        "mat_cat_req": "قسم المادة",
         "choose_cat": "-- اختر القسم المناسب --",
         "c_elec": "مواد كهربائية",
         "c_plum": "مواد مجاري",
@@ -207,8 +210,8 @@ const translations = {
         "c_int_alt": "أبواب ونوافذ",
         "c_sup": "مواد مستلزمات يومية",
         "c_sup_alt": "مستلزمات يومية",
-        "qty_in_req": "الكمية المدخلة *",
-        "unit_req": "وحدة القياس *",
+        "qty_in_req": "الكمية المدخلة",
+        "unit_req": "وحدة القياس",
         "choose_unit": "-- اختر الوحدة --",
         "u_pc": "قطعة",
         "u_pill": "حبة",
@@ -226,13 +229,13 @@ const translations = {
         "u_barrel": "برميل",
         "u_other": "أخرى (كتابة مخصصة)...",
         "u_other_ph": "اكتب وحدة القياس المخصصة...",
-        "unit_p_req": "سعر الوحدة (د.ع) *",
+        "unit_p_req": "سعر الوحدة (د.ع)",
         "calc_total": "السعر الإجمالي المحسوب",
-        "alert_limit_req": "حد التنبيه (للكمية الشحيحة) *",
+        "alert_limit_req": "حد التنبيه (للكمية الشحيحة)",
         "alert_limit_ph": "ينبهك النظام عند وصول الكمية لهذا الحد",
-        "buyer_req": "اسم المشتري / المسؤول *",
+        "buyer_req": "اسم المشتري / المسؤول",
         "buyer_ph": "اسم الشخص الذي اشترى المواد",
-        "rec_req": "اسم المستلم في الموقع *",
+        "rec_req": "اسم المستلم في الموقع",
         "rec_ph": "اسم الشخص الذي استلم الشحنة",
         "comp_op": "الشركة الموردة",
         "comp_ph": "اسم الشركة أو المحل",
@@ -244,23 +247,31 @@ const translations = {
         "cancel_btn": "إلغاء",
         "store_mat_btn": "تخزين المادة",
         "edit_modal_title": "تعديل بيانات مادة مخزونة",
-        "curr_qty_req": "الكمية المتوفرة حالياً *",
+        "curr_qty_req": "الكمية المتوفرة حالياً",
+        "qty_avail": "الكمية المتوفرة:",
+        "unit_price": "السعر للوحدة:",
         "new_calc_total": "السعر الإجمالي المحسوب الجديد",
         "update_btn": "تحديث البيانات",
         "issue_modal_title": "إخراج وصرف مادة من المستودع",
-        "mat_issue_req": "المادة المراد صرفها *",
-        "qty_out_req": "الكمية الصادرة *",
-        "op_out_req": "اسم الشخص الذي أخرج المواد (المهندس/المشرف) *",
+        "mat_issue_req": "المادة المراد صرفها",
+        "select_mat_ph": "-- اختر المادة من المخزن --",
+        "select_cat_ph": "-- اختر القسم لتظهر المواد --",
+        "qty_out_req": "الكمية الصادرة",
+        "op_out_req": "اسم الشخص الذي أخرج المواد (المهندس/المشرف)",
         "op_out_ph": "من قام بطلب صرف المادة",
-        "del_out_req": "اسم الشخص الذي سلّم المواد (أمين المخزن) *",
+        "del_out_req": "اسم الشخص الذي سلّم المواد (أمين المخزن)",
         "del_out_ph": "من قام بتسليم المواد في المستودع",
-        "reason_req": "سبب الإخراج *",
+        "reason_req": "سبب الإخراج",
         "r_proj": "استخدام بالمشروع الإنشائي",
         "r_ret": "استرجاع للشركة الموردة",
         "ret_det": "تفاصيل الاسترجاع للشركة",
-        "comp_ret_req": "اسم الشركة الموردة *",
+        "del_tx_pass_prompt": "يرجى إدخال كلمة المرور الخاصة بحذف الحركة:",
+        "edit_tx_pass_prompt": "يرجى إدخال كلمة المرور الخاصة بتعديل الحركة:",
+        "pass_prompt_title": "إدخال كلمة المرور",
+        "pass_label": "كلمة المرور",
+        "comp_ret_req": "اسم الشركة الموردة",
         "comp_ret_ph": "الشركة المستلمة للمواد المرتجعة",
-        "inv_ret_req": "رقم وصل الاسترجاع *",
+        "inv_ret_req": "رقم وصل الاسترجاع",
         "inv_ret_ph": "رقم وصل المرتجع",
         "ret_del_cost": "سعر التوصيل للمرتجع (د.ع)",
         "done_issue_btn": "إتمام الصرف",
@@ -293,8 +304,6 @@ const translations = {
         "total_inv_value": "القيمة الإجمالية للمخزون:",
         "cat_report": "تقرير قسم",
         "full_inv_report": "تقرير جرد المستودع العام الشامل",
-        "cat_word": "قسم",
-        "total_active_items": "إجمالي الأصناف النشطة:",
         "total_store_qtys": "إجمالي كميات المستودع:",
         "total_store_value": "القيمة الكلية للمستودع:",
         "gen_inv_report": "تقرير جرد المستودع العام",
@@ -334,7 +343,75 @@ const translations = {
         "active_item_badge": "صنف نشط",
         "tx_badge": "حركة",
         "item_word": "صنف",
-        "details_btn": "التفاصيل"
+        "details_btn": "التفاصيل",
+        "install_app": "تثبيت التطبيق",
+        "toggle_theme": "تبديل الوضع الليلي / النهاري",
+        "missing_1": "قسم المادة",
+        "missing_2": "اسم المادة",
+        "missing_3": "الكمية المدخلة",
+        "missing_4": "وحدة القياس",
+        "missing_5": "سعر الوحدة (د.ع)",
+        "missing_6": "حد التنبيه (للكمية الشحيحة)",
+        "missing_7": "اسم المشتري / المسؤول",
+        "missing_8": "اسم المستلم في الموقع",
+        "missing_9": "الكمية المتوفرة حالياً",
+        "missing_10": "المادة المراد صرفها",
+        "missing_11": "الكمية الصادرة",
+        "missing_12": "اسم الشخص الذي أخرج المواد (المهندس/المشرف)",
+        "missing_13": "اسم الشخص الذي سلّم المواد (أمين المخزن)",
+        "missing_14": "سبب الإخراج",
+        "missing_15": "اسم الشركة الموردة",
+        "missing_16": "رقم وصل الاسترجاع",
+        "missing_17": "-- الوحدة --",
+        "missing_18": "المورد / الشركة",
+        "missing_19": "اسم المورد أو المحل",
+        "missing_20": "اسم المشتري",
+        "missing_21": "اسم المستلم",
+        "missing_22": "رقم الفاتورة",
+        "missing_23": "حد التنبيه",
+        "missing_24": "الحد الأدنى",
+        "missing_25": "ملاحظات...",
+        "missing_26": "أخرى...",
+        "missing_27": "اكتب مخصص...",
+        "missing_28": "اكتب وحدة القياس المخصصة...",
+        "radio_out": "القسم الثاني: المواد المخرجة (صادر)",
+        "radio_in": "القسم الأول: المواد الجديدة (وارد)",
+        "radio_all": "عرض الكل",
+        "tx_hist_alt": "سجل الحركات التاريخي للمواد",
+        "tx_qty_hdr": "كمية الحركة",
+        "tx_date_hdr": "تاريخ ووقت الحركة",
+        "tx_receipt_title": "وصل حركة",
+        "status_empty": "نفذت",
+        "status_low": "شحيحة",
+        "no_matching_mats": "لا توجد مواد مطابقة للبحث أو التصفية الحالية.",
+        "page_title": "مخزن شريكة شڤیار - نظام إدارة مخزن مواد البناء والمشاريع الإنشائية",
+        "shvyar_company": "مخزن شريكة",
+        "shvyar_word": "شڤیار",
+        "ar_ku": "عربي / کوردی",
+        "zero_active": "0 صنف نشط",
+        "back_to_cats_2": "رجوع للأقسام",
+        "unit_price_h": "سعر الوحدة",
+        "print_tx_indiv": "طباعة وصولات الحركات فردياً",
+        "zero_tx": "0 حركة",
+        "choose_cat_first": "-- اختر القسم أولاً / بەشێ هەلبژێرە --",
+        "other_mats": "مواد أخرى",
+        "edit_tx_out": "تعديل الحركة الصادرة",
+        "person_out": "اسم الشخص الذي أخرج المواد",
+        "person_del": "اسم الشخص الذي سلّم المواد",
+        "lang_switch": "تبديل اللغة / گوهۆڕینا زمانێ",
+        "cat_stats": "إحصائيات قسم:",
+        "grand_total": "المجموع الإجمالي",
+        "active": "نشط",
+        "cat_report_title": "تقرير إحصائيات قسم:",
+        "all_cats_report": "تقرير إحصائيات جميع الأقسام",
+        "export_success_msg1": "تم تصدير إحصائيات قسم",
+        "export_success_msg2": "بنجاح!",
+        "confirm_del_tx": "هل أنت متأكد من رغبتك في حذف هذه الحركة؟",
+        "confirm_reset_db": "تحذير: هل أنت متأكد من رغبتك في حذف كافة البيانات وتصفير قاعدة البيانات؟ لا يمكن التراجع عن هذا الإجراء.",
+        "confirm_archive": "هل أنت متأكد من رغبتك في أرشفة هذه المادة؟ سيتم إخفاؤها من جداول الصرف النشطة وتجميدها.",
+        "confirm_delete_mat": "تحذير نهائي: هل أنت متأكد من حذف هذه المادة تماماً؟ سيتم إزالتها نهائياً من الجرد (لن يؤثر ذلك على سجل الحركات التاريخية)",
+        "user_exists": "المستخدم موجود بالفعل أو الاسم غير صالح!",
+        "backup_error": "خطأ في استعادة النسخة الاحتياطية: "
     },
     "ku": {
         // Navbar & General
@@ -343,23 +420,26 @@ const translations = {
         "nav_output": "دەرهێنان و خەرجکرنا کەرەستەیان",
         "nav_alerts": "ناڤەندا ئاگه‌هداریان",
         "nav_config": "ڕێکخستن و ژبەرگرتن",
-        "title_main": "مخزن شريكة <span style='color: var(--accent-color);'>شڤیار</span>",
+        "title_main": "کۆگەها کۆمپانیایا <span style='color: var(--accent-color);'>شڤیار</span>",
         "title_desc": "سیستەمێ تەمام بۆ بڕێڤەبرنا گەنجینە و بزاڤا کەرەستە و پرۆژەیێن ئاڤاکرنێ",
-        
+        "home": "سەرەکی",
+
         // Portal Cards
         "portal_storage_title": "هەلگرتن و تومارکرنا کەرەستەیان",
         "portal_storage_desc": "تومارکرن و پەسەندکرنا بارێن نوی و هژمارتنا سەرجەمی ب شێوەیێ ئۆتۆماتیکی و دەستکارییا گەنجینەیێ و ئەرشیڤکرنا کەرەستەیان.",
         "portal_storage_btn": "بڕێڤەبرن و هەلگرتنی کەرەستەیان",
-        
+
         "portal_output_title": "دەرهێنان و خەرجکرنا کەرەستەیان",
         "portal_output_desc": "تومارکرنا خەرجکرنا بڕان بۆ پرۆژەیان، و زڤڕاندنا کەرەستەیان بۆ کۆمپانیایان و هژمارتنا بهایێ بارکرن و گەهاندنێ.",
         "portal_output_btn": "خەرجکرن و دەرهێنانی کەرەستەیان",
-        
+
         "portal_dashboard_title": "تەبلۆیا کۆنترۆل و شیکاری",
         "portal_dashboard_desc": "دیڤچوونا ئاستێ دارایی و بهایێ گەنجینەیێ و پێداچوونا بڕان و خەرجییان و کۆمپانیایێن پتر دابینکەر.",
         "portal_dashboard_btn": "چوونە دناڤ تەبلۆیا کۆنترۆلێ",
 
-        "portal_alerts_title": "ناڤەندا ئاگه‌هداریێن زیرەک",
+        "portal_alerts_title": "ناڤەندا ئاگه‌هداریان و هایدارکرنێن گەنجینە",
+        "active_alerts_badge": "ئاگەهداری چالاک",
+        "no_alerts_badge": "ئاگەهداری نینە",
         "portal_alerts_desc": "چاڤدێرییا ئاستێن کێماسییێ و کەرەستەیێن نەفرۆتی.",
         "portal_config_title": "ڕێکخستنێن سیستەمی و ژبەرگرتن",
         "portal_config_desc": "ژبەرگرتنا یەدەگ، فەرمانبەران، و تۆماری کاران.",
@@ -421,10 +501,10 @@ const translations = {
         "success": "سەرکەفتن",
         "error": "خەلەتی",
         "warning": "ئاگه‌هداری",
-        
+
         "print_date": "دەمێ چاپکرنێ",
         "print_report": "ڕاپۆرت",
-        
+
         // Dashboard & Tables
         "dash_title": "تەبلۆیا کۆنترۆل و شیکارییا ئاماری",
         "dash_desc": "شیکارییا گەنجینەیێ، ئاستێ دارایی و خەرجییان",
@@ -456,7 +536,7 @@ const translations = {
         "export_full_inv": "هنارتنا سەرژمێریێ ب تەمامی",
         "print_cat": "چاپکرنا پشکەکێ",
         "export_cat_excel": "هنارتنا پشکەکێ بۆ Excel",
-        
+
         // Transaction Types
         "tx_in": "تومارکرنا کەرەستەیان",
         "tx_out": "خەرجکرنا پرۆژەی",
@@ -482,7 +562,7 @@ const translations = {
         "delivery": "گەهاندن",
         "status_h": "ڕەوش",
         "actions_h": "کردار",
-        
+
         // Output Tab
         "output_title": "دەرهێنان و خەرجکرنا کەرەستەیان بۆ پرۆژەیان",
         "output_desc": "حەرەکاتێن خەرجکرنێ و بکارئینانێ تومار بکە، و حالەتێن زڤڕاندنێ بۆ دابینکاران",
@@ -506,7 +586,7 @@ const translations = {
         "back_to_cats": "زڤڕین بۆ پشکێن لاوەکی",
 
         // Alerts & Config
-        "alerts_title": "سەنتەرێ ئاگەهدارییان و هایدارکرنێن گەنجینەیا زیرەک",
+        "alerts_title": "ناڤەندا ئاگه‌هداریان و هایدارکرنێن گەنجینە",
         "alerts_desc": "چاڤدێرییا دەمودەست بۆ گەنجینەیا هەستیار، کەرەستەیێن خەلاس بووی، و بابەتێن ڕاوەستیای کو نەهاتینە بکارئینان",
         "no_alerts": "ئاگەهداری نینە",
         "users_title": "بڕێڤەبرنا بکارئینەرێن سیستەمی",
@@ -525,21 +605,27 @@ const translations = {
 
         // Modals
         "add_modal_title": "تومارکرن و گەنجینەکرنا بارهەڵگرەکا کەرەستەیێن نوی",
-        "mat_name_req": "ناڤێ کەرەستەی *",
+        "mat_name_req": "ناڤێ کەرەستەی",
         "mat_name_ph": "نموونە: ئاسنێ چەکداری 12 ملم تورکیا",
-        "mat_cat_req": "پشکا کەرەستەی *",
+        "mat_cat_req": "پشکا کەرەستەی",
         "choose_cat": "-- پشکا گونجای هەلبژێرە --",
         "c_elec": "کەرەستەیێن کارەبایی",
         "c_plum": "کەرەستەیێن مەجاری",
         "c_steel": "کەرەستەیێن ئاسنی",
         "c_tile": "کەرەستەیێن کاشی و سەیرامیک",
+        "c_tile_alt": "کاشی و سەیرامیک",
         "c_gyp": "کەرەستەیێن جپسن بۆرد",
+        "c_gyp_alt": "جپسن بۆرد",
         "c_cem": "کەرەستەیێن چیمەنتۆ",
+        "c_cem_alt": "چیمەنتۆ",
         "c_paint": "کەرەستەیێن بۆیاخێ",
+        "c_paint_alt": "بۆیاخ و ڕەنگ",
         "c_int": "کەرەستەیێن دەرگەهـ و پەنجەرە",
+        "c_int_alt": "دەرگەهـ و پەنجەرە",
         "c_sup": "کەرەستەیێن پێدڤیێن ڕۆژانە",
-        "qty_in_req": "بڕا هاتوو *",
-        "unit_req": "یەکەیا پێڤانێ *",
+        "c_sup_alt": "پێدڤیێن ڕۆژانە",
+        "qty_in_req": "بڕا هاتوو",
+        "unit_req": "یەکەیا پێڤانێ",
         "choose_unit": "-- یەکەیێ هەلبژێرە --",
         "u_pc": "پارچە",
         "u_pill": "دەنک",
@@ -557,13 +643,13 @@ const translations = {
         "u_barrel": "بەرمیل",
         "u_other": "دیتر (نڤیسینا تایبەت)...",
         "u_other_ph": "یەکەیا پێڤانێ یا تایبەت بنڤیسە...",
-        "unit_p_req": "بهایێ یەکەیێ (د.ع) *",
+        "unit_p_req": "بهایێ یەکەیێ (د.ع)",
         "calc_total": "بهایێ گشتی یێ هەژمارکری",
-        "alert_limit_req": "سنوورێ ئاگەهداریێ (بۆ بڕا کێم) *",
+        "alert_limit_req": "سنوورێ ئاگەهداریێ (بۆ بڕا کێم)",
         "alert_limit_ph": "سیستەم تە ئاگەهدار دکەت دەمێ بڕ دگەهیتە ڤی سنووری",
-        "buyer_req": "ناڤێ کڕیار / بەرپرس *",
+        "buyer_req": "ناڤێ کڕیار / بەرپرس",
         "buyer_ph": "ناڤێ وی کەسێ کەرەستە کڕین",
-        "rec_req": "ناڤێ وەرگر ل جهێ کاری *",
+        "rec_req": "ناڤێ وەرگر ل جهێ کاری",
         "rec_ph": "ناڤێ وی کەسێ بار وەرگرتی",
         "comp_op": "کۆمپانیای دابینکار",
         "comp_ph": "ناڤێ کۆمپانیا یان جهـ",
@@ -575,23 +661,31 @@ const translations = {
         "cancel_btn": "هەلوەشاندن",
         "store_mat_btn": "گەنجینەکرنا کەرەستەی",
         "edit_modal_title": "دەستکاریا پێزانینێن کەرەستەیێ گەنجینەکری",
-        "curr_qty_req": "بڕا نوکە یا بەردەست *",
+        "curr_qty_req": "بڕا نوکە یا بەردەست",
+        "qty_avail": "بڕا بەردەست:",
+        "unit_price": "بهایێ ئێکەیێ:",
         "new_calc_total": "بهایێ گشتی یێ هەژمارکری یێ نوی",
         "update_btn": "نویکرنا پێزانینان",
         "issue_modal_title": "دەرهێنان و خەرجکرنا کەرەستەیەکێ ژ کۆگەهێ",
-        "mat_issue_req": "ئەو کەرەستەیا دڤێت بهێتە خەرجکرن *",
-        "qty_out_req": "بڕا دەرهاتی *",
-        "op_out_req": "ناڤێ وی کەسێ کەرەستە دەرهێناین (ئەندازیار/سەرپەرشت) *",
+        "mat_issue_req": "ئەو کەرەستەیا دڤێت بهێتە خەرجکرن",
+        "select_mat_ph": "-- کەرەستەی ژ کۆگەهێ هەلبژێرە --",
+        "select_cat_ph": "-- پشکێ هەلبژێرە دا کەرەستە دیار ببن --",
+        "qty_out_req": "بڕا دەرهاتی",
+        "op_out_req": "ناڤێ وی کەسێ کەرەستە دەرهێناین (ئەندازیار/سەرپەرشت)",
         "op_out_ph": "کێ داخوازا خەرجکرنا کەرەستەی کریە",
-        "del_out_req": "ناڤێ وی کەسێ کەرەستە ڕادەست کرین (ئەمیندارێ کۆگەهێ) *",
+        "del_out_req": "ناڤێ وی کەسێ کەرەستە ڕادەست کرین (ئەمیندارێ کۆگەهێ)",
         "del_out_ph": "کێ کەرەستە ل کۆگەهێ ڕادەست کرینە",
-        "reason_req": "ئەگەرێ دەرهێنانێ *",
+        "reason_req": "ئەگەرێ دەرهێنانێ",
         "r_proj": "بکارئینان د پرۆژەیێ ئاڤاکرنێ دا",
         "r_ret": "زڤڕاندن بۆ کۆمپانیای دابینکار",
         "ret_det": "پێزانینێن زڤڕاندنێ بۆ کۆمپانیایێ",
-        "comp_ret_req": "ناڤێ کۆمپانیای دابینکار *",
+        "del_tx_pass_prompt": "هیڤییە پاسوۆردێ تێبکە بۆ ژێبرنا ڤێ بزاڤێ:",
+        "edit_tx_pass_prompt": "هیڤییە پاسوۆردێ تێبکە بۆ دەستکاریكرنا ڤێ بزاڤێ:",
+        "pass_prompt_title": "تێکرنا پاسوۆردێ",
+        "pass_label": "پاسوۆرد",
+        "comp_ret_req": "ناڤێ کۆمپانیای دابینکار",
         "comp_ret_ph": "ئەو کۆمپانیای کەرەستەیێن زڤڕاندی وەرگرتین",
-        "inv_ret_req": "ژمارەیا پسوولەیا زڤڕاندنێ *",
+        "inv_ret_req": "ژمارەیا پسوولەیا زڤڕاندنێ",
         "inv_ret_ph": "ژمارەیا پسوولەیا زڤڕاندنێ",
         "ret_del_cost": "بهایێ گەهاندنێ بۆ یێ زڤڕاندی (د.ع)",
         "done_issue_btn": "تەمامکرنا خەرجکرنێ",
@@ -665,11 +759,83 @@ const translations = {
         "active_item_badge": "بابەتێ چالاک",
         "tx_badge": "حەرەکە",
         "item_word": "بابەت",
-        "details_btn": "درێژاهی"
+        "details_btn": "درێژاهی",
+        "install_app": "دابەزاندنا بەرنامەی",
+        "toggle_theme": "گوهۆڕینا دیمەنێ شەڤ / ڕۆژ",
+        "missing_1": "پشکا کەرەستەی",
+        "missing_2": "ناڤێ کەرەستەی",
+        "missing_3": "بڕا هاتوو",
+        "missing_4": "یەکەیا پێڤانێ",
+        "missing_5": "بهایێ یەکەیێ (د.ع)",
+        "missing_6": "سنوورێ ئاگەهداریێ (بۆ بڕا کێم)",
+        "missing_7": "ناڤێ کڕیار / بەرپرس",
+        "missing_8": "ناڤێ وەرگر ل جهێ کاری",
+        "missing_9": "بڕا نوکە یا بەردەست",
+        "missing_10": "ئەو کەرەستەیا دڤێت بهێتە خەرجکرن",
+        "missing_11": "بڕا دەرهاتی",
+        "missing_12": "ناڤێ وی کەسێ کەرەستە دەرهێناین (ئەندازیار/سەرپەرشت)",
+        "missing_13": "ناڤێ وی کەسێ کەرەستە ڕادەست کرین (ئەمیندارێ کۆگەهێ)",
+        "missing_14": "ئەگەرێ دەرهێنانێ",
+        "missing_15": "ناڤێ کۆمپانیای دابینکار",
+        "missing_16": "ژمارەیا پسوولەیا زڤڕاندنێ",
+        "missing_17": "-- یەکە --",
+        "missing_18": "دابینکار / کۆمپانیا",
+        "missing_19": "ناڤێ دابینکار یان جهـ",
+        "missing_20": "ناڤێ کڕیار",
+        "missing_21": "ناڤێ وەرگر",
+        "missing_22": "ژمارەیا پسوولەیێ",
+        "missing_23": "سنوورێ ئاگەهداریێ",
+        "missing_24": "کێمترین بڕ",
+        "missing_25": "تێبینی...",
+        "missing_26": "دیتر...",
+        "missing_27": "یەکەیەکا دی بنڤیسە...",
+        "missing_28": "یەکەیا پێڤانێ یا تایبەت بنڤیسە...",
+        "radio_out": "بەشێ دووێ: کەرەستەیێن دەرهاتی (صادر)",
+        "radio_in": "بەشێ ئێکێ: کەرەستەیێن نوی (وارد)",
+        "radio_all": "نیشاندانا هەمییان",
+        "tx_hist_alt": "تۆمارا دیرۆکی یا حەرەکاتێن کەرەستەیان",
+        "tx_qty_hdr": "بڕا حەرەکێ",
+        "tx_date_hdr": "مێژوو و دەمێ حەرەکێ",
+        "tx_receipt_title": "پسوولەیا حەرەکێ",
+        "status_empty": "خەلاس بوویە",
+        "status_low": "کێمە",
+        "no_matching_mats": "چ کەرەستە دگەل لێگەڕیان یان پاڵاوتنا نوکە ناگونجن.",
+        "page_title": "کۆگەها کۆمپانیایا شڤیار - سیستەمی بڕێڤەبرنا کۆگەها کەرەستەیێن ئاڤاکرنێ و پرۆژەیێن ئینشائی",
+        "shvyar_company": "کۆگەها کۆمپانیایا",
+        "shvyar_word": "شڤیار",
+        "ar_ku": "عەرەبی / کوردی",
+        "zero_active": "0 بابەتێ چالاک",
+        "back_to_cats_2": "زڤڕین بۆ پشکان",
+        "unit_price_h": "بهایێ یەکەیێ",
+        "print_tx_indiv": "چاپکرنا پسوولەیێن حەرەکاتان ب تاک",
+        "zero_tx": "0 حەرەکە",
+        "choose_cat_first": "-- بەشێ هەلبژێرە یەکەم --",
+        "other_mats": "کەرەستەیێن دی",
+        "edit_tx_out": "دەستکارییا حەرەکەیا دەرکەتی",
+        "person_out": "ناڤێ وی کەسێ کەرەستە دەرهێناین",
+        "person_del": "ناڤێ وی کەسێ کەرەستە ڕادەست کرین",
+        "lang_switch": "گوهۆڕینا زمانێ / گوهۆڕینا زمانێ",
+        "cat_stats": "ئامارێن پشکا:",
+        "grand_total": "سەرجەمێ گشتی",
+        "active": "چالاک",
+        "cat_report_title": "ڕاپۆرتا ئامارێن پشکا:",
+        "all_cats_report": "ڕاپۆرتا ئامارێن هەمی پشکان",
+        "export_success_msg1": "ئامارێن پشکا",
+        "export_success_msg2": "ب سەرکەفتنیڤە هاتنە هنارتن!",
+        "confirm_del_tx": "ئەرێ تۆ یێ پشتڕاستی کو دڤێت ڤێ حەرەکێ ژێببەی؟",
+        "confirm_reset_db": "هۆشداری: ئەرێ تۆ یێ پشتڕاستی کو دڤێت هەمی داتایان ژێببەی و داتابەیسێ سفر بکەی؟ ئەڤە ناهێتە زڤڕاندن.",
+        "confirm_archive": "ئەرێ تۆ یێ پشتڕاستی کو دڤێت ڤێ کەرەستەیێ ئەرشیڤ بکەی؟ دێ ژ خشتەیێن چالاک هێتە ڤەشارتن.",
+        "confirm_delete_mat": "هۆشداری: ئەرێ تۆ یێ پشتڕاستی کو دڤێت ڤێ کەرەستەیێ ب تەمامی ژێببەی؟ دێ ژ سەرژمێریێ هێتە لابرد (کار نێکتە سەر حەرەکاتێن کەڤن)",
+        "user_exists": "بکارئینەر ژ پێشڤە یێ هەی یان ناڤ نەدروستە!",
+        "backup_error": "خەلەتی د ڤەگەڕاندنا کۆپیا یەدەگ دا هەیە: "
     }
 };
 
-let currentLang = localStorage.getItem('appLang') || 'ar';
+if (!localStorage.getItem('lang_migrated_to_ku')) {
+    localStorage.setItem('appLang', 'ku');
+    localStorage.setItem('lang_migrated_to_ku', 'true');
+}
+let currentLang = localStorage.getItem('appLang') || 'ku';
 
 // Create a reverse mapping for automatic DOM translation
 const reverseArMap = {};
@@ -684,11 +850,30 @@ function t(key) {
     return key;
 }
 
+// Category Translation Helper
+function tCat(catKey) {
+    const map = {
+        electrical: 'c_elec',
+        plumbing: 'c_plum',
+        steel: 'c_steel',
+        tiles: 'c_tile',
+        gypsum: 'c_gyp',
+        cement: 'c_cem',
+        paint: 'c_paint',
+        interior: 'c_int',
+        supplies: 'c_sup'
+    };
+    if (map[catKey] && translations[currentLang] && translations[currentLang][map[catKey]]) {
+        return translations[currentLang][map[catKey]];
+    }
+    return AppDB.CATEGORIES[catKey] || catKey;
+}
+
 function autoTranslateDOM(node) {
     if (node.nodeType === Node.TEXT_NODE) {
         let text = node.nodeValue.trim();
         if (text === '') return;
-        
+
         // Save original Arabic text if not saved
         if (!node.originalArText) {
             if (reverseArMap[text]) {
@@ -704,7 +889,7 @@ function autoTranslateDOM(node) {
             node.nodeValue = node.nodeValue.replace(node.originalArText || text, translations[currentLang][node.i18nKey]);
             // If we switch back to Arabic, we must replace the Kurdish text with Arabic text
             if (currentLang === 'ar') {
-                node.originalArText = translations['ar'][node.i18nKey]; 
+                node.originalArText = translations['ar'][node.i18nKey];
             } else {
                 node.originalArText = translations['ku'][node.i18nKey]; // Temporarily hold the current language text so it can be replaced later
             }
@@ -722,7 +907,18 @@ function autoTranslateDOM(node) {
                 node.placeholder = translations[currentLang][node.origPlaceholderKey];
             }
         }
-        
+
+        // Translate title attributes
+        if (node.title) {
+            let tText = node.title.trim();
+            if (!node.origTitleKey && reverseArMap[tText]) {
+                node.origTitleKey = reverseArMap[tText];
+            }
+            if (node.origTitleKey && translations[currentLang][node.origTitleKey]) {
+                node.title = translations[currentLang][node.origTitleKey];
+            }
+        }
+
         for (let child of node.childNodes) {
             autoTranslateDOM(child);
         }
@@ -731,13 +927,19 @@ function autoTranslateDOM(node) {
 
 function changeLanguage(lang) {
     if (!translations[lang]) return;
-    
+
     currentLang = lang;
     localStorage.setItem('appLang', lang);
-    
+
     document.documentElement.lang = lang;
-    document.documentElement.dir = 'rtl'; 
-    
+    document.documentElement.dir = 'rtl';
+
+    // Update document title
+    if (translations[currentLang] && translations[currentLang]['title_main'] && translations[currentLang]['title_desc']) {
+        let cleanTitle = translations[currentLang]['title_main'].replace(/<[^>]+>/g, '');
+        document.title = cleanTitle + " - " + translations[currentLang]['title_desc'];
+    }
+
     // 1. Update elements with explicit data-i18n
     const elements = document.querySelectorAll('[data-i18n]');
     elements.forEach(el => {
@@ -1187,7 +1389,7 @@ const AppDB = {
             localStorage.setItem("warehouse_users", JSON.stringify(data.users || ["مدير المستودع"]));
             localStorage.setItem("warehouse_current_user", data.currentUser || "مدير المستودع");
             localStorage.setItem("warehouse_logs", JSON.stringify(data.logs || []));
-            
+
             this.addActivityLog("تم استعادة النسخة الاحتياطية بنجاح وتحديث كافة البيانات.");
             window.dispatchEvent(new CustomEvent("warehouseDataChanged"));
             return { success: true };
@@ -1216,13 +1418,13 @@ AppDB.init();
 const AppStorage = {
     addMaterial(data) {
         const materials = AppDB.getMaterials();
-        
+
         // Auto-calculate total price
         const quantity = parseFloat(data.quantity) || 0;
         const unitPrice = parseFloat(data.unitPrice) || 0;
         const deliveryCost = parseFloat(data.deliveryCost) || 0;
         const totalPrice = quantity * unitPrice;
-        
+
         let resolvedUnit = "";
         if (data.unit_select !== undefined) {
             resolvedUnit = data.unit_select === "custom" ? (data.unit_custom ? data.unit_custom.trim() : "") : data.unit_select.trim();
@@ -1278,7 +1480,7 @@ const AppStorage = {
         AppDB.saveTransactions(transactions);
 
         // Log general activity
-        AppDB.addActivityLog(`تم إضافة مادة جديدة [${newMaterial.name}] بالكمية (${newMaterial.quantity} ${newMaterial.unit}) في قسم [${AppDB.CATEGORIES[newMaterial.category] || newMaterial.category}]`);
+        AppDB.addActivityLog(`تم إضافة مادة جديدة [${newMaterial.name}] بالكمية (${newMaterial.quantity} ${newMaterial.unit}) في قسم [${tCat(newMaterial.category)}]`);
 
         return newMaterial;
     },
@@ -1286,7 +1488,7 @@ const AppStorage = {
     updateMaterial(id, data) {
         const materials = AppDB.getMaterials();
         const index = materials.findIndex(m => m.id === id);
-        
+
         if (index === -1) return false;
 
         const oldMaterial = materials[index];
@@ -1330,7 +1532,7 @@ const AppStorage = {
         };
 
         AppDB.saveMaterials(materials);
-        AppDB.addActivityLog(`تم تعديل بيانات المادة [${materials[index].name}] في قسم [${AppDB.CATEGORIES[materials[index].category]}]`);
+        AppDB.addActivityLog(`تم تعديل بيانات المادة [${materials[index].name}] في قسم [${tCat(materials[index].category)}]`);
         return true;
     },
 
@@ -1352,7 +1554,7 @@ const AppStorage = {
 
         material.archived = true;
         material.lastUsed = new Date().toISOString();
-        
+
         AppDB.saveMaterials(materials);
         AppDB.addActivityLog(`تم أرشفة المادة [${material.name}]`);
         return true;
@@ -1365,7 +1567,7 @@ const AppStorage = {
 
         material.archived = false;
         material.lastUsed = new Date().toISOString();
-        
+
         AppDB.saveMaterials(materials);
         AppDB.addActivityLog(`تم إلغاء أرشفة المادة [${material.name}] وإعادتها للمخزون النشط`);
         return true;
@@ -1376,6 +1578,130 @@ const AppStorage = {
  * Handles issuing materials, validating stock levels, project routing, and returns to supplier.
  */
 const AppOutput = {
+    promptDeleteTransaction(id) {
+        const msg = typeof t === 'function' && t('del_tx_pass_prompt') !== 'del_tx_pass_prompt' ? t('del_tx_pass_prompt') : "يرجى إدخال كلمة المرور الخاصة بحذف الحركة:";
+        if (typeof App !== 'undefined' && App.promptPassword) {
+            App.promptPassword(msg, "1012", () => {
+                App.confirmAction(typeof t === 'function' ? t('confirm_del_tx') : "هل أنت متأكد من حذف هذه الحركة؟", () => {
+                    this.deleteTransaction(id);
+                });
+            });
+        }
+    },
+    deleteTransaction(id) {
+        let transactions = AppDB.getTransactions();
+        const txIndex = transactions.findIndex(t => t.id === id);
+        if (txIndex === -1) return;
+        const tx = transactions[txIndex];
+
+        // Restore stock for "out" or "return"
+        if (tx.type === "out" || tx.type === "return") {
+            const materials = AppDB.getMaterials();
+            const material = materials.find(m => m.id === tx.materialId);
+            if (material) {
+                material.quantity += tx.quantity; // return to stock
+                material.totalPrice = material.quantity * material.unitPrice;
+                AppDB.saveMaterials(materials);
+            }
+        }
+
+        transactions.splice(txIndex, 1);
+        AppDB.saveTransactions(transactions);
+
+        if (typeof App !== 'undefined') {
+            App.showToast(typeof t === 'function' ? t('tx_deleted_success') : "تم حذف الحركة وإرجاع الكمية للمخزن!", "success");
+            App.renderAll();
+        }
+    },
+
+    promptEditTransaction(id) {
+        const msg = typeof t === 'function' && t('edit_tx_pass_prompt') !== 'edit_tx_pass_prompt' ? t('edit_tx_pass_prompt') : "يرجى إدخال كلمة المرور الخاصة بتعديل الحركة:";
+        if (typeof App !== 'undefined' && App.promptPassword) {
+            App.promptPassword(msg, "1011", () => {
+                this.openEditTransactionModal(id);
+            });
+        }
+    },
+
+    openEditTransactionModal(id) {
+        const transactions = AppDB.getTransactions();
+        const tx = transactions.find(t => t.id === id);
+        if (!tx) return;
+
+        document.getElementById("edit_tx_id").value = tx.id;
+        document.getElementById("edit_tx_quantity").value = tx.quantity;
+        document.getElementById("edit_tx_operatorName").value = tx.operatorName || '';
+        document.getElementById("edit_tx_delivererName").value = tx.delivererName || '';
+        document.getElementById("edit_tx_reason").value = tx.type === "return" ? "return" : "project";
+
+        const returnFields = document.getElementById("edit-tx-return-only-fields");
+        if (tx.type === "return") {
+            returnFields.classList.remove("d-none");
+            document.getElementById("edit_tx_companyName").value = tx.companyName || '';
+            document.getElementById("edit_tx_returnInvoice").value = tx.returnInvoiceNumber || '';
+            document.getElementById("edit_tx_deliveryCost").value = tx.deliveryCost || '';
+        } else {
+            returnFields.classList.add("d-none");
+            document.getElementById("edit_tx_companyName").value = '';
+            document.getElementById("edit_tx_returnInvoice").value = '';
+            document.getElementById("edit_tx_deliveryCost").value = '';
+        }
+
+        const modalEl = document.getElementById("editTransactionModal");
+        const modal = new bootstrap.Modal(modalEl);
+        modal.show();
+    },
+
+    submitEditTransaction(data) {
+        let transactions = AppDB.getTransactions();
+        const txIndex = transactions.findIndex(t => t.id === data.tx_id);
+        if (txIndex === -1) return { success: false, error: "الحركة غير موجودة" };
+        const tx = transactions[txIndex];
+
+        const oldQty = tx.quantity;
+        const newQty = parseFloat(data.quantity) || 0;
+        if (newQty <= 0) return { success: false, error: "يرجى إدخال كمية صحيحة أكبر من الصفر." };
+
+        const qtyDifference = newQty - oldQty;
+
+        // If it's an outgoing transaction, adjusting quantity changes stock
+        if (tx.type === "out" || tx.type === "return") {
+            const materials = AppDB.getMaterials();
+            const material = materials.find(m => m.id === tx.materialId);
+            if (material) {
+                // If they increased the issued quantity, we need to deduct more from stock
+                // If they decreased it, we add back to stock
+                if (material.quantity < qtyDifference) {
+                    return { success: false, error: `لا يوجد رصيد كافٍ في المخزن لتغطية الزيادة! المتوفر: ${material.quantity}` };
+                }
+                material.quantity -= qtyDifference;
+                material.totalPrice = material.quantity * material.unitPrice;
+                AppDB.saveMaterials(materials);
+            }
+        }
+
+        // Update transaction
+        tx.quantity = newQty;
+        tx.totalPrice = newQty * tx.unitPrice;
+        tx.operatorName = data.operatorName;
+        tx.delivererName = data.delivererName;
+        tx.type = data.reason === "return" ? "return" : "out";
+        tx.reason = data.reason === "return" ? "استرجاع للشركة" : "استخدام بالمشروع";
+
+        if (tx.type === "return") {
+            tx.companyName = data.companyName;
+            tx.returnInvoiceNumber = data.returnInvoiceNumber;
+            tx.deliveryCost = parseFloat(data.deliveryCost) || 0;
+        } else {
+            delete tx.companyName;
+            delete tx.returnInvoiceNumber;
+            delete tx.deliveryCost;
+        }
+
+        AppDB.saveTransactions(transactions);
+        return { success: true };
+    },
+
     issueMaterial(data) {
         const materials = AppDB.getMaterials();
         const material = materials.find(m => m.id === data.materialId);
@@ -1394,9 +1720,9 @@ const AppOutput = {
         }
 
         if (material.quantity < quantityToIssue) {
-            return { 
-                success: false, 
-                error: `الكمية المطلوبة (${quantityToIssue} ${material.unit}) أكبر من الكمية المتوفرة حالياً في المخزن (${material.quantity} ${material.unit}).` 
+            return {
+                success: false,
+                error: `الكمية المطلوبة (${quantityToIssue} ${material.unit}) أكبر من الكمية المتوفرة حالياً في المخزن (${material.quantity} ${material.unit}).`
             };
         }
 
@@ -1411,7 +1737,7 @@ const AppOutput = {
         // Prepare transaction
         const transactions = AppDB.getTransactions();
         const reasonText = data.reason === "return" ? "استرجاع للشركة" : "استخدام بالمشروع";
-        
+
         const outgoingTransaction = {
             id: "tx_" + Math.random().toString(36).substr(2, 9) + "_" + Date.now(),
             type: data.reason === "return" ? "return" : "out",
@@ -1441,7 +1767,7 @@ const AppOutput = {
         } else {
             activityMsg += ` للاستخدام بالمشروع بواسطة [${outgoingTransaction.operatorName}] وتم تسليمها من قِبل [${outgoingTransaction.delivererName}]`;
         }
-        
+
         AppDB.addActivityLog(activityMsg);
 
         return { success: true, transaction: outgoingTransaction };
@@ -1543,12 +1869,12 @@ const AppStatistics = {
     calculate(category = "all") {
         const materials = AppDB.getMaterials();
         const transactions = AppDB.getTransactions();
-        
+
         // Filter materials and transactions based on category
-        const filteredMaterials = category === "all" 
-            ? materials 
+        const filteredMaterials = category === "all"
+            ? materials
             : materials.filter(m => m.category === category);
-            
+
         const filteredTransactions = category === "all"
             ? transactions
             : transactions.filter(t => t.category === category);
@@ -1575,8 +1901,8 @@ const AppStatistics = {
 
         // 6. Total Delivery Costs (Delivery costs for all 'in' + 'return' transactions)
         const returnTransactions = filteredTransactions.filter(t => t.type === "return");
-        const totalDeliveryCosts = inTransactions.reduce((sum, t) => sum + (t.deliveryCost || 0), 0) + 
-                                   returnTransactions.reduce((sum, t) => sum + (t.deliveryCost || 0), 0);
+        const totalDeliveryCosts = inTransactions.reduce((sum, t) => sum + (t.deliveryCost || 0), 0) +
+            returnTransactions.reduce((sum, t) => sum + (t.deliveryCost || 0), 0);
 
         // 7. Most and Least Used Materials
         // Aggregate issued quantities by material name
@@ -1608,7 +1934,7 @@ const AppStatistics = {
             usageArray.sort((a, b) => b.quantity - a.quantity);
             mostUsedMaterial = usageArray[0].name;
             mostUsedQty = usageArray[0].quantity;
-            
+
             // For least used, we get the last element
             const leastElement = usageArray[usageArray.length - 1];
             leastUsedMaterial = leastElement.name;
@@ -1683,10 +2009,10 @@ const AppStatistics = {
         const filteredTransactions = category === "all"
             ? transactions
             : transactions.filter(t => t.category === category);
-        
+
         // Let's get the last 6 months
         const monthNames = ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"];
-        
+
         const now = new Date();
         const last6Months = [];
         for (let i = 5; i >= 0; i--) {
@@ -1971,7 +2297,7 @@ const AppPrint = {
             
             <table class="vertical-info-table">
                 <tbody>
-                    <tr><th>${t('category')}</th><td>${AppDB.CATEGORIES[mat.category] || mat.category}</td></tr>
+                    <tr><th>${t('category')}</th><td>${tCat(mat.category)}</td></tr>
                     <tr><th>${t('buyer_name')}</th><td>${mat.buyerName || '-'}</td></tr>
                     <tr><th>${t('receiver_name')}</th><td>${mat.receiverName || '-'}</td></tr>
                     <tr><th>${t('supplier_company')}</th><td>${mat.companyName || '-'}</td></tr>
@@ -2015,7 +2341,7 @@ const AppPrint = {
                     <div class="report-title my-4"><i class="fa-solid fa-receipt me-2"></i>${t('mat_entry_receipt')} ${mat.invoiceNumber || 'N/A'}</div>
                     <table class="vertical-info-table">
                         <tbody>
-                            <tr><th>${t('category')}</th><td>${AppDB.CATEGORIES[mat.category] || mat.category}</td></tr>
+                            <tr><th>${t('category')}</th><td>${tCat(mat.category)}</td></tr>
                             <tr><th>${t('buyer_name')}</th><td>${mat.buyerName || '-'}</td></tr>
                             <tr><th>${t('receiver_name')}</th><td>${mat.receiverName || '-'}</td></tr>
                             <tr><th>${t('supplier_company')}</th><td>${mat.companyName || '-'}</td></tr>
@@ -2034,13 +2360,13 @@ const AppPrint = {
             `;
         });
 
-        this._printWindow(contentHtml, `${t('individual_receipts')} ${category === "all" ? t('all_cats') : (AppDB.CATEGORIES[category] || category)}`);
+        this._printWindow(contentHtml, `${t('individual_receipts')} ${category === "all" ? t('all_cats') : tCat(category)}`);
     },
 
     // Print Category Materials List
     printCategory(category) {
         const materials = AppDB.getMaterials().filter(m => m.category === category && !m.archived);
-        const catName = AppDB.CATEGORIES[category] || category;
+        const catName = tCat(category);
 
         let rowsHtml = "";
         let totalValue = 0;
@@ -2208,7 +2534,15 @@ const AppPrint = {
 
     // Print Transactions Logs
     printTransactions() {
-        const transactions = AppDB.getTransactions().filter(t => t.type !== "in");
+        let transactions = AppDB.getTransactions();
+        const typeFilter = document.querySelector('input[name="txTypeFilter"]:checked');
+        if (typeFilter) {
+            if (typeFilter.value === "out") transactions = transactions.filter(t => t.type !== "in");
+            else if (typeFilter.value === "in") transactions = transactions.filter(t => t.type === "in");
+        }
+        if (App.state && App.state.outputCategory && App.state.outputCategory !== "all") {
+            transactions = transactions.filter(t => t.category === App.state.outputCategory);
+        }
         let rowsHtml = "";
 
         transactions.forEach((tx, idx) => {
@@ -2231,7 +2565,7 @@ const AppPrint = {
                     <td>${tx.companyName || '-'}</td>
                     <td>${tx.operatorName || '-'}</td>
                     <td>${tx.delivererName || '-'}</td>
-                    <td><strong>${tx.materialName}</strong><br><small class="text-muted">${AppDB.CATEGORIES[tx.category] || tx.category}</small></td>
+                    <td><strong>${tx.materialName}</strong><br><small class="text-muted">${tCat(tx.category)}</small></td>
                     <td>${tx.quantity.toLocaleString()} ${tx.unit}</td>
                     <td>${tx.unitPrice.toLocaleString()} ${t('currency')}</td>
                     <td>${tx.totalPrice.toLocaleString()} ${t('currency')}</td>
@@ -2288,7 +2622,7 @@ const AppPrint = {
         const originalQty = mat ? mat.initialQuantity : '-';
         const currentQty = mat ? mat.quantity : '-';
 
-        const dateStr = new Date(tx.date).toLocaleDateString('ar-EG', {hour: '2-digit', minute: '2-digit'});
+        const dateStr = new Date(tx.date).toLocaleDateString('ar-EG', { hour: '2-digit', minute: '2-digit' });
         let title = t('tx_hist_title') || "وصل حركة";
         let typeBadge = "";
         let colorTheme = "#1e3a8a"; // Default dark blue
@@ -2316,7 +2650,7 @@ const AppPrint = {
             
             <table class="vertical-info-table" style="border-color: ${colorTheme};">
                 <tbody>
-                    <tr><th>القسم</th><td>${AppDB.CATEGORIES[tx.category] || tx.category}</td></tr>
+                    <tr><th>${t('category')}</th><td>${tCat(tx.category)}</td></tr>
                     <tr><th>المسؤول / المشتري</th><td>${tx.operatorName || '-'}</td></tr>
                     <tr><th>المستلم / المسلّم</th><td>${tx.delivererName || '-'}</td></tr>
                     <tr><th>الشركة الموردة</th><td>${tx.companyName || '-'}</td></tr>
@@ -2324,10 +2658,10 @@ const AppPrint = {
                     ${tx.type === 'return' ? `<tr><th>رقم فاتورة المرتجع</th><td>${tx.returnInvoiceNumber || '-'}</td></tr><tr><th>تكلفة التوصيل</th><td>${(tx.deliveryCost || 0).toLocaleString()} <span style="font-size:14px;color:#64748b">${t('currency')}</span></td></tr>` : ''}
                     <tr><th>اسم المادة</th><td style="font-size:18px;font-weight:800;color:#0f172a">${tx.materialName}</td></tr>
                     <tr><th>الكمية الأصلية للمادة</th><td style="font-size:16px;font-weight:700;color:#475569">${originalQty !== '-' ? originalQty.toLocaleString() : '-'} <span style="font-size:14px;color:#64748b">${tx.unit}</span></td></tr>
-                    <tr><th>كمية الحركة</th><td style="font-size:18px;font-weight:800;color:${colorTheme}">${tx.quantity.toLocaleString()} <span style="font-size:14px;color:#64748b">${tx.unit}</span></td></tr>
+                    <tr><th>${t('tx_qty_hdr') || 'كمية الحركة'}</th><td style="font-size:18px;font-weight:800;color:${colorTheme}">${tx.quantity.toLocaleString()} <span style="font-size:14px;color:#64748b">${tx.unit}</span></td></tr>
                     <tr><th>سعر الوحدة</th><td>${tx.unitPrice.toLocaleString()} <span style="font-size:14px;color:#64748b">${t('currency')}</span></td></tr>
                     <tr><th>القيمة الإجمالية</th><td>${tx.totalPrice.toLocaleString()} <span style="font-size:14px;color:#64748b">${t('currency')}</span></td></tr>
-                    <tr><th>تاريخ ووقت الحركة</th><td>${dateStr}</td></tr>
+                    <tr><th>${t('tx_date_hdr') || 'تاريخ ووقت الحركة'}</th><td>${dateStr}</td></tr>
                     <tr class="highlight-row" style="background-color: ${bgTheme};"><th style="color: ${colorTheme} !important;">السبب والتفاصيل</th><td style="color: ${colorTheme}; font-size: 16px;">${tx.reason || '-'}</td></tr>
                     <tr class="highlight-row" style="background-color: #f8fafc;"><th style="color: #0f172a !important;">الباقي</th><td style="color: #0f172a; font-size: 18px; font-weight: 800;">${currentQty !== '-' ? currentQty.toLocaleString() : '-'} <span style="font-size:14px;color:#64748b">${tx.unit}</span></td></tr>
                 </tbody>
@@ -2336,17 +2670,93 @@ const AppPrint = {
 
         this._printWindow(html, title);
     },
+    // Print All Transaction Receipts Separately
+    printAllTransactionReceipts() {
+        let transactions = AppDB.getTransactions();
+        const typeFilter = document.querySelector('input[name="txTypeFilter"]:checked');
+        if (typeFilter) {
+            if (typeFilter.value === "out") transactions = transactions.filter(t => t.type !== "in");
+            else if (typeFilter.value === "in") transactions = transactions.filter(t => t.type === "in");
+        }
+        if (App.state && App.state.outputCategory && App.state.outputCategory !== "all") {
+            transactions = transactions.filter(t => t.category === App.state.outputCategory);
+        }
+        if (transactions.length === 0) {
+            alert(t('no_tx'));
+            return;
+        }
+
+        const materials = AppDB.getMaterials();
+        let contentHtml = '';
+
+        transactions.forEach((tx, idx) => {
+            const isLast = (idx === transactions.length - 1);
+            const mat = materials.find(m => m.id === tx.materialId);
+            const originalQty = mat ? mat.initialQuantity : '-';
+            const currentQty = mat ? mat.quantity : '-';
+
+            const dateStr = new Date(tx.date).toLocaleDateString('ar-EG', { hour: '2-digit', minute: '2-digit' });
+            let title = t('tx_hist_title') || "وصل حركة";
+            let typeBadge = "";
+            let colorTheme = "#1e3a8a";
+            let bgTheme = "#eff6ff";
+
+            if (tx.type === "in") {
+                title = "وصل وارد (شحنة)";
+                typeBadge = `<span style="padding:4px 10px; border-radius:6px; background:#f0fdf4; color:#16a34a; font-size:13px;">${t('tx_in_badge') || 'وارد (شحنة)'}</span>`;
+                colorTheme = "#16a34a";
+                bgTheme = "#f0fdf4";
+            } else if (tx.type === "out") {
+                title = "وصل صادر (استهلاك مشروع)";
+                typeBadge = `<span style="padding:4px 10px; border-radius:6px; background:#fffbeb; color:#d97706; font-size:13px;">${t('tx_out_badge') || 'صرف مشروع'}</span>`;
+                colorTheme = "#d97706";
+                bgTheme = "#fffbeb";
+            } else if (tx.type === "return") {
+                title = "وصل مرتجع لشركة";
+                typeBadge = `<span style="padding:4px 10px; border-radius:6px; background:#fef2f2; color:#dc2626; font-size:13px;">${t('tx_return_badge') || 'مرتجع شركة'}</span>`;
+                colorTheme = "#dc2626";
+                bgTheme = "#fef2f2";
+            }
+
+            contentHtml += `
+                <div style="${!isLast ? 'page-break-after: always; margin-bottom: 40px; padding-bottom: 40px; border-bottom: 2px dashed #cbd5e1;' : ''}">
+                    <div class="report-title my-4" style="color: ${colorTheme};"><i class="fa-solid fa-file-invoice me-2"></i>${title}</div>
+                    
+                    <table class="vertical-info-table" style="border-color: ${colorTheme};">
+                        <tbody>
+                            <tr><th>${t('category')}</th><td>${tCat(tx.category)}</td></tr>
+                            <tr><th>المسؤول / المشتري</th><td>${tx.operatorName || '-'}</td></tr>
+                            <tr><th>المستلم / المسلّم</th><td>${tx.delivererName || '-'}</td></tr>
+                            <tr><th>الشركة الموردة</th><td>${tx.companyName || '-'}</td></tr>
+                            ${tx.invoiceNumber ? `<tr><th>رقم الفاتورة</th><td>${tx.invoiceNumber}</td></tr>` : ''}
+                            ${tx.type === 'return' ? `<tr><th>رقم فاتورة المرتجع</th><td>${tx.returnInvoiceNumber || '-'}</td></tr><tr><th>تكلفة التوصيل</th><td>${(tx.deliveryCost || 0).toLocaleString()} <span style="font-size:14px;color:#64748b">${t('currency')}</span></td></tr>` : ''}
+                            <tr><th>اسم المادة</th><td style="font-size:18px;font-weight:800;color:#0f172a">${tx.materialName}</td></tr>
+                            <tr><th>الكمية الأصلية للمادة</th><td style="font-size:16px;font-weight:700;color:#475569">${originalQty !== '-' ? originalQty.toLocaleString() : '-'} <span style="font-size:14px;color:#64748b">${tx.unit}</span></td></tr>
+                            <tr><th>${t('tx_qty_hdr') || 'كمية الحركة'}</th><td style="font-size:18px;font-weight:800;color:${colorTheme}">${tx.quantity.toLocaleString()} <span style="font-size:14px;color:#64748b">${tx.unit}</span></td></tr>
+                            <tr><th>سعر الوحدة</th><td>${tx.unitPrice.toLocaleString()} <span style="font-size:14px;color:#64748b">${t('currency')}</span></td></tr>
+                            <tr><th>القيمة الإجمالية</th><td>${tx.totalPrice.toLocaleString()} <span style="font-size:14px;color:#64748b">${t('currency')}</span></td></tr>
+                            <tr><th>${t('tx_date_hdr') || 'تاريخ ووقت الحركة'}</th><td>${dateStr}</td></tr>
+                            <tr class="highlight-row" style="background-color: ${bgTheme};"><th style="color: ${colorTheme} !important;">السبب والتفاصيل</th><td style="color: ${colorTheme}; font-size: 16px;">${tx.reason || '-'}</td></tr>
+                            <tr class="highlight-row" style="background-color: #f8fafc;"><th style="color: #0f172a !important;">الباقي</th><td style="color: #0f172a; font-size: 18px; font-weight: 800;">${currentQty !== '-' ? currentQty.toLocaleString() : '-'} <span style="font-size:14px;color:#64748b">${tx.unit}</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            `;
+        });
+
+        this._printWindow(contentHtml, t('individual_receipts') || "طباعة وصولات فردية");
+    },
 
     // SheetJS Excel Exporter for Active Materials
     exportExcel(category = "all") {
         const materials = AppDB.getMaterials().filter(m => !m.archived);
         const filtered = category === "all" ? materials : materials.filter(m => m.category === category);
-        const catName = category === "all" ? "جميع الأقسام" : (AppDB.CATEGORIES[category] || category);
+        const catName = category === "all" ? t('all_cats') : tCat(category);
 
         // Map data to friendly Arabic names
         const dataToExport = filtered.map((m, idx) => ({
             "م": idx + 1,
-            "القسم": AppDB.CATEGORIES[m.category] || m.category,
+            "القسم": tCat(m.category),
             "اسم المادة": m.name,
             "الكمية الحالية": m.quantity,
             "الكمية الواردة": m.initialQuantity,
@@ -2379,14 +2789,22 @@ const AppPrint = {
 
     // SheetJS Excel Exporter for Transactions
     exportTransactionsExcel() {
-        const transactions = AppDB.getTransactions().filter(t => t.type !== "in");
+        let transactions = AppDB.getTransactions();
+        const typeFilter = document.querySelector('input[name="txTypeFilter"]:checked');
+        if (typeFilter) {
+            if (typeFilter.value === "out") transactions = transactions.filter(t => t.type !== "in");
+            else if (typeFilter.value === "in") transactions = transactions.filter(t => t.type === "in");
+        }
+        if (App.state && App.state.outputCategory && App.state.outputCategory !== "all") {
+            transactions = transactions.filter(t => t.category === App.state.outputCategory);
+        }
 
         const dataToExport = transactions.map((t, idx) => ({
             "م": idx + 1,
             "تاريخ العملية": new Date(t.date).toLocaleString('ar-EG'),
             "نوع العملية": t.type === "in" ? "إدخال شحنة" : (t.type === "out" ? "صرف مشروع" : "إرجاع لشركة"),
             "اسم المادة": t.materialName,
-            "القسم": AppDB.CATEGORIES[t.category] || t.category,
+            "القسم": tCat(t.category),
             "الكمية": t.quantity,
             "الوحدة": t.unit,
             "سعر الوحدة": t.unitPrice,
@@ -2426,12 +2844,6 @@ const AppPrint = {
  * Main Application Orchestrator - App
  * Binds UI components, handles event listeners, search/sort algorithms, and manages state updates.
  */
-if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", () => App.init());
-} else {
-    App.init();
-}
-
 const App = {
     // Chart instances
     charts: {
@@ -2458,15 +2870,51 @@ const App = {
         this.bindEvents();
         this.loadUsers();
         this.updateThemeUI();
-        
+
         // Render initial data
         this.renderAll();
-        
+
         // Display portal or initial active tab
         this.switchTab(this.state.currentTab);
-        
+
         // Display initial welcome log if new
         console.log("Building materials management system initialized.");
+    },
+
+    loadUsers() {
+        const userSelect = document.getElementById("user-select");
+        if (!userSelect || typeof AppDB === "undefined") return;
+
+        const users = AppDB.getUsers();
+        const currentUser = AppDB.getCurrentUser();
+        userSelect.innerHTML = "";
+
+        users.forEach(user => {
+            const option = document.createElement("option");
+            option.value = user;
+            option.textContent = user;
+            if (user === currentUser) option.selected = true;
+            userSelect.appendChild(option);
+        });
+    },
+
+    updateThemeUI() {
+        const savedTheme = localStorage.getItem("warehouse_theme") || document.documentElement.getAttribute("data-theme") || "light";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+
+        const themeBtn = document.getElementById("theme-toggle");
+        if (!themeBtn) return;
+
+        const icon = themeBtn.querySelector("i");
+        if (icon) {
+            icon.className = savedTheme === "dark" ? "fa-solid fa-sun fs-5" : "fa-solid fa-moon fs-5";
+        }
+    },
+
+    renderCharts() {
+        if (!document.getElementById("category-share-chart") && !document.getElementById("monthly-finance-chart")) {
+            return;
+        }
     },
 
     bindEvents() {
@@ -2494,7 +2942,7 @@ const App = {
             document.documentElement.setAttribute("data-theme", newTheme);
             localStorage.setItem("warehouse_theme", newTheme);
             this.updateThemeUI();
-            
+
             // Re-render charts for theme compatibility
             this.renderCharts();
         });
@@ -2556,22 +3004,23 @@ const App = {
                 e.preventDefault();
                 const formData = new FormData(addMaterialForm);
                 const data = Object.fromEntries(formData.entries());
-                
+
                 AppStorage.addMaterial(data);
-                
+
                 // Hide modal and reset form
                 const modalEl = document.getElementById("addMaterialModal");
                 const modal = bootstrap.Modal.getInstance(modalEl);
                 modal.hide();
                 addMaterialForm.reset();
+                this.renderAll();
                 this.showToast(typeof t === 'function' ? t('success') : "تمت إضافة المادة بنجاح للمخزون!", "success");
             });
-            
+
             // Auto sum helper in add form
             const qtyInput = document.getElementById("add_quantity");
             const priceInput = document.getElementById("add_unitPrice");
             const totalDisplay = document.getElementById("add_totalPrice_display");
-            
+
             const updateAddTotal = () => {
                 const qty = parseFloat(qtyInput.value) || 0;
                 const price = parseFloat(priceInput.value) || 0;
@@ -2579,7 +3028,7 @@ const App = {
             };
             qtyInput.addEventListener("input", updateAddTotal);
             priceInput.addEventListener("input", updateAddTotal);
-            
+
             // Auto-select category based on current storage category view
             const addMaterialModalEl = document.getElementById("addMaterialModal");
             if (addMaterialModalEl) {
@@ -2601,15 +3050,16 @@ const App = {
                 e.preventDefault();
                 const formData = new FormData(editMaterialForm);
                 const data = Object.fromEntries(formData.entries());
-                
+
                 if (this.state.editingMaterialId) {
                     AppStorage.updateMaterial(this.state.editingMaterialId, data);
-                    
+
                     const modalEl = document.getElementById("editMaterialModal");
                     const modal = bootstrap.Modal.getInstance(modalEl);
                     modal.hide();
                     editMaterialForm.reset();
                     this.state.editingMaterialId = null;
+                    this.renderAll();
                     this.showToast(typeof t === 'function' ? t('success') : "تم تعديل بيانات المادة بنجاح!", "success");
                 }
             });
@@ -2618,7 +3068,7 @@ const App = {
             const qtyInput = document.getElementById("edit_quantity");
             const priceInput = document.getElementById("edit_unitPrice");
             const totalDisplay = document.getElementById("edit_totalPrice_display");
-            
+
             const updateEditTotal = () => {
                 const qty = parseFloat(qtyInput.value) || 0;
                 const price = parseFloat(priceInput.value) || 0;
@@ -2635,7 +3085,7 @@ const App = {
                 e.preventDefault();
                 const formData = new FormData(issueMaterialForm);
                 const data = Object.fromEntries(formData.entries());
-                
+
                 const result = AppOutput.issueMaterial({
                     materialId: data.materialId,
                     quantity: data.quantity,
@@ -2652,11 +3102,51 @@ const App = {
                     const modal = bootstrap.Modal.getInstance(modalEl);
                     modal.hide();
                     issueMaterialForm.reset();
+                    this.renderAll();
                     this.showToast(typeof t === 'function' ? t('success') : "تم تسجيل حركة صرف المادة بنجاح وتحديث المخزون!", "success");
                 } else {
-                    alert(result.error);
+                    if (typeof App !== 'undefined') App.showToast(result.error, 'danger');
                 }
             });
+
+            // Edit Transaction toggle return fields
+            const editReasonSelect = document.getElementById("edit_tx_reason");
+            const editReturnFields = document.getElementById("edit-tx-return-only-fields");
+            if (editReasonSelect && editReturnFields) {
+                editReasonSelect.addEventListener("change", (e) => {
+                    if (e.target.value === "return") {
+                        editReturnFields.classList.remove("d-none");
+                        document.getElementById("edit_tx_companyName").required = true;
+                        document.getElementById("edit_tx_returnInvoice").required = true;
+                    } else {
+                        editReturnFields.classList.add("d-none");
+                        document.getElementById("edit_tx_companyName").required = false;
+                        document.getElementById("edit_tx_returnInvoice").required = false;
+                    }
+                });
+            }
+
+            // Edit Transaction submit
+            const editTxForm = document.getElementById("edit-transaction-form");
+            if (editTxForm) {
+                editTxForm.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    const formData = new FormData(e.target);
+                    const data = Object.fromEntries(formData.entries());
+
+                    const result = AppOutput.submitEditTransaction(data);
+                    if (result.success) {
+                        const modalEl = document.getElementById("editTransactionModal");
+                        const modal = bootstrap.Modal.getInstance(modalEl);
+                        modal.hide();
+                        editTxForm.reset();
+                        this.showToast(typeof t === 'function' ? t('success') : "تم التعديل بنجاح!", "success");
+                        this.renderAll();
+                    } else {
+                        if (typeof App !== 'undefined') App.showToast(result.error, 'danger');
+                    }
+                });
+            }
 
             // Toggle return fields based on reason dropdown
             const reasonSelect = document.getElementById("issue_reason");
@@ -2674,15 +3164,44 @@ const App = {
             });
 
             // Dynamic unit and stock warnings helper in issue modal
+            const issueModalEl = document.getElementById("issueMaterialModal");
+            if (issueModalEl) {
+                issueModalEl.addEventListener("show.bs.modal", () => {
+                    this.updateIssueModalDropdown();
+                });
+            }
+
             const matSelect = document.getElementById("issue_materialId");
             const issueMaxLabel = document.getElementById("issue_max_available");
             const issueQtyInput = document.getElementById("issue_quantity");
+            const catSelect = document.getElementById("issue_categoryId");
+
+            if (catSelect) {
+                catSelect.addEventListener("change", (e) => {
+                    const category = e.target.value;
+                    const materials = AppDB.getMaterials().filter(m => !m.archived && m.quantity > 0 && m.category === category);
+                    matSelect.innerHTML = `<option value="" disabled selected data-i18n="select_mat_ph">${t('select_mat_ph') || '-- اختر المادة من المخزن --'}</option>`;
+                    materials.forEach(m => {
+                        const opt = document.createElement("option");
+                        opt.value = m.id;
+                        opt.textContent = `${m.name} (${m.quantity} ${m.unit} ${t('status_active') || 'متوفر'})`;
+                        matSelect.appendChild(opt);
+                    });
+                    matSelect.disabled = false;
+                    issueMaxLabel.textContent = "";
+                    issueQtyInput.value = "";
+                    if (typeof App !== 'undefined' && typeof autoTranslateDOM === 'function') autoTranslateDOM(document.body);
+                });
+            }
 
             matSelect.addEventListener("change", (e) => {
                 const materials = AppDB.getMaterials();
                 const mat = materials.find(m => m.id === e.target.value);
                 if (mat) {
-                    issueMaxLabel.textContent = `الكمية المتوفرة: ${mat.quantity} ${mat.unit} | السعر للوحدة: ${mat.unitPrice.toLocaleString()} د.ع`;
+                    const availText = t('qty_avail') || 'الكمية المتوفرة:';
+                    const priceText = t('unit_price') || 'السعر للوحدة:';
+                    const currText = t('currency') || 'د.ع';
+                    issueMaxLabel.textContent = `${availText} ${mat.quantity.toLocaleString()} ${mat.unit} | ${priceText} ${mat.unitPrice.toLocaleString()} ${currText}`;
                     issueQtyInput.max = mat.quantity;
                 } else {
                     issueMaxLabel.textContent = "";
@@ -2705,7 +3224,7 @@ const App = {
                     input.value = "";
                     this.showToast(`تمت إضافة المستخدم [${name}] للمنظومة`, "success");
                 } else {
-                    alert("المستخدم موجود بالفعل أو الاسم غير صالح!");
+                    if (typeof App !== 'undefined') App.showToast(t('user_exists') || 'المستخدم موجود بالفعل أو الاسم غير صالح!', 'danger');
                 }
             }
         });
@@ -2713,10 +3232,10 @@ const App = {
         // Backup and Restore triggers
         document.getElementById("export-backup-btn").addEventListener("click", () => {
             const dataStr = AppDB.exportBackup();
-            const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
-            
+            const dataUri = 'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+
             const exportFileDefaultName = `نسخة_احتياطية_مخزن_شريكة_شڤیار_${new Date().toISOString().split('T')[0]}.json`;
-            
+
             const linkElement = document.createElement('a');
             linkElement.setAttribute('href', dataUri);
             linkElement.setAttribute('download', exportFileDefaultName);
@@ -2735,17 +3254,17 @@ const App = {
                     this.showToast("تمت استعادة البيانات بنجاح تام!", "success");
                     e.target.value = ""; // Reset
                 } else {
-                    alert("خطأ في استعادة النسخة الاحتياطية: " + result.error);
+                    if (typeof App !== 'undefined') App.showToast((t('backup_error') || 'خطأ في استعادة النسخة الاحتياطية: ') + result.error, 'danger');
                 }
             };
             reader.readAsText(file);
         });
 
         document.getElementById("reset-db-btn").addEventListener("click", () => {
-            if (confirm("تحذير: هل أنت متأكد من رغبتك في حذف كافة البيانات وتصفير قاعدة البيانات؟ لا يمكن التراجع عن هذا الإجراء.")) {
+            App.confirmAction(t('confirm_reset_db') || 'تحذير: هل أنت متأكد من رغبتك في حذف كافة البيانات وتصفير قاعدة البيانات؟ لا يمكن التراجع عن هذا الإجراء.', () => {
                 AppDB.resetDatabase();
                 this.showToast("تم مسح كافة البيانات وإعادة ضبط المصنع بنجاح.", "warning");
-            }
+            });
         });
 
         // Excel overall downloads
@@ -2770,12 +3289,16 @@ const App = {
             AppPrint.printTransactions();
         });
 
+        document.getElementById("print-tx-individual-btn").addEventListener("click", () => {
+            AppPrint.printAllTransactionReceipts();
+        });
+
         // Storage Sub-portal card clicks
         document.querySelectorAll("[data-storage-cat-card]").forEach(el => {
             el.addEventListener("click", () => {
                 const cat = el.getAttribute("data-storage-cat-card");
                 this.state.storageCategory = cat;
-                
+
                 // Update active tab styling in table view quick selector
                 document.querySelectorAll("[data-storage-cat]").forEach(btn => {
                     if (btn.getAttribute("data-storage-cat") === cat) {
@@ -2784,7 +3307,7 @@ const App = {
                         btn.classList.remove("active");
                     }
                 });
-                
+
                 this.switchStorageView("table");
             });
         });
@@ -2877,7 +3400,7 @@ const App = {
 
     switchTab(tab) {
         this.state.currentTab = tab;
-        
+
         // 1. Hide all sections, and show only the active one
         const sections = ["portal", "dashboard", "storage", "output", "alerts", "config"];
         sections.forEach(s => {
@@ -2952,24 +3475,24 @@ const App = {
             if (portalEl) portalEl.classList.remove("d-none");
             if (tableContainerEl) tableContainerEl.classList.add("d-none");
             if (backBtn) backBtn.classList.add("d-none");
-            
+
             if (printCategoryBtn) printCategoryBtn.classList.add("d-none");
             if (excelCategoryBtn) excelCategoryBtn.classList.add("d-none");
             if (printCategoryIndBtn) printCategoryIndBtn.classList.add("d-none");
             if (printDivider) printDivider.classList.add("d-none");
-            
+
             this.state.storageCategory = "all";
             this.renderStoragePortalCounters();
         } else {
             if (portalEl) portalEl.classList.add("d-none");
             if (tableContainerEl) tableContainerEl.classList.remove("d-none");
             if (backBtn) backBtn.classList.remove("d-none");
-            
+
             if (printCategoryBtn) printCategoryBtn.classList.remove("d-none");
             if (excelCategoryBtn) excelCategoryBtn.classList.remove("d-none");
             if (printCategoryIndBtn) printCategoryIndBtn.classList.remove("d-none");
             if (printDivider) printDivider.classList.remove("d-none");
-            
+
             this.renderMaterialsTable();
         }
     },
@@ -2990,7 +3513,7 @@ const App = {
             if (backBtn) backBtn.classList.add("d-none");
             if (printBtn) printBtn.classList.add("d-none");
             if (excelBtn) excelBtn.classList.add("d-none");
-            
+
             this.state.dashboardCategory = "all";
             this.renderDashboardPortalCounters();
             this.renderDashboardSummaryTable();
@@ -3001,7 +3524,7 @@ const App = {
             if (backBtn) backBtn.classList.remove("d-none");
             if (printBtn) printBtn.classList.remove("d-none");
             if (excelBtn) excelBtn.classList.remove("d-none");
-            
+
             this.renderCategoryDetailTable(this.state.dashboardCategory);
         }
     },
@@ -3016,14 +3539,14 @@ const App = {
             if (portalEl) portalEl.classList.remove("d-none");
             if (tableContainerEl) tableContainerEl.classList.add("d-none");
             if (backBtn) backBtn.classList.add("d-none");
-            
+
             this.state.outputCategory = "all";
             this.renderOutputPortalCounters();
         } else {
             if (portalEl) portalEl.classList.add("d-none");
             if (tableContainerEl) tableContainerEl.classList.remove("d-none");
             if (backBtn) backBtn.classList.remove("d-none");
-            
+
             this.renderTransactionsTable();
         }
     },
@@ -3031,15 +3554,15 @@ const App = {
     // Render the per-category detail table in dashboard
     renderCategoryDetailTable(category) {
         const categoryMeta = {
-            electrical: { name: "مواد كهربائية",       icon: "fa-bolt-lightning",  colorClass: "sp-icon-yellow" },
-            plumbing:   { name: "مواد مجاري",          icon: "fa-faucet-drip",    colorClass: "sp-icon-blue"   },
-            steel:      { name: "مواد حديد",           icon: "fa-cubes",          colorClass: "sp-icon-orange" },
-            tiles:      { name: "بلاط وكاشي وسيراميك",icon: "fa-table-cells",    colorClass: "sp-icon-cyan"   },
-            gypsum:     { name: "جبسن بورد",           icon: "fa-border-all",     colorClass: "sp-icon-purple" },
-            cement:     { name: "إسمنت",               icon: "fa-fill-drip",     colorClass: "sp-icon-bronze" },
-            paint:      { name: "دهان وطلاء",          icon: "fa-paint-roller",  colorClass: "sp-icon-pink"   },
-            interior:   { name: "أبواب ونوافذ",        icon: "fa-door-open",     colorClass: "sp-icon-green"  },
-            supplies:   { name: "مستلزمات يومية",      icon: "fa-toolbox",       colorClass: "sp-icon-gray"   }
+            electrical: { name: "مواد كهربائية", icon: "fa-bolt-lightning", colorClass: "sp-icon-yellow" },
+            plumbing: { name: "مواد مجاري", icon: "fa-faucet-drip", colorClass: "sp-icon-blue" },
+            steel: { name: "مواد حديد", icon: "fa-cubes", colorClass: "sp-icon-orange" },
+            tiles: { name: "بلاط وكاشي وسيراميك", icon: "fa-table-cells", colorClass: "sp-icon-cyan" },
+            gypsum: { name: "جبسن بورد", icon: "fa-border-all", colorClass: "sp-icon-purple" },
+            cement: { name: "إسمنت", icon: "fa-fill-drip", colorClass: "sp-icon-bronze" },
+            paint: { name: "دهان وطلاء", icon: "fa-paint-roller", colorClass: "sp-icon-pink" },
+            interior: { name: "أبواب ونوافذ", icon: "fa-door-open", colorClass: "sp-icon-green" },
+            supplies: { name: "مستلزمات يومية", icon: "fa-toolbox", colorClass: "sp-icon-gray" }
         };
 
         const meta = categoryMeta[category] || { name: category, icon: "fa-boxes-stacked", colorClass: "sp-icon-gray" };
@@ -3054,7 +3577,7 @@ const App = {
             iconWrap.innerHTML = `<i class="fa-solid ${meta.icon}"></i>`;
         }
         const titleEl = document.getElementById("dash-cat-title");
-        if (titleEl) titleEl.textContent = `إحصائيات قسم: ${meta.name}`;
+        if (titleEl) titleEl.textContent = `${t('cat_stats') || 'إحصائيات قسم:'} ${tCat(category) || meta.name}`;
 
         // Compute per-material issued qty
         const issuedMap = {};
@@ -3074,17 +3597,17 @@ const App = {
 
         // Totals
         const activeMaterials = materials.filter(m => !m.archived);
-        const totalCount   = activeMaterials.length;
-        const totalValue   = activeMaterials.reduce((s, m) => s + m.quantity * m.unitPrice, 0);
-        const totalIssued  = activeMaterials.reduce((s, m) => s + (issuedMap[m.id] || 0), 0);
+        const totalCount = activeMaterials.length;
+        const totalValue = activeMaterials.reduce((s, m) => s + m.quantity * m.unitPrice, 0);
+        const totalIssued = activeMaterials.reduce((s, m) => s + (issuedMap[m.id] || 0), 0);
         const totalPurchase = materials.reduce((s, m) => s + (purchaseMap[m.id] || 0), 0);
 
         // Update summary badges
-        const countEl  = document.getElementById("dash-cat-count");
-        const valueEl  = document.getElementById("dash-cat-value");
+        const countEl = document.getElementById("dash-cat-count");
+        const valueEl = document.getElementById("dash-cat-value");
         const issuedEl = document.getElementById("dash-cat-issued");
-        if (countEl)  countEl.textContent  = totalCount;
-        if (valueEl)  valueEl.textContent  = totalValue.toLocaleString();
+        if (countEl) countEl.textContent = totalCount;
+        if (valueEl) valueEl.textContent = totalValue.toLocaleString();
         if (issuedEl) issuedEl.textContent = totalIssued.toLocaleString();
 
         // Build table rows
@@ -3108,15 +3631,15 @@ const App = {
 
         materials.forEach((mat, idx) => {
             const currentValue = mat.quantity * mat.unitPrice;
-            const issued       = issuedMap[mat.id] || 0;
-            const purchased    = purchaseMap[mat.id] || 0;
-            const statusBadge  = mat.archived
+            const issued = issuedMap[mat.id] || 0;
+            const purchased = purchaseMap[mat.id] || 0;
+            const statusBadge = mat.archived
                 ? `<span class="badge bg-secondary">مؤرشف</span>`
                 : (mat.quantity === 0
-                    ? `<span class="badge bg-danger">نفذت</span>`
+                    ? `<span class="badge bg-danger">${t('status_empty') || 'نفذت'}</span>`
                     : (mat.quantity <= mat.alertLimit
                         ? `<span class="badge bg-warning text-dark">شحيحة</span>`
-                        : `<span class="badge bg-success">نشط</span>`));
+                        : `<span class="badge bg-success">${t('active') || 'نشط'}</span>`));
 
             const tr = document.createElement("tr");
             if (mat.archived) tr.classList.add("table-secondary", "opacity-75");
@@ -3131,572 +3654,82 @@ const App = {
                     name: mat.name, qty: mat.quantity, unit: mat.unit,
                     unitPrice: mat.unitPrice, currentValue,
                     purchased, issued,
-                    status: mat.archived ? "مؤرشف" : (mat.quantity === 0 ? "نفذت" : (mat.quantity <= mat.alertLimit ? "شحيحة" : "نشط")),
+                    status: mat.archived ? "مؤرشف" : (mat.quantity === 0 ? (t('status_empty') || "نفذت") : (mat.quantity <= mat.alertLimit ? (t('status_low') || "شحيحة") : (t('active') || "نشط"))),
                     category: meta.name
                 });
             });
 
+            // Row styling: White background with a subtle border, rounded corners via first/last child
+            tr.style.backgroundColor = "#fff";
+            tr.style.boxShadow = "0 2px 4px rgba(0,0,0,0.02)";
+            tr.style.transition = "transform 0.2s ease, box-shadow 0.2s ease";
+            tr.onmouseover = function () { this.style.transform = "translateY(-2px)"; this.style.boxShadow = "0 8px 16px rgba(0,0,0,0.05)"; };
+            tr.onmouseout = function () { this.style.transform = "none"; this.style.boxShadow = "0 2px 4px rgba(0,0,0,0.02)"; };
+
             tr.innerHTML = `
-                <td class="text-muted small">${idx + 1}</td>
-                <td class="text-start fw-semibold">${mat.name}</td>
-                <td class="fw-bold text-secondary">${mat.initialQuantity.toLocaleString()}</td>
-                <td class="fw-bold">${mat.quantity.toLocaleString()}</td>
-                <td class="text-muted">${mat.unit}</td>
-                <td>${mat.unitPrice.toLocaleString()} د.ع</td>
-                <td class="fw-bold text-success">${currentValue.toLocaleString()} د.ع</td>
-                <td class="text-primary">${purchased.toLocaleString()} د.ع</td>
-                <td class="text-warning-emphasis fw-semibold">${issued.toLocaleString()}</td>
-                <td>${statusBadge}</td>
-                <td></td>
+                <td class="text-center py-3 text-muted fw-bold">${idx + 1}</td>
+                <td class="py-3 fw-bold">${mat.name}</td>
+                <td class="text-center py-3 text-secondary">${mat.initialQuantity.toLocaleString()} ${mat.unit}</td>
+                <td class="text-center py-3 fs-5 fw-bold text-dark">${mat.quantity.toLocaleString()} <span class="fs-6 text-muted">${mat.unit}</span></td>
+                <td class="text-center py-3 text-muted font-monospace">${mat.unitPrice.toLocaleString()}</td>
+                <td class="text-center py-3 fw-bold text-primary font-monospace">${currentValue.toLocaleString()}</td>
+                <td class="text-center py-3 text-success fw-bold">${purchased.toLocaleString()}</td>
+                <td class="text-center py-3 text-danger fw-bold">${issued.toLocaleString()}</td>
+                <td class="text-center py-3">${statusBadge}</td>
+                <td class="text-center py-3 action-td"></td>
             `;
-            tr.querySelector("td:last-child").appendChild(printBtn);
+            tr.querySelector('.action-td').appendChild(printBtn);
             tbody.appendChild(tr);
         });
 
-        // Footer totals row
-        tfoot.innerHTML = `
-            <tr>
-                <td></td>
-                <td class="text-start">المجموع الإجمالي</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td class="text-success">${totalValue.toLocaleString()} د.ع</td>
-                <td class="text-primary">${totalPurchase.toLocaleString()} د.ع</td>
-                <td class="text-warning-emphasis">${totalIssued.toLocaleString()}</td>
-                <td><span class="badge bg-dark">${totalCount} صنف نشط</span></td>
-                <td></td>
-            </tr>`;
-    },
-
-    // --- Print & Export for Category Stats ---
-
-    printSingleMaterial(mat) {
-        const printDate = new Date().toLocaleDateString('ar-EG', { year:'numeric', month:'long', day:'numeric' });
-        const win = window.open("", "_blank");
-        win.document.write(`
-<!DOCTYPE html>
-<html dir="rtl" lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <title>بطاقة مادة: ${mat.name}</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; direction: rtl; color: #1e293b; padding: 30px; font-size: 14px; max-width: 800px; margin: 0 auto; }
-        .unified-invoice-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; text-align: center; direction: rtl; }
-        .unified-invoice-table th, .unified-invoice-table td { border: 1px solid #cbd5e1; padding: 12px; vertical-align: middle; }
-        .unified-invoice-table th { background-color: #0f172a !important; color: #ffffff !important; font-weight: 700; }
-        .unified-invoice-table td { background-color: #ffffff; color: #1e293b; font-weight: 600; }
-        
-        .vertical-info-table { width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 25px; direction: rtl; }
-        .vertical-info-table tr:not(:last-child) th, .vertical-info-table tr:not(:last-child) td { border-bottom: 1px solid #e2e8f0; }
-        .vertical-info-table th { background-color: #f8fafc !important; color: #64748b !important; font-weight: 600; padding: 16px 24px; text-align: right; width: 35%; border-left: 1px solid #e2e8f0; font-size: 15px; }
-        .vertical-info-table td { background-color: #ffffff; color: #0f172a; font-weight: 700; padding: 16px 24px; text-align: right; width: 65%; font-size: 16px; }
-        .vertical-info-table .highlight-row th { background-color: #eff6ff !important; color: #1d4ed8 !important; }
-        .vertical-info-table .highlight-row td { background-color: #f8fafc; color: #1d4ed8; font-size: 20px; font-weight: 800; }
-        .header { text-align: center; margin-bottom: 28px; padding-bottom: 16px; border-bottom: 3px solid #0f172a; }
-        .header h1 { font-size: 22px; color: #0f172a; margin-bottom: 6px; }
-        .header .cat { color: #f97316; font-weight: 700; font-size: 14px; }
-        .header .date { color: #94a3b8; font-size: 12px; margin-top: 4px; }
-        .footer { text-align: center; color: #94a3b8; font-size: 11px; margin-top: 20px; }
-        .signature-area { display: flex; justify-content: space-between; margin-top: 50px; }
-        .signature-box { flex: 1; text-align: center; border-top: 1px dashed #cbd5e1; margin: 0 20px; padding-top: 10px; font-weight: 700; }
-        @media print {
-            body { padding: 10px; padding-bottom: 120px !important; }
-            .signature-area { position: fixed; bottom: 20px; left: 0; right: 0; width: 100%; page-break-inside: avoid; }
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <h1>${mat.name}</h1>
-        <div class="cat">القسم: ${mat.category}</div>
-        <div class="date">تاريخ الطباعة: ${printDate}</div>
-    </div>
-    <table class="vertical-info-table">
-        <tbody>
-            <tr><th>الكمية الحالية</th><td>${Number(mat.qty).toLocaleString()} <span style="color:#64748b;font-weight:600;font-size:14px">${mat.unit}</span></td></tr>
-            <tr><th>سعر الوحدة</th><td>${Number(mat.unitPrice).toLocaleString()} <span style="color:#64748b;font-weight:600;font-size:14px">د.ع</span></td></tr>
-            <tr class="highlight-row"><th>قيمة المخزون الحالي</th><td>${Number(mat.currentValue).toLocaleString()} <span style="font-size:16px">د.ع</span></td></tr>
-            <tr><th>إجمالي المشتريات</th><td>${Number(mat.purchased).toLocaleString()} <span style="color:#64748b;font-weight:600;font-size:14px">د.ع</span></td></tr>
-            <tr><th>الكمية المصروفة</th><td>${Number(mat.issued).toLocaleString()} <span style="color:#64748b;font-weight:600;font-size:14px">${mat.unit}</span></td></tr>
-            <tr><th>الحالة</th><td><span style="padding:4px 10px; border-radius:6px; background:${mat.status === 'مؤرشفة' ? '#fef2f2' : '#f0fdf4'}; color:${mat.status === 'مؤرشفة' ? '#ef4444' : '#16a34a'}; font-size:13px;">${mat.status}</span></td></tr>
-        </tbody>
-    </table>
-    <div class="signature-area">
-        <div class="signature-box">المستلم الفني</div>
-        <div class="signature-box">أمين المخزن</div>
-        <div class="signature-box">مدير المشروع</div>
-    </div>
-    <div class="footer">نظام شريكة شڤیار • إدارة مخازن مواد البناء والمشاريع الإنشائية</div>
-    <script>setTimeout(() => window.print(), 300);</script>
-</body>
-</html>`);
-        win.document.close();
-    },
-
-    // Print all 9 categories in one comprehensive report
-    printAllCategoriesStats() {
-        const categoryKeys = ["electrical","plumbing","steel","tiles","gypsum","cement","paint","interior","supplies"];
-        const categoryNames = {
-            electrical: "مواد كهربائية", plumbing: "مواد مجاري",
-            steel: "مواد حديد", tiles: "بلاط وكاشي وسيراميك",
-            gypsum: "جبسن بورد", cement: "إسمنت",
-            paint: "دهان وطلاء", interior: "أبواب ونوافذ",
-            supplies: "مستلزمات يومية"
-        };
-        const allMaterials    = AppDB.getMaterials();
-        const allTransactions = AppDB.getTransactions();
-        const printDate = new Date().toLocaleDateString('ar-EG', { year:'numeric', month:'long', day:'numeric' });
-
-        let sectionsHTML = "";
-        let grandTotalValue = 0, grandTotalPurchase = 0, grandTotalIssued = 0, grandTotalCount = 0;
-
-        categoryKeys.forEach(cat => {
-            const materials    = allMaterials.filter(m => m.category === cat);
-            const transactions = allTransactions.filter(t => t.category === cat);
-            if (materials.length === 0) return;
-
-            const issuedMap = {}, purchaseMap = {};
-            transactions.filter(t => t.type === "out" || t.type === "return")
-                .forEach(t => { issuedMap[t.materialId] = (issuedMap[t.materialId] || 0) + t.quantity; });
-            transactions.filter(t => t.type === "in")
-                .forEach(t => { purchaseMap[t.materialId] = (purchaseMap[t.materialId] || 0) + t.totalPrice + (t.deliveryCost || 0); });
-
-            const active = materials.filter(m => !m.archived);
-            const secValue    = active.reduce((s, m) => s + m.quantity * m.unitPrice, 0);
-            const secIssued   = active.reduce((s, m) => s + (issuedMap[m.id] || 0), 0);
-            const secPurchase = materials.reduce((s, m) => s + (purchaseMap[m.id] || 0), 0);
-            grandTotalValue += secValue; grandTotalPurchase += secPurchase;
-            grandTotalIssued += secIssued; grandTotalCount += active.length;
-
-            let rows = "";
-            materials.forEach((mat, i) => {
-                const val = mat.quantity * mat.unitPrice;
-                const issued = issuedMap[mat.id] || 0;
-                const purchased = purchaseMap[mat.id] || 0;
-                const st = mat.archived ? "مؤرشف" : (mat.quantity === 0 ? "نفذت" : (mat.quantity <= mat.alertLimit ? "شحيحة" : "نشط"));
-                rows += `<tr><td>${i+1}</td><td style="text-align:right">${mat.name}</td><td>${mat.quantity.toLocaleString()}</td><td>${mat.unit}</td><td>${mat.unitPrice.toLocaleString()}</td><td>${val.toLocaleString()}</td><td>${purchased.toLocaleString()}</td><td>${issued.toLocaleString()}</td><td>${st}</td></tr>`;
-            });
-
-            sectionsHTML += `
-                <div class="section">
-                    <div class="section-title">${categoryNames[cat]}
-                        <span class="section-summary">${active.length} صنف نشط &nbsp;|&nbsp; قيمة المخزون: ${secValue.toLocaleString()} د.ع</span>
-                    </div>
-                    <table class="unified-invoice-table">
-                        <thead><tr class="sub-header"><th>#</th><th style="width: 25%;">اسم المادة</th><th>الكمية</th><th>الوحدة</th><th>سعر الوحدة</th><th>قيمة المخزون</th><th>المشتريات (د.ع)</th><th>المصروف</th><th>الحالة</th></tr></thead>
-                        <tbody>${rows}</tbody>
-                        <tfoot><tr class="footer-row"><td></td><td class="text-left-align" style="font-size: 1.1rem;">المجموع</td><td>—</td><td>—</td><td>—</td><td class="text-primary">${secValue.toLocaleString()} د.ع</td><td>${secPurchase.toLocaleString()} د.ع</td><td>${secIssued.toLocaleString()}</td><td>${active.length} صنف</td></tr></tfoot>
-                    </table>
-                </div>`;
-        });
-
-        const win = window.open("", "_blank");
-        win.document.write(`
-<!DOCTYPE html>
-<html dir="rtl" lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <title>تقرير إحصائيات جميع الأقسام - بناءتك</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; direction: rtl; color: #1e293b; padding: 20px; font-size: 12px; }
-        .main-header { text-align: center; margin-bottom: 24px; padding-bottom: 14px; border-bottom: 3px solid #0f172a; }
-        .main-header h1 { font-size: 20px; color: #0f172a; margin-bottom: 4px; }
-        .main-header .sub { color: #64748b; font-size: 11px; }
-        
-        .unified-invoice-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; text-align: center; direction: rtl; }
-        .unified-invoice-table th, .unified-invoice-table td { border: 1px solid #cbd5e1; padding: 10px; vertical-align: middle; }
-        .unified-invoice-table th { background-color: #0f172a !important; color: #ffffff !important; font-weight: 700; }
-        .unified-invoice-table td { background-color: #ffffff; color: #1e293b; font-weight: 600; }
-        .unified-invoice-table .sub-header th { background-color: #0f172a !important; padding: 12px; }
-        .unified-invoice-table .footer-row td { background-color: #f8fafc; font-weight: 700; }
-        .text-left-align { text-align: left !important; padding-left: 20px !important; }
-
-        .section { margin-bottom: 24px; page-break-inside: avoid; }
-        .section-title { background: #f97316; color: #fff; padding: 8px 12px; font-size: 14px; font-weight: 700; border-radius: 6px 6px 0 0; display: flex; justify-content: space-between; align-items: center; }
-        .section-summary { font-size: 12px; font-weight: 700; color: #fff; }
-        .footer { margin-top: 16px; text-align: center; color: #94a3b8; font-size: 10px; }
-        .signature-area { display: flex; justify-content: space-between; margin-top: 50px; }
-        .signature-box { flex: 1; text-align: center; border-top: 1px dashed #cbd5e1; margin: 0 20px; padding-top: 10px; font-weight: 700; }
-        @media print {
-            body { padding: 8px; padding-bottom: 120px !important; }
-            .section { page-break-inside: avoid; }
-            .signature-area { position: fixed; bottom: 20px; left: 0; right: 0; width: 100%; page-break-inside: avoid; }
-        }
-    </style>
-</head>
-<body>
-    <div class="main-header">
-        <h1>تقرير إحصائيات جميع الأقسام</h1>
-        <div class="sub">تاريخ الطباعة: ${printDate} &nbsp;|&nbsp; نظام شريكة شڤیار لإدارة مخازن مواد البناء</div>
-    </div>
-    
-    <table class="unified-invoice-table mb-4">
-        <tbody>
-            <tr>
-                <th style="width: 25%;">إجمالي الأصناف النشطة</th>
-                <td style="width: 25%;">${grandTotalCount} صنف</td>
-                <th style="width: 25%;">إجمالي قيمة المخزون</th>
-                <td style="width: 25%; color: #16a34a;">${grandTotalValue.toLocaleString()} د.ع</td>
-            </tr>
-            <tr>
-                <th>إجمالي المشتريات</th>
-                <td style="color: #2563eb;">${grandTotalPurchase.toLocaleString()} د.ع</td>
-                <th>إجمالي الكميات المصروفة</th>
-                <td style="color: #ea580c;">${grandTotalIssued.toLocaleString()}</td>
-            </tr>
-        </tbody>
-    </table>
-    ${sectionsHTML}
-    <div class="signature-area">
-        <div class="signature-box">المستلم الفني</div>
-        <div class="signature-box">أمين المخزن</div>
-        <div class="signature-box">مدير المشروع</div>
-    </div>
-    <div class="footer">نظام شريكة شڤیار • إدارة مخازن مواد البناء والمشاريع الإنشائية</div>
-    <script>setTimeout(() => window.print(), 300);</script>
-</body>
-</html>`);
-        win.document.close();
-    },
-
-    printCategoryStats() {
-        const cat = this.state.dashboardCategory;
-        const categoryMeta = {
-            electrical: "مواد كهربائية",
-            plumbing:   "مواد مجاري",
-            steel:      "مواد حديد",
-            tiles:      "بلاط وكاشي وسيراميك",
-            gypsum:     "جبسن بورد",
-            cement:     "إسمنت",
-            paint:      "دهان وطلاء",
-            interior:   "أبواب ونوافذ",
-            supplies:   "مستلزمات يومية"
-        };
-        const catName = categoryMeta[cat] || cat;
-        const materials = AppDB.getMaterials().filter(m => m.category === cat);
-        const transactions = AppDB.getTransactions().filter(t => t.category === cat);
-
-        const issuedMap = {};
-        const purchaseMap = {};
-        transactions.filter(t => t.type === "out" || t.type === "return")
-            .forEach(t => { issuedMap[t.materialId] = (issuedMap[t.materialId] || 0) + t.quantity; });
-        transactions.filter(t => t.type === "in")
-            .forEach(t => { purchaseMap[t.materialId] = (purchaseMap[t.materialId] || 0) + t.totalPrice + (t.deliveryCost || 0); });
-
-        const activeMaterials = materials.filter(m => !m.archived);
-        const totalValue    = activeMaterials.reduce((s, m) => s + m.quantity * m.unitPrice, 0);
-        const totalIssued   = activeMaterials.reduce((s, m) => s + (issuedMap[m.id] || 0), 0);
-        const totalPurchase = materials.reduce((s, m) => s + (purchaseMap[m.id] || 0), 0);
-
-        let rows = "";
-        materials.forEach((mat, i) => {
-            const val      = mat.quantity * mat.unitPrice;
-            const issued   = issuedMap[mat.id] || 0;
-            const purchased = purchaseMap[mat.id] || 0;
-            const statusTxt = mat.archived ? "مؤرشف" : (mat.quantity === 0 ? "نفذت" : (mat.quantity <= mat.alertLimit ? "شحيحة" : "نشط"));
-            rows += `
-                <tr>
-                    <td>${i + 1}</td>
-                    <td style="text-align:right">${mat.name}</td>
-                    <td>${mat.quantity.toLocaleString()}</td>
-                    <td>${mat.unit}</td>
-                    <td>${mat.unitPrice.toLocaleString()} د.ع</td>
-                    <td>${val.toLocaleString()} د.ع</td>
-                    <td>${purchased.toLocaleString()} د.ع</td>
-                    <td>${issued.toLocaleString()}</td>
-                    <td>${statusTxt}</td>
-                </tr>`;
-        });
-
-        const printDate = new Date().toLocaleDateString('ar-EG', { year:'numeric', month:'long', day:'numeric' });
-
-        const win = window.open("", "_blank");
-        win.document.write(`
-<!DOCTYPE html>
-<html dir="rtl" lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <title>تقرير إحصائيات قسم: ${catName}</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; direction: rtl; color: #1e293b; padding: 24px; font-size: 13px; }
-        .header { text-align: center; margin-bottom: 28px; padding-bottom: 16px; border-bottom: 3px solid #0f172a; }
-        .header h1 { font-size: 20px; color: #0f172a; margin-bottom: 4px; }
-        .header .sub { color: #64748b; font-size: 12px; }
-        
-        .unified-invoice-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; text-align: center; direction: rtl; }
-        .unified-invoice-table th, .unified-invoice-table td { border: 1px solid #cbd5e1; padding: 12px; vertical-align: middle; }
-        .unified-invoice-table th { background-color: #0f172a !important; color: #ffffff !important; font-weight: 700; }
-        .unified-invoice-table td { background-color: #ffffff; color: #1e293b; font-weight: 600; }
-        .unified-invoice-table .sub-header th { background-color: #0f172a !important; padding: 14px; }
-        .unified-invoice-table .footer-row td { background-color: #f8fafc; font-weight: 700; }
-        .text-left-align { text-align: left !important; padding-left: 20px !important; }
-
-        .footer { margin-top: 20px; text-align: center; color: #94a3b8; font-size: 11px; }
-        .signature-area { display: flex; justify-content: space-between; margin-top: 50px; }
-        .signature-box { flex: 1; text-align: center; border-top: 1px dashed #cbd5e1; margin: 0 20px; padding-top: 10px; font-weight: 700; }
-        @media print {
-            body { padding: 10px; padding-bottom: 120px !important; }
-            .signature-area { position: fixed; bottom: 20px; left: 0; right: 0; width: 100%; page-break-inside: avoid; }
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <h1>تقرير إحصائيات قسم: ${catName}</h1>
-        <div class="sub">تاريخ الطباعة: ${printDate} &nbsp;|&nbsp; نظام شريكة شڤیار لإدارة مخازن مواد البناء</div>
-    </div>
-    
-    <table class="unified-invoice-table mb-4">
-        <tbody>
-            <tr>
-                <th style="width: 25%;">عدد الأصناف النشطة</th>
-                <td style="width: 25%;">${activeMaterials.length} صنف</td>
-                <th style="width: 25%;">قيمة المخزون الحالي</th>
-                <td style="width: 25%; color: #16a34a;">${totalValue.toLocaleString()} د.ع</td>
-            </tr>
-            <tr>
-                <th>إجمالي المشتريات</th>
-                <td style="color: #2563eb;">${totalPurchase.toLocaleString()} د.ع</td>
-                <th>إجمالي الكميات المصروفة</th>
-                <td style="color: #ea580c;">${totalIssued.toLocaleString()}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <table class="unified-invoice-table">
-        <thead>
-            <tr class="sub-header">
-                <th style="width:4%">#</th>
-                <th style="width:23%;text-align:right">اسم المادة</th>
-                <th style="width:10%">الكمية الحالية</th>
-                <th style="width:7%">الوحدة</th>
-                <th style="width:12%">سعر الوحدة</th>
-                <th style="width:13%">قيمة المخزون</th>
-                <th style="width:13%">إجمالي المشتريات</th>
-                <th style="width:10%">كمية المصروف</th>
-                <th style="width:8%">الحالة</th>
-            </tr>
-        </thead>
-        <tbody>${rows}</tbody>
-        <tfoot>
-            <tr class="footer-row">
-                <td colspan="5" class="text-left-align" style="font-size: 1.2rem;">المجموع</td>
-                <td class="text-primary">${totalValue.toLocaleString()} د.ع</td>
-                <td class="text-primary">${totalPurchase.toLocaleString()} د.ع</td>
-                <td>${totalIssued.toLocaleString()}</td>
-                <td>${activeMaterials.length} صنف</td>
-            </tr>
-        </tfoot>
-    </table>
-    <div class="signature-area">
-        <div class="signature-box">المستلم الفني</div>
-        <div class="signature-box">أمين المخزن</div>
-        <div class="signature-box">مدير المشروع</div>
-    </div>
-    <div class="footer">نظام شريكة شڤیار • إدارة مخازن مواد البناء والمشاريع الإنشائية</div>
-    <script>setTimeout(() => window.print(), 300);</script>
-</body>
-</html>`);
-        win.document.close();
-    },
-
-    exportCategoryStatsExcel() {
-        const cat = this.state.dashboardCategory;
-        const categoryMeta = {
-            electrical: "مواد كهربائية", plumbing: "مواد مجاري",
-            steel: "مواد حديد", tiles: "بلاط وكاشي",
-            gypsum: "جبسن بورد", cement: "إسمنت",
-            paint: "دهان وطلاء", interior: "أبواب ونوافذ",
-            supplies: "مستلزمات يومية"
-        };
-        const catName = categoryMeta[cat] || cat;
-        const materials = AppDB.getMaterials().filter(m => m.category === cat);
-        const transactions = AppDB.getTransactions().filter(t => t.category === cat);
-
-        const issuedMap = {};
-        const purchaseMap = {};
-        transactions.filter(t => t.type === "out" || t.type === "return")
-            .forEach(t => { issuedMap[t.materialId] = (issuedMap[t.materialId] || 0) + t.quantity; });
-        transactions.filter(t => t.type === "in")
-            .forEach(t => { purchaseMap[t.materialId] = (purchaseMap[t.materialId] || 0) + t.totalPrice + (t.deliveryCost || 0); });
-
-        const BOM = "\uFEFF";
-        const headers = ["رقم", "اسم المادة", "الكمية الحالية", "الوحدة", "سعر الوحدة", "قيمة المخزون (د.ع)", "إجمالي المشتريات (د.ع)", "كمية المصروف", "الحالة"];
-        const rows = materials.map((mat, i) => {
-            const val      = mat.quantity * mat.unitPrice;
-            const issued   = issuedMap[mat.id] || 0;
-            const purchased = purchaseMap[mat.id] || 0;
-            const statusTxt = mat.archived ? "مؤرشف" : (mat.quantity === 0 ? "نفذت" : (mat.quantity <= mat.alertLimit ? "شحيحة" : "نشط"));
-            return [i + 1, mat.name, mat.quantity, mat.unit, mat.unitPrice, val, purchased, issued, statusTxt];
-        });
-
-        const csvContent = BOM + [headers, ...rows].map(r => r.map(c => `"${c}"`).join(",")).join("\n");
-        const link = document.createElement("a");
-        link.href = "data:text/csv;charset=utf-8," + encodeURIComponent(csvContent);
-        link.download = `إحصائيات_قسم_${catName}_${new Date().toISOString().split('T')[0]}.csv`;
-        link.click();
-        this.showToast(`تم تصدير إحصائيات قسم ${catName} بنجاح!`, "success");
-    },
-
-    updateThemeUI() {
-        const theme = document.documentElement.getAttribute("data-theme") || "light";
-        const icon = document.querySelector("#theme-toggle i");
-        if (theme === "dark") {
-            icon.className = "fa-solid fa-sun fs-5";
-        } else {
-            icon.className = "fa-solid fa-moon fs-5";
+        if (tfoot) {
+            tfoot.innerHTML = `
+                <tr style="background-color: #f8fafc;">
+                    <td colspan="5" class="text-end fw-bold py-3 fs-5 text-dark">${typeof t === 'function' ? t('total') || 'الإجمالي الكلي:' : 'الإجمالي الكلي:'}</td>
+                    <td class="text-center fw-bold text-primary fs-5 py-3 font-monospace">${totalValue.toLocaleString()}</td>
+                    <td class="text-center fw-bold text-success fs-5 py-3">${totalPurchase.toLocaleString()}</td>
+                    <td class="text-center fw-bold text-danger fs-5 py-3">${totalIssued.toLocaleString()}</td>
+                    <td colspan="2"></td>
+                </tr>
+            `;
         }
     },
 
-    loadUsers() {
-        const users = AppDB.getUsers();
-        const select = document.getElementById("user-select");
-        const currentUser = AppDB.getCurrentUser();
 
-        select.innerHTML = "";
-        users.forEach(u => {
-            const opt = document.createElement("option");
-            opt.value = u;
-            opt.textContent = u;
-            if (u === currentUser) opt.selected = true;
-            select.appendChild(opt);
-        });
-
-        // User display removed
-    },
-
-    // Renders everything that needs updating on stock changes
     renderAll() {
-        this.renderAlertsBadges();
-        this.renderMaterialsTable();
-        this.renderTransactionsTable();
-        this.updateIssueModalDropdown();
-        this.renderAlerts();
-        this.renderLogs();
-        this.renderStoragePortalCounters();
-        this.renderDashboardPortalCounters();
-        this.renderOutputPortalCounters();
-        this.renderDashboardSummaryTable();
+        if (typeof this.renderStoragePortalCounters === 'function') this.renderStoragePortalCounters();
+        if (typeof this.renderDashboardPortalCounters === 'function') this.renderDashboardPortalCounters();
+        if (typeof this.renderOutputPortalCounters === 'function') this.renderOutputPortalCounters();
+        if (typeof this.renderStatsCounters === 'function') this.renderStatsCounters();
+        if (typeof this.renderMaterialsTable === 'function') this.renderMaterialsTable();
+        if (typeof this.renderTransactionsTable === 'function') this.renderTransactionsTable();
+        if (typeof this.updateIssueModalDropdown === 'function') this.updateIssueModalDropdown();
+        if (typeof this.renderOutputCategoryFilter === 'function') this.renderOutputCategoryFilter();
         
-        // Auto translate after re-rendering all
-        if (typeof autoTranslateDOM === 'function') {
-            autoTranslateDOM(document.body);
+        // Let's also update dashboard if in details view
+        if (this.state && this.state.dashboardView === "details" && this.state.dashboardCategory && typeof this.renderCategoryDetailTable === 'function') {
+            this.renderCategoryDetailTable(this.state.dashboardCategory);
         }
     },
 
-    // Render item counts for Storage sub-portal categories
-    renderStoragePortalCounters() {
-        const materials = AppDB.getMaterials();
-        const categories = ["electrical", "plumbing", "steel", "tiles", "gypsum", "cement", "paint", "interior", "supplies"];
-        categories.forEach(cat => {
-            const count = materials.filter(m => m.category === cat && !m.archived).length;
-            const badge = document.getElementById(`count-${cat}`);
-            if (badge) {
-                badge.textContent = `${count} صنف نشط`;
-            }
+    renderOutputCategoryFilter() {
+        const filter = document.getElementById("outputCategoryFilter");
+        if (!filter) return;
+        let catsObj = (typeof AppDB !== 'undefined' && AppDB.CATEGORIES) ? AppDB.CATEGORIES : { electrical: "مواد كهربائية" };
+        let html = `<option value="all">${typeof t === 'function' ? (t('all_categories') || 'جميع الأقسام') : 'جميع الأقسام'}</option>`;
+        Object.keys(catsObj).forEach(cat => {
+            html += `<option value="${cat}">${typeof tCat === 'function' ? tCat(cat) : catsObj[cat]}</option>`;
         });
+        filter.innerHTML = html;
+        if (this.state && this.state.outputCategory) {
+            filter.value = this.state.outputCategory;
+        }
     },
 
-    // Render item counts for Dashboard sub-portal categories
-    renderDashboardPortalCounters() {
-        const materials = AppDB.getMaterials();
-        const categories = ["electrical", "plumbing", "steel", "tiles", "gypsum", "cement", "paint", "interior", "supplies"];
-        categories.forEach(cat => {
-            const count = materials.filter(m => m.category === cat && !m.archived).length;
-            const badge = document.getElementById(`db-count-${cat}`);
-            if (badge) {
-                badge.textContent = `${count} ${t('active_item_badge') || 'صنف نشط'}`;
-            }
-        });
-    },
-
-    // Render transaction counts for Output sub-portal categories
-    renderOutputPortalCounters() {
-        const transactions = AppDB.getTransactions();
-        const categories = ["electrical", "plumbing", "steel", "tiles", "gypsum", "cement", "paint", "interior", "supplies"];
-        categories.forEach(cat => {
-            const count = transactions.filter(t => t.category === cat).length;
-            const badge = document.getElementById(`output-count-${cat}`);
-            if (badge) {
-                badge.textContent = `${count} ${t('tx_badge') || 'حركة'}`;
-            }
-        });
-    },
-
-    // Render the comprehensive categories summary table in dashboard
-    renderDashboardSummaryTable() {
-        if (this.state.dashboardView !== "portal") return;
-
-        const tbody = document.getElementById("dashboard-summary-table-body");
-        if (!tbody) return;
-
-        tbody.innerHTML = "";
-
-        const categories = ["electrical", "plumbing", "steel", "tiles", "gypsum", "cement", "paint", "interior", "supplies"];
-        const arabicCategoryNames = AppDB.CATEGORIES;
-
-        // Custom icons matching style.css (sp-icon-yellow, sp-icon-blue, etc.)
-        const categoryIcons = {
-            electrical: "fa-bolt-lightning text-warning",
-            plumbing: "fa-faucet-drip text-primary",
-            steel: "fa-cubes text-danger",
-            tiles: "fa-table-cells text-info",
-            gypsum: "fa-border-all text-secondary",
-            cement: "fa-fill-drip text-dark",
-            paint: "fa-paint-roller text-success",
-            interior: "fa-door-open text-success",
-            supplies: "fa-toolbox text-muted"
-        };
-
-        categories.forEach(cat => {
-            const stats = AppStatistics.calculate(cat);
-            const arabicName = arabicCategoryNames[cat] || cat;
-            const iconClass = categoryIcons[cat] || "fa-boxes-stacked";
-
-            const tr = document.createElement("tr");
-            tr.innerHTML = `
-                <td class="text-start fw-bold">
-                    <i class="fa-solid ${iconClass} me-2" style="font-size: 1.1rem; width: 24px; text-align: center;"></i>
-                    ${arabicName}
-                </td>
-                <td>
-                    <span class="badge bg-secondary-subtle text-secondary-emphasis px-3 py-2 fw-semibold" style="font-size: 0.85rem;">
-                        ${stats.totalMaterialsCount} ${t('item_word') || 'صنف'}
-                    </span>
-                </td>
-                <td>
-                    <span class="fw-bold">${stats.totalCurrentQuantity.toLocaleString()}</span>
-                </td>
-                <td class="fw-bold text-success">
-                    ${stats.totalInventoryValue.toLocaleString()} ${t('currency')}
-                </td>
-                <td class="fw-bold text-primary">
-                    ${stats.totalExpenses.toLocaleString()} ${t('currency')}
-                </td>
-                <td class="fw-bold text-warning-emphasis">
-                    ${stats.totalIssuedQuantity.toLocaleString()}
-                </td>
-                <td>
-                    <button class="btn btn-sm btn-outline-warning font-cairo px-3" onclick="App.state.dashboardCategory='${cat}'; App.switchDashboardView('details');">
-                        ${t('details_btn') || 'التفاصيل'} <i class="fa-solid fa-arrow-left ms-1 small"></i>
-                    </button>
-                </td>
-            `;
-            tbody.appendChild(tr);
-        });
-    },
-
-    // Live KPI stats rendering
     renderStatsCounters() {
         const cat = this.state.dashboardCategory || "all";
-        const stats = AppStatistics.calculate(cat);
-        
-        // Counter widgets
+        const stats = typeof AppStatistics !== 'undefined' ? AppStatistics.calculate(cat) : { totalMaterialsCount: 0, totalInventoryValue: 0, totalExpenses: 0, totalIssuedQuantity: 0 };
+
         const countMatsEl = document.getElementById("stat-total-materials");
         const countValEl = document.getElementById("stat-total-value");
         const countExpEl = document.getElementById("stat-total-expenses");
@@ -3706,340 +3739,271 @@ const App = {
         if (countValEl) countValEl.textContent = stats.totalInventoryValue.toLocaleString() + " د.ع";
         if (countExpEl) countExpEl.textContent = stats.totalExpenses.toLocaleString() + " د.ع";
         if (countOutEl) countOutEl.textContent = stats.totalIssuedQuantity.toLocaleString();
-
-        // Dashboard detail breakdown stats
-        const activeCount = document.getElementById("dash-active-count");
-        const deliveryCosts = document.getElementById("dash-delivery-costs");
-        const mostUsed = document.getElementById("dash-most-used");
-        const leastUsed = document.getElementById("dash-least-used");
-        const topSupplier = document.getElementById("dash-top-supplier");
-
-        if (activeCount) activeCount.textContent = stats.totalMaterialsCount + " صنف نشط";
-        if (deliveryCosts) deliveryCosts.textContent = stats.totalDeliveryCosts.toLocaleString() + " د.ع";
-        if (mostUsed) mostUsed.textContent = stats.mostUsedMaterial;
-        if (leastUsed) leastUsed.textContent = stats.leastUsedMaterial;
-        if (topSupplier) topSupplier.textContent = stats.topSupplier;
-    },
-
-    renderAlertsBadges() {
-        const alertStats = AppAlerts.getAlertStats();
-        const badge = document.getElementById("alert-badge");
-        const listBadge = document.getElementById("alert-list-badge");
         
-        if (badge) {
-            if (alertStats.total > 0) {
-                badge.textContent = alertStats.total;
-                badge.classList.remove("d-none");
-            } else {
-                badge.classList.add("d-none");
-            }
-        }
-        
-        if (listBadge) {
-            if (alertStats.total > 0) {
-                listBadge.textContent = `${alertStats.total} تنبيه نشط`;
-                listBadge.className = "badge bg-danger rounded-pill px-2";
-            } else {
-                listBadge.textContent = "لا توجد تنبيهات";
-                listBadge.className = "badge bg-success rounded-pill px-2";
-            }
+        if (typeof this.renderDashboardSummaryTable === 'function') {
+            this.renderDashboardSummaryTable();
         }
     },
 
-    // Chart.js render engine
-    renderCharts() {
-        if (this.state.currentTab !== "dashboard" || this.state.dashboardView === "portal") return;
+    renderStoragePortalCounters() {
+        const stats = typeof AppStatistics !== 'undefined' ? AppStatistics.calculate("all") : { totalMaterialsCount: 0, totalInventoryValue: 0 };
+        const storageValEl = document.getElementById("portal-storage-value");
+        const storageCountEl = document.getElementById("portal-storage-count");
+        if (storageValEl) storageValEl.textContent = stats.totalInventoryValue.toLocaleString() + " د.ع";
+        if (storageCountEl) storageCountEl.textContent = stats.totalMaterialsCount.toLocaleString() + " مادة";
 
-        const isDark = document.documentElement.getAttribute("data-theme") === "dark";
-        const gridColor = isDark ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.05)";
-        const textColor = isDark ? "#cbd5e1" : "#475569";
-
-        const cat = this.state.dashboardCategory || "all";
-
-        // 1. Category Share Chart
-        const shareData = AppStatistics.getCategoryShareData(cat);
-        const ctxShare = document.getElementById("categoryShareChart");
-        
-        if (ctxShare) {
-            if (this.charts.categoryShare) {
-                this.charts.categoryShare.destroy();
-            }
-
-            if (shareData.labels.length === 0) {
-                // Render empty state on canvas if no value
-                const ctx = ctxShare.getContext("2d");
-                ctx.clearRect(0,0,ctxShare.width, ctxShare.height);
-                ctx.fillStyle = textColor;
-                ctx.textAlign = "center";
-                ctx.font = "14px 'Noto Kufi Arabic'";
-                ctx.fillText("لا تتوفر مواد ذات قيمة لحساب النسب", ctxShare.width/2, ctxShare.height/2);
-            } else {
-                this.charts.categoryShare = new Chart(ctxShare, {
-                    type: 'doughnut',
-                    data: {
-                        labels: shareData.labels,
-                        datasets: [{
-                            data: shareData.values,
-                            backgroundColor: [
-                                '#1e3a8a', // Dark blue
-                                '#f97316', // Orange
-                                '#06b6d4', // Cyan
-                                '#10b981', // Emerald green
-                                '#8b5cf6', // Violet
-                                '#ec4899', // Pink
-                                '#eab308', // Yellow
-                                '#f43f5e', // Rose
-                                '#64748b'  // Slate gray
-                            ],
-                            borderWidth: isDark ? 2 : 1,
-                            borderColor: isDark ? '#0f172a' : '#ffffff'
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        plugins: {
-                            legend: {
-                                position: 'right',
-                                labels: {
-                                    font: { family: "'Noto Kufi Arabic'", size: 11 },
-                                    color: textColor
-                                }
-                            },
-                            tooltip: {
-                                callbacks: {
-                                    label: function(context) {
-                                        let val = context.raw || 0;
-                                        return ` ${context.label}: ${val.toLocaleString()} د.ع`;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                });
-            }
-        }
-
-        // 2. Monthly Financial Flow Chart
-        const flowData = AppStatistics.getTransactionMonthlyData(cat);
-        const ctxFlow = document.getElementById("monthlyFinanceChart");
-
-        if (ctxFlow) {
-            if (this.charts.monthlyFinance) {
-                this.charts.monthlyFinance.destroy();
-            }
-
-            this.charts.monthlyFinance = new Chart(ctxFlow, {
-                type: 'bar',
-                data: {
-                    labels: flowData.labels,
-                    datasets: [
-                        {
-                            label: 'إجمالي المشتريات والتوصيل (الوارد)',
-                            data: flowData.expenses,
-                            backgroundColor: 'rgba(30, 58, 138, 0.85)', // Dark Blue
-                            borderColor: '#1e3a8a',
-                            borderWidth: 1
-                        },
-                        {
-                            label: 'إجمالي قيمة المواد المصروفة (الصادر)',
-                            data: flowData.outputs,
-                            backgroundColor: 'rgba(249, 115, 22, 0.85)', // Orange
-                            borderColor: '#f97316',
-                            borderWidth: 1
-                        }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            position: 'top',
-                            labels: {
-                                font: { family: "'Noto Kufi Arabic'", size: 11 },
-                                color: textColor
-                            }
-                        }
-                    },
-                    scales: {
-                        x: {
-                            grid: { color: gridColor },
-                            ticks: { font: { family: "'Noto Kufi Arabic'" }, color: textColor }
-                        },
-                        y: {
-                            grid: { color: gridColor },
-                            ticks: { 
-                                font: { family: "'Noto Kufi Arabic'" }, 
-                                color: textColor,
-                                callback: function(value) {
-                                    return value.toLocaleString() + ' د.ع';
-                                }
-                            }
-                        }
-                    }
-                }
-            });
-            }
-        },
-
-    // Materials Grid rendering
-    renderMaterialsTable() {
-        if (this.state.currentTab !== "storage") return;
-
-        const materials = AppDB.getMaterials();
-        let list = [...materials];
-
-        // 1. Category Filter
-        if (this.state.storageCategory !== "all") {
-            list = list.filter(m => m.category === this.state.storageCategory);
-        }
-
-        // 2. Active/Archived Filter
-        if (this.state.filterStatus === "active") {
-            list = list.filter(m => !m.archived);
-        } else if (this.state.filterStatus === "archived") {
-            list = list.filter(m => m.archived);
-        }
-
-        // 3. Search Filter
-        if (this.state.searchQuery) {
-            const q = this.state.searchQuery;
-            list = list.filter(m => 
-                m.name.toLowerCase().includes(q) ||
-                m.companyName.toLowerCase().includes(q) ||
-                m.buyerName.toLowerCase().includes(q) ||
-                m.invoiceNumber.toLowerCase().includes(q)
-            );
-        }
-
-        // 4. Sorting Algorithms
-        list.sort((a, b) => {
-            switch (this.state.sortBy) {
-                case "name-asc":
-                    return a.name.localeCompare(b.name, "ar");
-                case "name-desc":
-                    return b.name.localeCompare(a.name, "ar");
-                case "qty-asc":
-                    return a.quantity - b.quantity;
-                case "qty-desc":
-                    return b.quantity - a.quantity;
-                case "value-asc":
-                    return (a.quantity * a.unitPrice) - (b.quantity * b.unitPrice);
-                case "value-desc":
-                    return (b.quantity * b.unitPrice) - (a.quantity * a.unitPrice);
-                case "date-asc":
-                    return new Date(a.entryDate) - new Date(b.entryDate);
-                case "date-desc":
-                default:
-                    return new Date(b.entryDate) - new Date(a.entryDate);
+        if (typeof AppDB === "undefined") return;
+        Object.keys(AppDB.CATEGORIES).forEach(category => {
+            const categoryStats = typeof AppStatistics !== 'undefined'
+                ? AppStatistics.calculate(category)
+                : { totalMaterialsCount: 0 };
+            const countEl = document.getElementById(`count-${category}`);
+            if (countEl) {
+                countEl.textContent = `${categoryStats.totalMaterialsCount.toLocaleString()} ${t('active_items') || 'صنف نشط'}`;
             }
         });
+    },
 
-        // 5. Render list items
+    renderDashboardPortalCounters() {
+        if (typeof AppDB === "undefined") return;
+        Object.keys(AppDB.CATEGORIES).forEach(category => {
+            const categoryStats = typeof AppStatistics !== 'undefined'
+                ? AppStatistics.calculate(category)
+                : { totalMaterialsCount: 0 };
+            const countEl = document.getElementById(`db-count-${category}`);
+            if (countEl) {
+                countEl.textContent = `${categoryStats.totalMaterialsCount.toLocaleString()} ${t('active_items') || 'صنف نشط'}`;
+            }
+        });
+    },
+
+    renderOutputPortalCounters() {
+        const stats = typeof AppStatistics !== 'undefined' ? AppStatistics.calculate("all") : { totalIssuedQuantity: 0 };
+        const outCountEl = document.getElementById("portal-output-count");
+        if (outCountEl) outCountEl.textContent = stats.totalIssuedQuantity.toLocaleString() + " عملية";
+
+        if (typeof AppDB === "undefined") return;
+        Object.keys(AppDB.CATEGORIES).forEach(category => {
+            const categoryStats = typeof AppStatistics !== 'undefined'
+                ? AppStatistics.calculate(category)
+                : { totalIssuedCount: 0 };
+            const countEl = document.getElementById(`output-count-${category}`);
+            if (countEl) {
+                countEl.textContent = `${categoryStats.totalIssuedCount.toLocaleString()} ${t('operation') || 'حركة'}`;
+            }
+        });
+    },
+
+    printAllCategoriesStats() {
+        if (typeof AppPrint !== "undefined" && AppPrint.printAllCategories) {
+            AppPrint.printAllCategories();
+        }
+    },
+
+    printCategoryStats() {
+        const category = this.state.dashboardCategory || "all";
+        if (typeof AppPrint !== "undefined" && AppPrint.printCategory) {
+            category === "all" ? AppPrint.printAllCategories() : AppPrint.printCategory(category);
+        }
+    },
+
+    exportCategoryStatsExcel() {
+        const category = this.state.dashboardCategory || "all";
+        if (typeof AppPrint !== "undefined" && AppPrint.exportExcel) {
+            AppPrint.exportExcel(category);
+        }
+    },
+
+    printSingleMaterial(material) {
+        if (!material || typeof AppPrint === "undefined" || !AppPrint._printWindow) return;
+
+        const html = `
+            <div class="report-title my-4"><i class="fa-solid fa-cube me-2"></i>${material.name || "-"}</div>
+            <table class="vertical-info-table">
+                <tbody>
+                    <tr><th>${t('category') || 'القسم'}</th><td>${material.category || "-"}</td></tr>
+                    <tr><th>${t('quantity') || 'الكمية'}</th><td>${(material.qty || 0).toLocaleString()} ${material.unit || ""}</td></tr>
+                    <tr><th>${t('unit_price') || 'سعر الوحدة'}</th><td>${(material.unitPrice || 0).toLocaleString()} ${t('currency') || 'د.ع'}</td></tr>
+                    <tr><th>${t('inventory_value') || 'قيمة المخزون'}</th><td>${(material.currentValue || 0).toLocaleString()} ${t('currency') || 'د.ع'}</td></tr>
+                    <tr><th>${t('total') || 'الإجمالي'}</th><td>${(material.purchased || 0).toLocaleString()} ${t('currency') || 'د.ع'}</td></tr>
+                    <tr><th>${t('status_active') || 'الحالة'}</th><td>${material.status || "-"}</td></tr>
+                </tbody>
+            </table>
+        `;
+
+        AppPrint._printWindow(html, material.name || "تفاصيل المادة");
+    },
+
+    renderDashboardSummaryTable() {
+        const tbody = document.getElementById("dashboard-summary-table-body");
+        if (!tbody) return;
+        tbody.innerHTML = "";
+        
+        let catsObj = (typeof AppDB !== 'undefined' && AppDB.CATEGORIES) ? AppDB.CATEGORIES : { electrical: "مواد كهربائية" };
+        const cats = Object.keys(catsObj);
+        
+        let html = '';
+        cats.forEach(c => {
+            const stats = typeof AppStatistics !== 'undefined' ? AppStatistics.calculate(c) : { totalMaterialsCount: 0, totalInventoryValue: 0 };
+            html += `<tr>
+                <td>${typeof tCat === 'function' ? tCat(c) : c}</td>
+                <td>${stats.totalMaterialsCount}</td>
+                <td>${stats.totalInventoryValue.toLocaleString()} د.ع</td>
+                <td><button class="btn btn-sm btn-outline-primary" onclick="App.state.dashboardCategory='${c}'; App.switchDashboardView('details');">${typeof t === 'function' ? (t('details_btn') || 'التفاصيل') : 'التفاصيل'}</button></td>
+            </tr>`;
+        });
+        tbody.innerHTML = html;
+    },
+
+    renderMaterialsTable() {
         const tbody = document.getElementById("materials-table-body");
         if (!tbody) return;
-
         tbody.innerHTML = "";
 
-        // Display excel export state for specific sub-categories
-        const printCategoryBtn = document.getElementById("print-category-btn");
-        const excelCategoryBtn = document.getElementById("excel-category-btn");
-        const printCategoryIndBtn = document.getElementById("print-category-individual-btn");
-        const printDivider = document.getElementById("print-category-divider");
-        
-        if (this.state.storageCategory === "all") {
-            printCategoryBtn.classList.add("disabled", "d-none");
-            excelCategoryBtn.classList.add("disabled", "d-none");
-            printCategoryIndBtn.classList.add("disabled", "d-none");
-            if (printDivider) printDivider.classList.add("d-none");
-            
-            printCategoryBtn.innerHTML = `<i class="fa-solid fa-print me-2"></i>${t('print_cat')}`;
-            excelCategoryBtn.innerHTML = `<i class="fa-solid fa-file-excel me-2"></i>${t('export_cat_excel')}`;
-            printCategoryIndBtn.innerHTML = `<i class="fa-solid fa-file-invoice me-2"></i>${t('print_indiv_cat')}`;
-        } else {
-            printCategoryBtn.classList.remove("disabled", "d-none");
-            excelCategoryBtn.classList.remove("disabled", "d-none");
-            printCategoryIndBtn.classList.remove("disabled", "d-none");
-            if (printDivider) printDivider.classList.remove("d-none");
-            
-            const catLabel = AppDB.CATEGORIES[this.state.storageCategory];
-            printCategoryBtn.innerHTML = `<i class="fa-solid fa-print me-2"></i>${t('print_cat')}: ${catLabel}`;
-            excelCategoryBtn.innerHTML = `<i class="fa-solid fa-file-excel me-2"></i>${t('export_cat_excel')}: ${catLabel}`;
-            printCategoryIndBtn.innerHTML = `<i class="fa-solid fa-file-invoice me-2"></i>${t('print_indiv_cat')}: ${catLabel}`;
-            
-            // Set dynamic triggers
-            printCategoryBtn.onclick = () => AppPrint.printCategory(this.state.storageCategory);
-            excelCategoryBtn.onclick = () => AppPrint.exportExcel(this.state.storageCategory);
-            printCategoryIndBtn.onclick = () => AppPrint.printAllMaterialInvoices(this.state.storageCategory);
-        }
+        const cat = this.state.storageCategory || "all";
+        let materials = typeof AppDB !== 'undefined' ? AppDB.getMaterials() : [];
+        if (cat !== "all") materials = materials.filter(m => m.category === cat);
 
-        if (list.length === 0) {
-            tbody.innerHTML = `
-                <tr>
-                    <td colspan="12" class="text-center py-5 text-muted">
-                        <i class="fa-solid fa-box-open fs-2 mb-3 d-block text-secondary"></i>
-                        لا توجد مواد مطابقة للبحث أو التصفية الحالية.
-                    </td>
-                </tr>
-            `;
+        if (materials.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="12" class="text-center py-3 text-muted">${typeof t === 'function' ? (t('no_mats_in_cat') || 'لا توجد مواد') : 'لا توجد مواد'}</td></tr>`;
             return;
         }
 
-        list.forEach((mat, index) => {
+        materials.forEach((mat, index) => {
             const tr = document.createElement("tr");
-            
-            // Color badges for alerts in the table
             let qtyAlertBadge = "";
-            if (mat.quantity === 0) {
-                qtyAlertBadge = `<span class="badge bg-danger">نفذت</span>`;
-            } else if (mat.quantity <= mat.alertLimit) {
-                qtyAlertBadge = `<span class="badge bg-warning text-dark">شحيحة</span>`;
-            }
+            if (mat.quantity === 0) qtyAlertBadge = `<span class="badge bg-danger">${typeof t === 'function' ? (t('status_empty') || 'نفذت') : 'نفذت'}</span>`;
+            else if (mat.quantity <= mat.alertLimit) qtyAlertBadge = `<span class="badge bg-warning text-dark">${typeof t === 'function' ? (t('status_low') || 'شحيحة') : 'شحيحة'}</span>`;
 
-            // Status label for archived
-            const statusLabel = mat.archived 
-                ? `<span class="badge bg-secondary">مؤرشف</span>` 
-                : `<span class="badge bg-success">نشط</span>`;
+            const statusLabel = mat.archived ? `<span class="badge bg-secondary">${typeof t === 'function' ? (t('status_archived') || 'مؤرشف') : 'مؤرشف'}</span>` : `<span class="badge bg-success">${typeof t === 'function' ? (t('status_active') || 'نشط') : 'نشط'}</span>`;
 
             tr.innerHTML = `
                 <td>${index + 1}</td>
                 <td>
                     <div class="fw-bold">${mat.name}</div>
-                    <small class="text-muted">${AppDB.CATEGORIES[mat.category] || mat.category}</small>
+                    <small class="text-muted">${typeof tCat === 'function' ? tCat(mat.category) : mat.category}</small>
                 </td>
-                <td>
-                    <span class="fs-6 fw-semibold text-secondary">${mat.initialQuantity.toLocaleString()}</span> <small class="text-secondary">${mat.unit}</small>
-                </td>
+                <td><span class="fs-6 fw-semibold text-secondary">${mat.initialQuantity.toLocaleString()}</span> <small class="text-secondary">${mat.unit}</small></td>
                 <td>
                     <span class="fs-6 fw-semibold">${mat.quantity.toLocaleString()}</span> <small>${mat.unit}</small>
                     <div class="mt-1">${qtyAlertBadge}</div>
                 </td>
-                <td>${mat.unitPrice.toLocaleString()} ${t('currency')}</td>
-                <td class="fw-bold text-primary">${(mat.quantity * mat.unitPrice).toLocaleString()} ${t('currency')}</td>
+                <td>${mat.unitPrice.toLocaleString()} ${typeof t === 'function' ? (t('currency') || 'د.ع') : 'د.ع'}</td>
+                <td class="fw-bold text-primary">${(mat.quantity * mat.unitPrice).toLocaleString()} ${typeof t === 'function' ? (t('currency') || 'د.ع') : 'د.ع'}</td>
                 <td>
                     <div>${mat.companyName || '-'}</div>
-                    <small class="text-muted">${t('invoice_label') || 'وصل:'} ${mat.invoiceNumber || '-'}</small>
+                    <small class="text-muted">${typeof t === 'function' ? (t('invoice_label') || 'وصل:') : 'وصل:'} ${mat.invoiceNumber || '-'}</small>
                 </td>
                 <td>
-                    <div>${t('buyer_label') || 'شراء:'} ${mat.buyerName || '-'}</div>
-                    <small class="text-muted">${t('receiver_label') || 'استلم:'} ${mat.receiverName || '-'}</small>
+                    <div>${typeof t === 'function' ? (t('buyer_label') || 'شراء:') : 'شراء:'} ${mat.buyerName || '-'}</div>
+                    <small class="text-muted">${typeof t === 'function' ? (t('receiver_label') || 'استلم:') : 'استلم:'} ${mat.receiverName || '-'}</small>
                 </td>
-                <td>${mat.deliveryCost.toLocaleString()} ${t('currency')}</td>
-                <td><small>${mat.entryDate}</small></td>
+                <td>${(mat.deliveryCost || 0).toLocaleString()} ${typeof t === 'function' ? (t('currency') || 'د.ع') : 'د.ع'}</td>
+                <td>${mat.entryDate || '-'}</td>
                 <td>${statusLabel}</td>
                 <td>
                     <div class="btn-group btn-group-sm">
-                        <button class="btn btn-outline-primary" title="${t('edit_mat_tooltip') || 'تعديل المادة'}" onclick="App.openEditModal('${mat.id}')">
-                            <i class="fa-solid fa-pen"></i>
-                        </button>
-                        <button class="btn btn-outline-warning" title="${mat.archived ? (t('unarchive_tooltip') || 'إلغاء الأرشفة') : (t('archive_tooltip') || 'أرشفة المادة')}" onclick="App.toggleArchive('${mat.id}', ${mat.archived})">
-                            <i class="fa-solid ${mat.archived ? 'fa-box-open' : 'fa-box'}"></i>
-                        </button>
-                        <button class="btn btn-outline-info" title="${t('print_receipt_tooltip') || 'طباعة الوصل'}" onclick="AppPrint.printMaterialInvoice('${mat.id}')">
+                        <button class="btn btn-outline-primary" title="${typeof t === 'function' ? (t('edit_mat_tooltip') || 'تعديل المادة') : 'تعديل المادة'}" onclick="App.openEditModal('${mat.id}')"><i class="fa-solid fa-pen"></i></button>
+                        <button class="btn btn-outline-warning" title="${mat.archived ? (typeof t === 'function' ? (t('unarchive_tooltip') || 'إلغاء الأرشفة') : 'إلغاء الأرشفة') : (typeof t === 'function' ? (t('archive_tooltip') || 'أرشفة المادة') : 'أرشفة المادة')}" onclick="App.toggleArchive('${mat.id}', ${mat.archived})"><i class="fa-solid ${mat.archived ? 'fa-box-open' : 'fa-box'}"></i></button>
+                        <button class="btn btn-outline-info" title="${typeof t === 'function' ? (t('print_receipt_tooltip') || 'طباعة الوصل') : 'طباعة الوصل'}" onclick="AppPrint.printMaterialInvoice('${mat.id}')"><i class="fa-solid fa-print"></i></button>
+                        <button class="btn btn-outline-danger" title="${typeof t === 'function' ? (t('delete_tooltip') || 'حذف نهائي') : 'حذف نهائي'}" onclick="App.confirmDelete('${mat.id}')"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                </td>
+            `;
+            tbody.appendChild(tr);
+        });
+    },
+
+    renderTransactionsTable() {
+        if (this.state.currentTab !== "output") return;
+        const tbody = document.getElementById("transactions-table-body");
+        if (!tbody) return;
+        tbody.innerHTML = "";
+
+        let transactions = typeof AppDB !== 'undefined' ? AppDB.getTransactions() : [];
+        const typeFilter = document.querySelector('input[name="txTypeFilter"]:checked');
+        if (typeFilter) {
+            if (typeFilter.value === "out") transactions = transactions.filter(t => t.type !== "in");
+            else if (typeFilter.value === "in") transactions = transactions.filter(t => t.type === "in");
+        }
+        
+        if (this.state.outputCategory && this.state.outputCategory !== "all") {
+            transactions = transactions.filter(t => t.category === this.state.outputCategory);
+        }
+
+        const sortedTxs = [...transactions].sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        sortedTxs.forEach((tx, index) => {
+            const tr = document.createElement("tr");
+            const dateStr = new Date(tx.date).toLocaleDateString('ar-EG', { hour: '2-digit', minute: '2-digit' });
+
+            let typeBadge = "";
+            if (tx.type === "in") typeBadge = `<span class="badge bg-success-subtle text-success border border-success-subtle px-2">${typeof t === 'function' ? (t('tx_in_badge') || 'وارد (شحنة)') : 'وارد (شحنة)'}</span>`;
+            else if (tx.type === "out") typeBadge = `<span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle px-2">${typeof t === 'function' ? (t('tx_out_badge') || 'صرف مشروع') : 'صرف مشروع'}</span>`;
+            else if (tx.type === "return") typeBadge = `<span class="badge bg-danger-subtle text-danger border border-danger-subtle px-2">${typeof t === 'function' ? (t('tx_return_badge') || 'مرتجع شركة') : 'مرتجع شركة'}</span>`;
+
+            let reasonDetails = `<strong>${typeof t === 'function' ? (t('reason_label') || 'السبب:') : 'السبب:'}</strong> ${tx.reason}`;
+            if (tx.type === "return") {
+                reasonDetails += `
+                    <div class="mt-1 small">
+                        <strong>${typeof t === 'function' ? (t('company_label') || 'الشركة:') : 'الشركة:'}</strong> ${tx.companyName}<br>
+                        <strong>${typeof t === 'function' ? (t('return_receipt_label') || 'وصل إرجاع:') : 'وصل إرجاع:'}</strong> ${tx.returnInvoiceNumber}<br>
+                        <strong>${typeof t === 'function' ? (t('delivery_cost_label') || 'سعر التوصيل:') : 'سعر التوصيل:'}</strong> ${tx.deliveryCost ? tx.deliveryCost.toLocaleString() : '0'} ${typeof t === 'function' ? (t('currency') || 'د.ع') : 'د.ع'}
+                    </div>
+                `;
+            }
+
+            // Lookup original quantity
+            let originalQty = '-';
+            if (typeof AppDB !== 'undefined') {
+                const materials = AppDB.getMaterials();
+                const mat = materials.find(m => m.id === tx.materialId);
+                if (mat) originalQty = mat.initialQuantity;
+            }
+
+            tr.innerHTML = `
+                <td class="text-center py-3 text-muted fw-bold" style="border-top-right-radius: 12px; border-bottom-right-radius: 12px; border: 1px solid #f1f5f9; border-left: none;">${index + 1}</td>
+                <td class="py-3" style="border-top: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9;"><span class="badge bg-light text-secondary border px-2 py-1"><i class="fa-regular fa-clock me-1"></i>${dateStr}</span></td>
+                <td class="text-center py-3" style="border-top: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9;">${typeBadge}</td>
+                <td class="py-3" style="border-top: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9;">
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="rounded-circle d-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary flex-shrink-0" style="width: 38px; height: 38px;">
+                            <i class="fa-solid fa-cube fs-6"></i>
+                        </div>
+                        <div>
+                            <div class="fw-bold text-dark font-cairo mb-1" style="font-size: 0.9rem;">${tx.materialName}</div>
+                            <span class="badge bg-light text-secondary border px-2 py-1" style="font-size: 0.7rem;"><i class="fa-solid fa-tag me-1"></i>${typeof tCat === 'function' ? tCat(tx.category) : tx.category}</span>
+                        </div>
+                    </div>
+                </td>
+                <td class="text-secondary text-center py-3" style="border-top: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9;"><span class="fw-bold">${originalQty !== '-' ? originalQty.toLocaleString() : '-'}</span> <small style="font-size: 0.75rem;">${tx.unit}</small></td>
+                <td class="text-center py-3" style="border-top: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9;">
+                    <div class="fw-bold text-dark fs-5">${tx.quantity.toLocaleString()}</div>
+                    <small class="text-muted" style="font-size: 0.75rem;">${tx.unit}</small>
+                </td>
+                <td class="text-center py-3 font-monospace text-muted" style="border-top: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9;">${tx.unitPrice.toLocaleString()} <span style="font-size: 0.75rem;">د.ع</span></td>
+                <td class="text-center py-3" style="border-top: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9;">
+                    <div class="fw-bold text-primary font-monospace" style="font-size: 1.1rem;">${tx.totalPrice.toLocaleString()}</div>
+                    <small class="text-muted">د.ع</small>
+                </td>
+                <td class="text-center py-3" style="border-top: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9;">
+                    <div class="text-dark fw-semibold" style="font-size: 0.85rem;"><i class="fa-solid fa-user-tie me-1 text-muted"></i>${tx.operatorName || '-'}</div>
+                </td>
+                <td class="text-center py-3" style="border-top: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9;">
+                    <div class="text-muted" style="font-size: 0.8rem;"><i class="fa-solid fa-user-check me-1"></i>${tx.delivererName || '-'}</div>
+                </td>
+                <td class="py-3" style="border-top: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9;">
+                    <div class="text-muted border-start border-2 border-primary border-opacity-25 ps-2" style="font-size: 0.8rem;">${reasonDetails}</div>
+                </td>
+                <td class="text-center py-3" style="border-top-left-radius: 12px; border-bottom-left-radius: 12px; border: 1px solid #f1f5f9; border-right: none;">
+                    <div class="d-flex justify-content-center gap-2">
+                        <button class="btn btn-light btn-sm rounded-circle text-dark shadow-sm border" style="width: 36px; height: 36px; transition: all 0.2s;" onclick="AppPrint.printTransactionReceipt('${tx.id}')" title="طباعة وصل الحركة" onmouseover="this.classList.replace('text-dark', 'text-white'); this.classList.replace('btn-light', 'btn-dark');" onmouseout="this.classList.replace('text-white', 'text-dark'); this.classList.replace('btn-dark', 'btn-light');">
                             <i class="fa-solid fa-print"></i>
                         </button>
-                        <button class="btn btn-outline-danger" title="${t('delete_tooltip') || 'حذف نهائي'}" onclick="App.confirmDelete('${mat.id}')">
+                        <button class="btn btn-light btn-sm rounded-circle text-primary shadow-sm border" style="width: 36px; height: 36px; transition: all 0.2s;" onclick="AppOutput.promptEditTransaction('${tx.id}')" title="تعديل الحركة" onmouseover="this.classList.replace('text-primary', 'text-white'); this.classList.replace('btn-light', 'btn-primary');" onmouseout="this.classList.replace('text-white', 'text-primary'); this.classList.replace('btn-primary', 'btn-light');">
+                            <i class="fa-solid fa-pen"></i>
+                        </button>
+                        <button class="btn btn-light btn-sm rounded-circle text-danger shadow-sm border" style="width: 36px; height: 36px; transition: all 0.2s;" onclick="AppOutput.promptDeleteTransaction('${tx.id}')" title="حذف الحركة" onmouseover="this.classList.replace('text-danger', 'text-white'); this.classList.replace('btn-light', 'btn-danger');" onmouseout="this.classList.replace('text-white', 'text-danger'); this.classList.replace('btn-danger', 'btn-light');">
                             <i class="fa-solid fa-trash"></i>
                         </button>
                     </div>
@@ -4049,118 +4013,33 @@ const App = {
         });
     },
 
-    // Transaction Ledger rendering
-    renderTransactionsTable() {
-        if (this.state.currentTab !== "output") return;
-
-        let transactions = AppDB.getTransactions();
-        
-        // Filter by Transaction Type (All / In / Out)
-        const typeFilter = document.querySelector('input[name="txTypeFilter"]:checked');
-        if (typeFilter) {
-            const filterValue = typeFilter.value;
-            if (filterValue === "out") {
-                transactions = transactions.filter(t => t.type !== "in");
-            } else if (filterValue === "in") {
-                transactions = transactions.filter(t => t.type === "in");
-            }
-            // If "all", we don't filter.
-        }
-
-        if (this.state.outputCategory !== "all") {
-            transactions = transactions.filter(t => t.category === this.state.outputCategory);
-        }
-        const tbody = document.getElementById("transactions-table-body");
-        if (!tbody) return;
-
-        tbody.innerHTML = "";
-
-        if (transactions.length === 0) {
-            tbody.innerHTML = `
-                <tr>
-                    <td colspan="10" class="text-center py-5 text-muted">
-                        <i class="fa-solid fa-receipt fs-2 mb-3 d-block text-secondary"></i>
-                        ${t('no_tx_record') || 'لا توجد أي حركات صرف أو إخراج مسجلة حتى الآن.'}
-                    </td>
-                </tr>
-            `;
-            return;
-        }
-
-        // Show transactions in descending order (latest first)
-        const sortedTxs = [...transactions].sort((a,b) => new Date(b.date) - new Date(a.date));
-
-        sortedTxs.forEach((tx, index) => {
-            const tr = document.createElement("tr");
-            const dateStr = new Date(tx.date).toLocaleDateString('ar-EG', {hour: '2-digit', minute: '2-digit'});
-
-            let typeBadge = "";
-            if (tx.type === "in") {
-                typeBadge = `<span class="badge bg-success-subtle text-success border border-success-subtle px-2">${t('tx_in_badge') || 'وارد (شحنة)'}</span>`;
-            } else if (tx.type === "out") {
-                typeBadge = `<span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle px-2">${t('tx_out_badge') || 'صرف مشروع'}</span>`;
-            } else if (tx.type === "return") {
-                typeBadge = `<span class="badge bg-danger-subtle text-danger border border-danger-subtle px-2">${t('tx_return_badge') || 'مرتجع شركة'}</span>`;
-            }
-
-            let reasonDetails = `<strong>${t('reason_label') || 'السبب:'}</strong> ${tx.reason}`;
-            if (tx.type === "return") {
-                reasonDetails += `
-                    <div class="mt-1 small">
-                        <strong>${t('company_label') || 'الشركة:'}</strong> ${tx.companyName}<br>
-                        <strong>${t('return_receipt_label') || 'وصل إرجاع:'}</strong> ${tx.returnInvoiceNumber}<br>
-                        <strong>${t('delivery_cost_label') || 'سعر التوصيل:'}</strong> ${tx.deliveryCost.toLocaleString()} ${t('currency')}
-                    </div>
-                `;
-            }
-
-            // Lookup material to get original quantity
-            const materials = AppDB.getMaterials();
-            const mat = materials.find(m => m.id === tx.materialId);
-            const originalQty = mat ? mat.initialQuantity : '-';
-
-            tr.innerHTML = `
-                <td class="text-center">${index + 1}</td>
-                <td><small>${dateStr}</small></td>
-                <td class="text-center">${typeBadge}</td>
-                <td>
-                    <div class="fw-bold">${tx.materialName}</div>
-                    <small class="text-muted">${AppDB.CATEGORIES[tx.category] || tx.category}</small>
-                </td>
-                <td class="text-primary fw-bold text-center">${originalQty !== '-' ? originalQty.toLocaleString() : '-'} <small>${tx.unit}</small></td>
-                <td class="text-center"><strong>${tx.quantity.toLocaleString()}</strong> <small>${tx.unit}</small></td>
-                <td class="text-center">${tx.unitPrice.toLocaleString()} <small class="text-muted">${t('currency')}</small></td>
-                <td class="fw-bold text-center">${tx.totalPrice.toLocaleString()} <small class="text-muted">${t('currency')}</small></td>
-                <td class="text-center">${tx.operatorName || '-'}</td>
-                <td class="text-center">${tx.delivererName || '-'}</td>
-                <td><small>${reasonDetails}</small></td>
-                <td class="text-center">
-                    <button class="btn btn-sm btn-outline-dark" onclick="AppPrint.printTransactionReceipt('${tx.id}')" title="طباعة وصل الحركة">
-                        <i class="fa-solid fa-print"></i>
-                    </button>
-                </td>
-            `;
-            tbody.appendChild(tr);
-        });
-    },
-
     // Populate issue modal with available materials
     updateIssueModalDropdown() {
-        const materials = AppDB.getMaterials().filter(m => !m.archived && m.quantity > 0);
+        const catSelect = document.getElementById("issue_categoryId");
         const select = document.getElementById("issue_materialId");
-        if (!select) return;
 
-        select.innerHTML = '<option value="" disabled selected>-- اختر المادة من المخزن --</option>';
-        materials.forEach(m => {
-            const opt = document.createElement("option");
-            opt.value = m.id;
-            opt.textContent = `${m.name} [${AppDB.CATEGORIES[m.category]}] (${m.quantity} ${m.unit} متوفر)`;
-            select.appendChild(opt);
-        });
+        if (catSelect) {
+            if (this.state && this.state.currentTab === "output" && this.state.outputCategory && this.state.outputCategory !== "all") {
+                catSelect.value = this.state.outputCategory;
+                // Defer dispatching to avoid loop if called during render
+                setTimeout(() => {
+                    catSelect.dispatchEvent(new Event("change"));
+                }, 0);
+            } else {
+                catSelect.value = "";
+                if (select) {
+                    select.innerHTML = `<option value="" disabled selected data-i18n="select_cat_ph">${t('select_cat_ph') || '-- اختر القسم لتظهر المواد --'}</option>`;
+                    select.disabled = true;
+                }
+            }
+        }
 
         // Reset details label in modal
         const label = document.getElementById("issue_max_available");
         if (label) label.textContent = "";
+
+        const qtyInput = document.getElementById("issue_quantity");
+        if (qtyInput) qtyInput.value = "";
     },
 
     // Alerts view rendering
@@ -4188,36 +4067,70 @@ const App = {
         alertsList.forEach(alert => {
             const div = document.createElement("div");
             div.className = "col-md-6 col-lg-4 mb-4";
-            
+
             let statusBadge = "";
             let alertMsg = "";
-            
+
             if (alert.type === "out_of_stock") {
-                statusBadge = `<span class="badge bg-danger px-3 py-2"><i class="fa-solid fa-circle-xmark me-2"></i>${t('out_of_stock_badge') || 'نفاد المادة'}</span>`;
-                alertMsg = `${t('out_of_stock_msg1') || 'الكمية المتوفرة حالياً هي'} <strong>0 ${alert.unit}</strong>. ${t('out_of_stock_msg2') || 'يرجى تزويد المخزن فوراً.'}`;
+                statusBadge = `<span class="badge bg-danger rounded-pill px-3 py-2 shadow-sm" style="font-size: 0.85rem;"><i class="fa-solid fa-circle-xmark me-2"></i>${t('out_of_stock_badge') || 'نفاد المادة'}</span>`;
+                alertMsg = `<span class="text-dark">${t('out_of_stock_msg1') || 'الكمية المتوفرة حالياً هي'} <strong>0 ${alert.unit}</strong>. ${t('out_of_stock_msg2') || 'يرجى تزويد المخزن فوراً لتجنب توقف العمل.'}</span>`;
             } else if (alert.type === "low_stock") {
-                statusBadge = `<span class="badge bg-warning text-dark px-3 py-2"><i class="fa-solid fa-triangle-exclamation me-2"></i>${t('low_stock_badge') || 'مخزون حرج'}</span>`;
-                alertMsg = `${t('low_stock_msg1') || 'الكمية الحالية'} <strong>${alert.quantity} ${alert.unit}</strong> ${t('low_stock_msg2') || 'وهي أقل من حد الأمان المحدد للقسم'} (${alert.alertLimit} ${alert.unit}).`;
+                statusBadge = `<span class="badge bg-warning text-dark rounded-pill px-3 py-2 shadow-sm" style="font-size: 0.85rem;"><i class="fa-solid fa-triangle-exclamation me-2"></i>${t('low_stock_badge') || 'مخزون حرج'}</span>`;
+                alertMsg = `<span class="text-dark">${t('low_stock_msg1') || 'الكمية الحالية المتوفرة هي فقط'} <strong>${alert.quantity} ${alert.unit}</strong>. ${t('low_stock_msg2') || 'وهذا الرقم أقل من حد الأمان'} (<strong>${alert.alertLimit} ${alert.unit}</strong>).</span>`;
             } else if (alert.type === "unused_long_time") {
-                statusBadge = `<span class="badge bg-success px-3 py-2"><i class="fa-solid fa-clock me-2"></i>${t('unused_badge') || 'مادة راكدة'}</span>`;
-                alertMsg = `${t('unused_msg1') || 'لم يطرأ أي استخدام على المادة منذ'} <strong>${alert.daysUnused} ${typeof t === 'function' && t('days') ? t('days') : 'يوماً'}</strong>. ${t('unused_msg2') || 'الكمية الراكدة:'} ${alert.quantity} ${alert.unit}.`;
+                statusBadge = `<span class="badge bg-success rounded-pill px-3 py-2 shadow-sm" style="font-size: 0.85rem;"><i class="fa-solid fa-clock me-2"></i>${t('unused_badge') || 'مادة راكدة'}</span>`;
+                alertMsg = `<span class="text-dark">${t('unused_msg1') || 'لم يتم استخدام هذه المادة منذ'} <strong>${alert.daysUnused} ${typeof t === 'function' && t('days') ? t('days') : 'يوماً'}</strong>. ${t('unused_msg2') || 'الكمية المتبقية:'} <strong>${alert.quantity} ${alert.unit}</strong>.</span>`;
+            }
+
+            let iconClass = "fa-bell";
+            let themeBg = "bg-danger";
+
+            if (alert.color === "danger") {
+                iconClass = "fa-circle-exclamation";
+                themeBg = "bg-danger";
+            }
+            if (alert.color === "warning") {
+                iconClass = "fa-triangle-exclamation";
+                themeBg = "bg-warning";
+            }
+            if (alert.color === "success") {
+                iconClass = "fa-clock";
+                themeBg = "bg-success";
             }
 
             div.innerHTML = `
-                <div class="card h-100 border-${alert.color} border-start border-4 shadow-sm">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <div>
-                                <h5 class="card-title fw-bold mb-1">${alert.name}</h5>
-                                <span class="badge bg-secondary-subtle text-secondary">${AppDB.CATEGORIES[alert.category] || alert.category}</span>
-                            </div>
-                            ${statusBadge}
+                <div class="card h-100 border-0 shadow-sm" style="border-radius: 12px; background: #fff; overflow: visible; margin-top: 25px; transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='none'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)';">
+                    <div class="card-body p-4 position-relative d-flex flex-column">
+                        <!-- Floating Icon -->
+                        <div class="${themeBg} ${alert.color === 'warning' ? 'text-dark' : 'text-white'} shadow-sm d-flex justify-content-center align-items-center rounded-circle position-absolute" 
+                             style="width: 54px; height: 54px; top: -27px; right: 20px; font-size: 1.5rem; border: 4px solid #fff;">
+                             <i class="fa-solid ${iconClass}"></i>
                         </div>
-                        <p class="card-text text-muted small">${alertMsg}</p>
-                        <hr class="my-2">
-                        <div class="d-flex justify-content-between align-items-center text-muted small">
-                            <span>آخر حركة: ${new Date(alert.date).toLocaleDateString('ar-EG')}</span>
-                            <button class="btn btn-link btn-sm text-decoration-none p-0 text-${alert.color}" onclick="App.switchTab('storage')">إدارة المادة</button>
+                        
+                        <div class="pt-3 mb-3">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h5 class="fw-bold text-dark font-cairo mb-0" style="padding-left: 10px;">${alert.name}</h5>
+                                <span class="badge bg-light text-secondary border px-2 py-1"><i class="fa-solid fa-folder-open me-1"></i>${tCat(alert.category)}</span>
+                            </div>
+                            
+                            <div class="mb-3">
+                                ${statusBadge}
+                            </div>
+                            
+                            <div style="border-right: 3px solid var(--bs-${alert.color}); padding-right: 12px; background: rgba(var(--bs-${alert.color}-rgb), 0.05); padding: 10px; padding-right: 15px; border-radius: 6px 0 0 6px;">
+                                <p class="mb-0 font-cairo" style="font-size: 0.9rem; line-height: 1.6;">
+                                    ${alertMsg}
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top">
+                            <div class="text-muted" style="font-size: 0.85rem;">
+                                <i class="fa-regular fa-calendar-days me-1"></i>${new Date(alert.date).toLocaleDateString('ar-EG')}
+                            </div>
+                            <button class="btn btn-outline-${alert.color} btn-sm rounded-pill px-3 py-1 fw-bold" onclick="App.switchTab('storage')" style="transition: all 0.2s ease;">
+                                ${t('details_btn') || 'التفاصيل'} <i class="fa-solid fa-chevron-left ms-1" style="font-size: 0.75rem;"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -4244,7 +4157,7 @@ const App = {
         logs.forEach((log, idx) => {
             const tr = document.createElement("tr");
             const dateStr = new Date(log.date).toLocaleString('ar-EG');
-            
+
             tr.innerHTML = `
                 <td>${idx + 1}</td>
                 <td><small>${dateStr}</small></td>
@@ -4305,18 +4218,18 @@ const App = {
             AppStorage.unarchiveMaterial(id);
             this.showToast("تمت إعادة المادة للمخزون النشط.", "success");
         } else {
-            if (confirm("هل أنت متأكد من رغبتك في أرشفة هذه المادة؟ سيتم إخفاؤها من جداول الصرف النشطة وتجميدها.")) {
+            App.confirmAction(t('confirm_archive') || 'هل أنت متأكد من رغبتك في أرشفة هذه المادة؟ سيتم إخفاؤها من جداول الصرف النشطة وتجميدها.', () => {
                 AppStorage.archiveMaterial(id);
                 this.showToast("تم أرشفة المادة بنجاح.", "info");
-            }
+            });
         }
     },
 
     confirmDelete(id) {
-        if (confirm("تحذير نهائي: هل أنت متأكد من حذف هذه المادة تماماً؟ سيتم إزالتها نهائياً من الجرد (لن يؤثر ذلك على سجل الحركات التاريخية).")) {
+        App.confirmAction(t('confirm_delete_mat') || 'تحذير نهائي: هل أنت متأكد من حذف هذه المادة تماماً؟', () => {
             AppStorage.deleteMaterial(id);
             this.showToast("تم حذف المادة بنجاح.", "danger");
-        }
+        });
     },
 
     // Beautiful UI Toasts Notification Helper
@@ -4350,5 +4263,120 @@ const App = {
         toastEl.addEventListener('hidden.bs.toast', () => {
             toastEl.remove();
         });
+    },
+
+
+    confirmAction(message, onConfirm) {
+        const msgEl = document.getElementById('customConfirmMessage');
+        if (msgEl) msgEl.innerText = message;
+
+        const modalEl = document.getElementById('customConfirmModal');
+        if (!modalEl) {
+            // Fallback to native
+            if (confirm(message)) {
+                onConfirm();
+            }
+            return;
+        }
+        const modal = new bootstrap.Modal(modalEl);
+
+        const confirmBtn = document.getElementById('customConfirmOkBtn');
+
+        // Remove previous listeners by cloning
+        const newConfirmBtn = confirmBtn.cloneNode(true);
+        confirmBtn.parentNode.replaceChild(newConfirmBtn, confirmBtn);
+
+        newConfirmBtn.addEventListener('click', () => {
+            modal.hide();
+            onConfirm();
+        });
+
+        modal.show();
+    },
+
+
+    confirmAction(message, onConfirm) {
+        const msgEl = document.getElementById('customConfirmMessage');
+        if (msgEl) msgEl.innerText = message;
+
+        const modalEl = document.getElementById('customConfirmModal');
+        if (!modalEl) {
+            // Fallback to native
+            if (confirm(message)) {
+                onConfirm();
+            }
+            return;
+        }
+        const modal = new bootstrap.Modal(modalEl);
+
+        const confirmBtn = document.getElementById('customConfirmOkBtn');
+
+        // Remove previous listeners by cloning
+        const newConfirmBtn = confirmBtn.cloneNode(true);
+        confirmBtn.parentNode.replaceChild(newConfirmBtn, confirmBtn);
+
+        newConfirmBtn.addEventListener('click', () => {
+            modal.hide();
+            onConfirm();
+        });
+
+        modal.show();
+    },
+
+    promptPassword(message, expectedPassword, onSuccess) {
+        const msgEl = document.getElementById('passwordPromptMessage');
+        if (msgEl) msgEl.innerText = message;
+
+        const input = document.getElementById('passwordPromptInput');
+        if (input) input.value = '';
+
+        const modalEl = document.getElementById('passwordPromptModal');
+        if (!modalEl) {
+            // Fallback to native
+            const pass = prompt(message);
+            if (pass === expectedPassword) onSuccess();
+            else if (pass !== null) if (typeof App !== 'undefined') App.showToast(typeof t === 'function' ? t('wrong_pass') : 'كلمة المرور غير صحيحة!', 'danger');
+            return;
+        }
+        const modal = new bootstrap.Modal(modalEl);
+
+        const confirmBtn = document.getElementById('passwordPromptConfirmBtn');
+
+        // Remove previous listeners by cloning
+        const newConfirmBtn = confirmBtn.cloneNode(true);
+        confirmBtn.parentNode.replaceChild(newConfirmBtn, confirmBtn);
+
+        newConfirmBtn.addEventListener('click', () => {
+            if (input.value === expectedPassword) {
+                modal.hide();
+                onSuccess();
+            } else {
+                if (typeof App !== 'undefined') App.showToast(typeof t === 'function' ? t('wrong_pass') : 'كلمة المرور غير صحيحة!', 'danger');
+                input.value = '';
+                input.focus();
+            }
+        });
+
+        const keydownHandler = (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                newConfirmBtn.click();
+            }
+        };
+        input.removeEventListener('keydown', input._keydownHandler);
+        input.addEventListener('keydown', keydownHandler);
+        input._keydownHandler = keydownHandler;
+
+        modalEl.addEventListener('shown.bs.modal', () => {
+            input.focus();
+        }, { once: true });
+
+        modal.show();
     }
 };
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", () => App.init());
+} else {
+    App.init();
+}
