@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مخزن شريكة شڤیار - نظام إدارة مخزن مواد البناء والمشاريع الإنشائية</title>
+    
+    <!-- Google Fonts: Noto Kufi Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#f97316">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.svg">
+    
+    <!-- i18n Script -->
+    <script src="js/i18n.js"></script>
+</head>
+<body>
+
+    <!-- Main Content Container -->
+    <main id="main-content" style="margin-right: 0; width: 100%;">
+        
+        <!-- Top Navigation Bar (Header Nav) -->
+        <header class="navbar-top flex-wrap h-auto py-3 g-3">
+            <div class="d-flex align-items-center gap-2">
+                <div class="sidebar-logo p-0" style="font-size: 1.4rem; cursor: pointer;" data-tab="portal">
+                    <i class="fa-solid fa-helmet-safety text-warning"></i>
+                    <span class="fw-bold font-cairo text-primary-emphasis" style="margin-right: 5px;">مخزن شريكة <span style="color: var(--accent-color);">شڤیار</span></span>
+                </div>
+            </div>
+            
+            <div class="d-flex align-items-center gap-3">
+                <!-- Install App Button -->
+                <button id="install-app-btn" class="btn btn-primary btn-sm font-cairo fw-bold px-3 d-none" title="تثبيت التطبيق" style="gap: 5px; align-items: center;">
+                    <i class="fa-solid fa-download"></i>
+                    <span class="d-none d-sm-inline">تثبيت التطبيق</span>
+                </button>
+
+                <!-- Language Toggle Button -->
+                <button id="lang-toggle" class="btn btn-outline-primary btn-sm font-cairo fw-bold px-3" title="تبديل اللغة / گوهۆڕینا زمانێ" onclick="changeLanguage(currentLang === 'ar' ? 'ku' : 'ar')">
+                    عربي / کوردی
+                </button>
+                
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="btn btn-light btn-sm" title="تبديل الوضع الليلي / النهاري">
+                    <i class="fa-solid fa-moon fs-5"></i>
+                </button>
+
+                <!-- Users selection switcher -->
+                <div class="d-none">
+                    <i class="fa-solid fa-user-shield text-muted small"></i>
+                    <select id="user-select" class="form-select form-select-sm" style="width: 130px;"></select>
+                </div>
+
+
+            </div>
+        </header>
+
+        <!-- Dynamic Content Body -->
+        <div class="container-fluid p-4">
+
+            <!-- TAB 0: LUXURY PORTAL / HOMEPAGE -->
+            <section id="section-portal" class="app-section text-center py-4">
+                <!-- Ambient background glows -->
+                <div class="portal-bg-glow portal-glow-1"></div>
+                <div class="portal-bg-glow portal-glow-2"></div>
+                
+                <div class="mb-5 mt-4 position-relative">
+                    <i class="fa-solid fa-helmet-safety text-warning mb-2" style="font-size: 4.5rem; filter: drop-shadow(0 0 20px rgba(249, 115, 22, 0.35));"></i>
+                    <h1 class="fw-bold font-cairo mt-3 mb-2 text-primary-emphasis" style="font-size: 2.5rem; letter-spacing: -0.5px;" data-i18n="title_main">مخزن شريكة <span style="color: var(--accent-color);">شڤیار</span></h1>
+                    <p class="text-muted fs-5 max-width-600 mx-auto" style="max-width: 650px;" data-i18n="title_desc">النظام المتكامل لإدارة المخازن وحركة المواد والمشاريع الإنشائية</p>
+                </div>
+                
+                <!-- Main 3 columns portal layout like the Kurdish one -->
+                <div class="portal-grid">
+                    <!-- Card 1: Storage -->
+                    <div class="portal-card" data-tab="storage">
+                        <div class="portal-icon-box portal-icon-orange">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                        </div>
+                        <h4 class="fw-bold font-cairo text-primary-emphasis mb-2" data-i18n="portal_storage_title">تخزين وإدخال المواد</h4>
+                        <p class="portal-card-desc" data-i18n="portal_storage_desc">إدخال وتوثيق الشحنات الجديدة وحساب الإجماليات تلقائياً وتعديل الجرد وأرشفة المواد.</p>
+                        <button class="portal-card-btn">
+                            <span data-i18n="portal_storage_btn">إدارة وتخزين المواد</span>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                    </div>
+
+                    <!-- Card 2: Output -->
+                    <div class="portal-card" data-tab="output">
+                        <div class="portal-icon-box portal-icon-blue">
+                            <i class="fa-solid fa-truck-ramp-box"></i>
+                        </div>
+                        <h4 class="fw-bold font-cairo text-primary-emphasis mb-2" data-i18n="portal_output_title">إخراج وصرف المواد</h4>
+                        <p class="portal-card-desc" data-i18n="portal_output_desc">تسجيل صرف الكميات للمشاريع، وإرجاع المواد للشركات وحساب سعر التحميل والتوصيل.</p>
+                        <button class="portal-card-btn">
+                            <span data-i18n="portal_output_btn">صرف وإخراج المواد</span>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                    </div>
+
+                    <!-- Card 3: Dashboard -->
+                    <div class="portal-card" data-tab="dashboard">
+                        <div class="portal-icon-box portal-icon-indigo">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h4 class="fw-bold font-cairo text-primary-emphasis mb-2" data-i18n="portal_dashboard_title">لوحة التحكم والتحليلات</h4>
+                        <p class="portal-card-desc" data-i18n="portal_dashboard_desc">متابعة الأداء المالي وقيمة المخزن وجرد الكميات والمصروفات والشركات الأكثر توريداً.</p>
+                        <button class="portal-card-btn">
+                            <span data-i18n="portal_dashboard_btn">دخول لوحة التحكم</span>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Secondary smaller grid for Alerts and Config -->
+                <div class="portal-grid-secondary mt-4">
+                    <!-- Card 4: Alerts -->
+                    <div class="portal-card portal-card-horizontal" data-tab="alerts">
+                        <div class="d-flex align-items-center gap-3 text-start">
+                            <div class="portal-icon-box portal-icon-red">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold font-cairo text-primary-emphasis mb-1" data-i18n="portal_alerts_title">مركز التنبيهات الذكي</h6>
+                                <small class="text-muted d-block" style="font-size: 11px;" data-i18n="portal_alerts_desc">مراقبة مستويات العجز والأصناف الراكدة.</small>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-danger btn-sm rounded-3 py-1 font-cairo" style="font-size: 11px;">
+                            <span data-i18n="enter_btn">دخول</span> <i class="fa-solid fa-chevron-left ms-1 small"></i>
+                        </button>
+                    </div>
+
+                    <!-- Card 5: Settings -->
+                    <div class="portal-card portal-card-horizontal" data-tab="config">
+                        <div class="d-flex align-items-center gap-3 text-start">
+                            <div class="portal-icon-box portal-icon-gray">
+                                <i class="fa-solid fa-gears"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold font-cairo text-primary-emphasis mb-1" data-i18n="portal_config_title">إعدادات النظام والنسخ</h6>
+                                <small class="text-muted d-block" style="font-size: 11px;" data-i18n="portal_config_desc">النسخ الاحتياطي، الموظفين، وسجل العمليات.</small>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-secondary btn-sm rounded-3 py-1 font-cairo" style="font-size: 11px;">
+                            <span data-i18n="enter_btn">دخول</span> <i class="fa-solid fa-chevron-left ms-1 small"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 1: DASHBOARD & STATISTICS -->
+            <section id="section-dashboard" class="app-section d-none">
+                <div class="glass-container mb-4">
+                    <div class="row align-items-center g-3">
+                        <div class="col-md-6 col-lg-5">
+                            <h5 class="fw-bold m-0"><i class="fa-solid fa-chart-line text-warning me-2"></i>لوحة التحكم والتحليلات الإحصائية</h5>
+                            <small class="text-muted">تحليلات جرد المخزن، الأداء المالي والمصروفات</small>
+                        </div>
+                        <div class="col-md-6 col-lg-7 text-md-end d-flex gap-2 justify-content-md-end flex-wrap">
+                            <button id="back-to-dashboard-categories-btn" class="btn btn-outline-secondary d-none">
+                                <i class="fa-solid fa-chevron-right me-2"></i>العودة للأقسام الفرعية
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sub-categories Dashboard Portal Grid -->
+                <div id="dashboard-categories-portal" class="my-4">
+                    <div class="storage-portal-grid">
+                        <!-- Card 1: Electrical -->
+                        <div class="storage-portal-card" data-dashboard-cat-card="electrical">
+                            <div class="storage-portal-icon sp-icon-yellow">
+                                <i class="fa-solid fa-bolt-lightning"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">مواد كهربائية</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="db-count-electrical" style="font-size: 11px;">0 صنف نشط</span>
+                        </div>
+
+                        <!-- Card 2: Plumbing -->
+                        <div class="storage-portal-card" data-dashboard-cat-card="plumbing">
+                            <div class="storage-portal-icon sp-icon-blue">
+                                <i class="fa-solid fa-faucet-drip"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">مواد مجاري</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="db-count-plumbing" style="font-size: 11px;">0 صنف نشط</span>
+                        </div>
+
+                        <!-- Card 3: Steel -->
+                        <div class="storage-portal-card" data-dashboard-cat-card="steel">
+                            <div class="storage-portal-icon sp-icon-orange">
+                                <i class="fa-solid fa-cubes"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">مواد حديد</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="db-count-steel" style="font-size: 11px;">0 صنف نشط</span>
+                        </div>
+
+                        <!-- Card 4: Tiles -->
+                        <div class="storage-portal-card" data-dashboard-cat-card="tiles">
+                            <div class="storage-portal-icon sp-icon-cyan">
+                                <i class="fa-solid fa-table-cells"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">بلاط وكاشي وسيراميك</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="db-count-tiles" style="font-size: 11px;">0 صنف نشط</span>
+                        </div>
+
+                        <!-- Card 5: Gypsum -->
+                        <div class="storage-portal-card" data-dashboard-cat-card="gypsum">
+                            <div class="storage-portal-icon sp-icon-purple">
+                                <i class="fa-solid fa-border-all"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">جبسن بورد</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="db-count-gypsum" style="font-size: 11px;">0 صنف نشط</span>
+                        </div>
+
+                        <!-- Card 6: Cement -->
+                        <div class="storage-portal-card" data-dashboard-cat-card="cement">
+                            <div class="storage-portal-icon sp-icon-bronze">
+                                <i class="fa-solid fa-fill-drip"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">إسمنت</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="db-count-cement" style="font-size: 11px;">0 صنف نشط</span>
+                        </div>
+
+                        <!-- Card 7: Paint -->
+                        <div class="storage-portal-card" data-dashboard-cat-card="paint">
+                            <div class="storage-portal-icon sp-icon-pink">
+                                <i class="fa-solid fa-paint-roller"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">دهان وطلاء</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="db-count-paint" style="font-size: 11px;">0 صنف نشط</span>
+                        </div>
+
+                        <!-- Card 8: Interior -->
+                        <div class="storage-portal-card" data-dashboard-cat-card="interior">
+                            <div class="storage-portal-icon sp-icon-green">
+                                <i class="fa-solid fa-door-open"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">أبواب ونوافذ</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="db-count-interior" style="font-size: 11px;">0 صنف نشط</span>
+                        </div>
+
+                        <!-- Card 9: Supplies -->
+                        <div class="storage-portal-card" data-dashboard-cat-card="supplies">
+                            <div class="storage-portal-icon sp-icon-gray">
+                                <i class="fa-solid fa-toolbox"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">مستلزمات يومية</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="db-count-supplies" style="font-size: 11px;">0 صنف نشط</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comprehensive Categories Summary Table -->
+                <div id="dashboard-summary-table-container" class="glass-container mt-4 mb-4">
+                    <h5 class="fw-bold mb-3 text-secondary">
+                        <i class="fa-solid fa-table-list text-warning me-2"></i>جدول مقارنة إحصائيات الأقسام الشاملة
+                    </h5>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-striped align-middle text-center font-cairo" style="font-size: 0.95rem;">
+                            <thead>
+                                <tr>
+                                    <th style="width: 22%;" class="text-start">القسم الرئيسي</th>
+                                    <th style="width: 12%;">عدد الأصناف</th>
+                                    <th style="width: 13%;">الكمية المتوفرة</th>
+                                    <th style="width: 17%;">قيمة المخزون الحالي</th>
+                                    <th style="width: 17%;">إجمالي الوارد (المشتريات)</th>
+                                    <th style="width: 11%;">الكميات المخرجة</th>
+                                    <th style="width: 8%;">إجراء</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dashboard-summary-table-body">
+                                <!-- Dynamic rendering of the 9 categories -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Category-specific detail table (shown when drilling into a category) -->
+                <div id="dashboard-details-container" class="d-none">
+                    <!-- Category title bar -->
+                    <div class="glass-container mb-4 d-flex align-items-center gap-3 flex-wrap" style="padding: 14px 20px;">
+                        <div id="dash-cat-icon-wrap" class="storage-portal-icon sp-icon-yellow" style="width:46px;height:46px;font-size:1.2rem;flex-shrink:0;">
+                            <i class="fa-solid fa-bolt-lightning"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-0 font-cairo" id="dash-cat-title">تفاصيل القسم</h5>
+                            <small class="text-muted" id="dash-cat-subtitle">جدول تفصيلي لجميع مواد هذا القسم وإحصائياتها</small>
+                        </div>
+                        <!-- Quick summary badges -->
+                        <div class="d-flex gap-2 flex-wrap">
+                            <span class="badge bg-primary-subtle text-primary-emphasis px-3 py-2" style="font-size:12px;">
+                                <i class="fa-solid fa-cubes me-1"></i>
+                                <span id="dash-cat-count">0</span> صنف
+                            </span>
+                            <span class="badge bg-success-subtle text-success-emphasis px-3 py-2" style="font-size:12px;">
+                                <i class="fa-solid fa-coins me-1"></i>
+                                قيمة المخزون: <span id="dash-cat-value">0</span> د.ع
+                            </span>
+                            <span class="badge bg-warning-subtle text-warning-emphasis px-3 py-2" style="font-size:12px;">
+                                <i class="fa-solid fa-truck-ramp-box me-1"></i>
+                                إجمالي الصرف: <span id="dash-cat-issued">0</span>
+                            </span>
+                        </div>
+                        <!-- Print action buttons -->
+                        <div class="ms-auto d-flex gap-2 flex-wrap justify-content-end">
+                            <button class="btn btn-outline-primary btn-sm px-3 fw-bold" onclick="App.switchTab('portal')">
+                                <i class="fa-solid fa-house me-1"></i>الرئيسية
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm px-3 fw-bold" onclick="App.switchDashboardView('portal')">
+                                <i class="fa-solid fa-arrow-right me-1"></i>رجوع للأقسام
+                            </button>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary btn-sm px-3 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-file-export me-1"></i>تصدير وطباعة
+                                </button>
+                                <ul class="dropdown-menu shadow">
+                                    <li><button class="dropdown-item fw-bold" onclick="App.printAllCategoriesStats()"><i class="fa-solid fa-print me-2 text-dark"></i>طباعة جميع الأقسام</button></li>
+                                    <li><button class="dropdown-item" onclick="App.printCategoryStats()"><i class="fa-solid fa-print me-2 text-info"></i>طباعة هذا القسم</button></li>
+                                    <li><button class="dropdown-item" onclick="App.exportCategoryStatsExcel()"><i class="fa-solid fa-file-excel me-2 text-success"></i>تصدير Excel</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Detail table -->
+                    <div class="glass-container">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-striped align-middle text-center font-cairo" style="font-size:0.93rem;">
+                                <thead>
+                                    <tr>
+                                        <th style="width:4%">#</th>
+                                        <th style="width:16%;text-align:right;">اسم المادة</th>
+                                        <th style="width:8%;">الكمية الأصلية</th>
+                                        <th style="width:8%;">الكمية الحالية</th>
+                                        <th style="width:6%;">الوحدة</th>
+                                        <th style="width:10%;">سعر الوحدة</th>
+                                        <th style="width:12%;">قيمة المخزون الحالي</th>
+                                        <th style="width:12%;">إجمالي المشتريات</th>
+                                        <th style="width:9%;">كمية المصروف</th>
+                                        <th style="width:7%;">الحالة</th>
+                                        <th style="width:8%;">طباعة فردية</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="dashboard-cat-detail-tbody">
+                                    <!-- Dynamic rows -->
+                                </tbody>
+                                <tfoot id="dashboard-cat-detail-tfoot" class="table-active fw-bold">
+                                    <!-- Totals row -->
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- TAB 2: STORAGE / INPUT MATERIALS -->
+            <section id="section-storage" class="app-section d-none">
+                <div class="glass-container mb-4">
+                    <div class="row align-items-center g-3">
+                        <div class="col-md-6 col-lg-4">
+                            <h5 class="fw-bold m-0"><i class="fa-solid fa-boxes-stacked text-warning me-2"></i>إدارة مخزون وجرد المواد</h5>
+                            <small class="text-muted">قم بإضافة وتعديل وأرشفة مواد البناء وتتبع مستوياتها</small>
+                        </div>
+                        <div class="col-md-6 col-lg-8 text-md-end d-flex gap-2 justify-content-md-end flex-wrap">
+                            <button id="back-to-categories-btn" class="btn btn-outline-secondary d-none">
+                                <i class="fa-solid fa-chevron-right me-2"></i>العودة للأقسام الفرعية
+                            </button>
+                            <button class="btn btn-outline-primary fw-bold" onclick="App.switchTab('portal')">
+                                <i class="fa-solid fa-house me-1"></i>الرئيسية
+                            </button>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addMaterialModal">
+                                <i class="fa-solid fa-square-plus me-2"></i>إضافة مادة جديدة
+                            </button>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-file-export me-2"></i>تصدير وطباعة
+                                </button>
+                                <ul class="dropdown-menu shadow">
+                                    <li><button id="print-all-btn" class="dropdown-item fw-bold"><i class="fa-solid fa-print me-2 text-dark"></i>طباعة الجرد الشامل</button></li>
+                                    <li><button id="excel-export-all" class="dropdown-item fw-bold"><i class="fa-solid fa-file-excel me-2 text-success"></i>تصدير الجرد كاملاً</button></li>
+                                    <li><button id="print-all-individual-btn" class="dropdown-item fw-bold" style="color:#0284c7"><i class="fa-solid fa-file-invoice me-2"></i>طباعة وصولات فردية للكل</button></li>
+                                    <li><hr class="dropdown-divider" id="print-category-divider" class="d-none"></li>
+                                    <li><button id="print-category-btn" class="dropdown-item fw-bold disabled d-none" style="color:var(--bs-info-text)"><i class="fa-solid fa-print me-2"></i>طباعة قسم</button></li>
+                                    <li><button id="excel-category-btn" class="dropdown-item fw-bold disabled d-none" style="color:var(--bs-success-text)"><i class="fa-solid fa-file-excel me-2"></i>تصدير قسم Excel</button></li>
+                                    <li><button id="print-category-individual-btn" class="dropdown-item fw-bold disabled d-none" style="color:#0284c7"><i class="fa-solid fa-file-invoice me-2"></i>طباعة وصولات فردية للقسم</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sub-categories Portal Grid -->
+                <div id="storage-categories-portal" class="my-4">
+                    <div class="storage-portal-grid">
+                        <!-- Card 1: Electrical -->
+                        <div class="storage-portal-card" data-storage-cat-card="electrical">
+                            <div class="storage-portal-icon sp-icon-yellow">
+                                <i class="fa-solid fa-bolt-lightning"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">مواد كهربائية</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="count-electrical" style="font-size: 11px;">0 صنف نشط</span>
+                        </div>
+
+                        <!-- Card 2: Plumbing -->
+                        <div class="storage-portal-card" data-storage-cat-card="plumbing">
+                            <div class="storage-portal-icon sp-icon-blue">
+                                <i class="fa-solid fa-faucet-drip"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">مواد مجاري</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="count-plumbing" style="font-size: 11px;">0 صنف نشط</span>
+                        </div>
+
+                        <!-- Card 3: Steel -->
+                        <div class="storage-portal-card" data-storage-cat-card="steel">
+                            <div class="storage-portal-icon sp-icon-orange">
+                                <i class="fa-solid fa-cubes"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">مواد حديد</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="count-steel" style="font-size: 11px;">0 صنف نشط</span>
+                        </div>
+
+                        <!-- Card 4: Tiles -->
+                        <div class="storage-portal-card" data-storage-cat-card="tiles">
+                            <div class="storage-portal-icon sp-icon-cyan">
+                                <i class="fa-solid fa-table-cells"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">بلاط وكاشي وسيراميك</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="count-tiles" style="font-size: 11px;">0 صنف نشط</span>
+                        </div>
+
+                        <!-- Card 5: Gypsum -->
+                        <div class="storage-portal-card" data-storage-cat-card="gypsum">
+                            <div class="storage-portal-icon sp-icon-purple">
+                                <i class="fa-solid fa-border-all"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">جبسن بورد</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="count-gypsum" style="font-size: 11px;">0 صنف نشط</span>
+                        </div>
+
+                        <!-- Card 6: Cement -->
+                        <div class="storage-portal-card" data-storage-cat-card="cement">
+                            <div class="storage-portal-icon sp-icon-bronze">
+                                <i class="fa-solid fa-fill-drip"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">إسمنت</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="count-cement" style="font-size: 11px;">0 صنف نشط</span>
+                        </div>
+
+                        <!-- Card 7: Paint -->
+                        <div class="storage-portal-card" data-storage-cat-card="paint">
+                            <div class="storage-portal-icon sp-icon-pink">
+                                <i class="fa-solid fa-paint-roller"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">دهان وطلاء</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="count-paint" style="font-size: 11px;">0 صنف نشط</span>
+                        </div>
+
+                        <!-- Card 8: Interior -->
+                        <div class="storage-portal-card" data-storage-cat-card="interior">
+                            <div class="storage-portal-icon sp-icon-green">
+                                <i class="fa-solid fa-door-open"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">أبواب ونوافذ</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="count-interior" style="font-size: 11px;">0 صنف نشط</span>
+                        </div>
+
+                        <!-- Card 9: Supplies -->
+                        <div class="storage-portal-card" data-storage-cat-card="supplies">
+                            <div class="storage-portal-icon sp-icon-gray">
+                                <i class="fa-solid fa-toolbox"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">مستلزمات يومية</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="count-supplies" style="font-size: 11px;">0 صنف نشط</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle wrapper for materials tables -->
+                <div id="storage-table-container" class="d-none">
+                    <!-- Sub-categories Tab Selector -->
+                    <div class="mb-4 d-none">
+                        <div class="category-tab-scroll">
+                            <button class="category-tab-btn active" data-storage-cat="all">جميع الأقسام</button>
+                            <button class="category-tab-btn" data-storage-cat="electrical">مواد كهربائية</button>
+                            <button class="category-tab-btn" data-storage-cat="plumbing">مواد مجاري</button>
+                            <button class="category-tab-btn" data-storage-cat="steel">مواد حديد</button>
+                            <button class="category-tab-btn" data-storage-cat="tiles">بلاط وكاشي وسيراميك</button>
+                            <button class="category-tab-btn" data-storage-cat="gypsum">جبسن بورد</button>
+                            <button class="category-tab-btn" data-storage-cat="cement">إسمنت</button>
+                            <button class="category-tab-btn" data-storage-cat="paint">دهان وطلاء</button>
+                            <button class="category-tab-btn" data-storage-cat="interior">أبواب ونوافذ</button>
+                            <button class="category-tab-btn" data-storage-cat="supplies">مستلزمات يومية</button>
+                        </div>
+                    </div>
+
+                    <!-- Search & Filters Toolbar -->
+                    <div class="glass-container mb-4">
+                        <div class="row g-3">
+                            <div class="col-md-5 col-lg-6">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                    <input type="text" id="search-input" class="form-control" placeholder="البحث بالاسم، المورد، المشتري، رقم الوصل...">
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-3">
+                                <select id="sort-select" class="form-select">
+                                    <option value="date-desc" selected>ترتيب بحسب: الأحدث دخولاً</option>
+                                    <option value="date-asc">ترتيب بحسب: الأقدم دخولاً</option>
+                                    <option value="name-asc">ترتيب بحسب: الاسم (أ-ي)</option>
+                                    <option value="name-desc">ترتيب بحسب: الاسم (ي-أ)</option>
+                                    <option value="qty-desc">ترتيب بحسب: الكمية (من الأكثر)</option>
+                                    <option value="qty-asc">ترتيب بحسب: الكمية (من الأقل)</option>
+                                    <option value="value-desc">ترتيب بحسب: إجمالي القيمة (من الأكثر)</option>
+                                    <option value="value-asc">ترتيب بحسب: إجمالي القيمة (من الأقل)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3 col-lg-3">
+                                <select id="archive-filter" class="form-select">
+                                    <option value="active" selected>عرض: المخزون النشط فقط</option>
+                                    <option value="archived">عرض: المخزون المؤرشف فقط</option>
+                                    <option value="all">عرض: الكل (النشط والمؤرشف)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Table -->
+                    <div class="glass-container">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-striped align-middle">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 3%;">#</th>
+                                        <th style="width: 17%;">اسم المادة / القسم</th>
+                                        <th style="width: 9%;">الكمية الأصلية</th>
+                                        <th style="width: 9%;">الكمية المتوفرة</th>
+                                        <th style="width: 10%;">سعر الوحدة</th>
+                                        <th style="width: 12%;">القيمة الكلية</th>
+                                        <th style="width: 12%;">الشركة / الوصل</th>
+                                        <th style="width: 12%;">المشتري / المستلم</th>
+                                        <th style="width: 8%;">التوصيل</th>
+                                        <th style="width: 8%;">تاريخ الإدخال</th>
+                                        <th style="width: 5%;">الحالة</th>
+                                        <th style="width: 10%;">إجراءات</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="materials-table-body">
+                                    <!-- Dynamic rendering -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 3: MATERIAL OUTPUT -->
+            <section id="section-output" class="app-section d-none">
+                <div class="glass-container mb-4">
+                    <div class="row align-items-center g-3">
+                        <div class="col-md-6 col-lg-5">
+                            <h5 class="fw-bold m-0"><i class="fa-solid fa-truck-ramp-box text-warning me-2"></i>إخراج وصرف المواد للمشاريع</h5>
+                            <small class="text-muted">قم بتسجيل حركات الصرف والاستهلاك، وحالات الإرجاع للموردين</small>
+                        </div>
+                        <div class="col-md-6 col-lg-7 text-md-end d-flex gap-2 justify-content-md-end flex-wrap">
+                            <button id="back-to-output-categories-btn" class="btn btn-outline-secondary d-none">
+                                <i class="fa-solid fa-chevron-right me-2"></i>العودة للأقسام الفرعية
+                            </button>
+                            <button class="btn btn-outline-primary fw-bold" onclick="App.switchTab('portal')">
+                                <i class="fa-solid fa-house me-1"></i>الرئيسية
+                            </button>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#issueMaterialModal">
+                                <i class="fa-solid fa-file-export me-2"></i>إخراج وصرف مادة
+                            </button>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-file-export me-2"></i>تصدير وطباعة
+                                </button>
+                                <ul class="dropdown-menu shadow">
+                                    <li><button id="print-tx-btn" class="dropdown-item fw-bold"><i class="fa-solid fa-print me-2 text-dark"></i>طباعة سجل الحركات الشامل</button></li>
+                                    <li><button id="excel-export-tx" class="dropdown-item fw-bold"><i class="fa-solid fa-file-excel me-2 text-success"></i>تصدير سجل الحركات Excel</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sub-categories Output Portal Grid -->
+                <div id="output-categories-portal" class="my-4">
+                    <div class="storage-portal-grid">
+                        <!-- Card 1: Electrical -->
+                        <div class="storage-portal-card" data-output-cat-card="electrical">
+                            <div class="storage-portal-icon sp-icon-yellow">
+                                <i class="fa-solid fa-bolt-lightning"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">مواد كهربائية</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="output-count-electrical" style="font-size: 11px;">0 حركة</span>
+                        </div>
+
+                        <!-- Card 2: Plumbing -->
+                        <div class="storage-portal-card" data-output-cat-card="plumbing">
+                            <div class="storage-portal-icon sp-icon-blue">
+                                <i class="fa-solid fa-faucet-drip"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">مواد مجاري</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="output-count-plumbing" style="font-size: 11px;">0 حركة</span>
+                        </div>
+
+                        <!-- Card 3: Steel -->
+                        <div class="storage-portal-card" data-output-cat-card="steel">
+                            <div class="storage-portal-icon sp-icon-orange">
+                                <i class="fa-solid fa-cubes"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">مواد حديد</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="output-count-steel" style="font-size: 11px;">0 حركة</span>
+                        </div>
+
+                        <!-- Card 4: Tiles -->
+                        <div class="storage-portal-card" data-output-cat-card="tiles">
+                            <div class="storage-portal-icon sp-icon-cyan">
+                                <i class="fa-solid fa-table-cells"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">بلاط وكاشي وسيراميك</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="output-count-tiles" style="font-size: 11px;">0 حركة</span>
+                        </div>
+
+                        <!-- Card 5: Gypsum -->
+                        <div class="storage-portal-card" data-output-cat-card="gypsum">
+                            <div class="storage-portal-icon sp-icon-purple">
+                                <i class="fa-solid fa-border-all"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">جبسن بورد</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="output-count-gypsum" style="font-size: 11px;">0 حركة</span>
+                        </div>
+
+                        <!-- Card 6: Cement -->
+                        <div class="storage-portal-card" data-output-cat-card="cement">
+                            <div class="storage-portal-icon sp-icon-bronze">
+                                <i class="fa-solid fa-fill-drip"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">إسمنت</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="output-count-cement" style="font-size: 11px;">0 حركة</span>
+                        </div>
+
+                        <!-- Card 7: Paint -->
+                        <div class="storage-portal-card" data-output-cat-card="paint">
+                            <div class="storage-portal-icon sp-icon-pink">
+                                <i class="fa-solid fa-paint-roller"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">دهان وطلاء</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="output-count-paint" style="font-size: 11px;">0 حركة</span>
+                        </div>
+
+                        <!-- Card 8: Interior -->
+                        <div class="storage-portal-card" data-output-cat-card="interior">
+                            <div class="storage-portal-icon sp-icon-green">
+                                <i class="fa-solid fa-door-open"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">أبواب ونوافذ</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="output-count-interior" style="font-size: 11px;">0 حركة</span>
+                        </div>
+
+                        <!-- Card 9: Supplies -->
+                        <div class="storage-portal-card" data-output-cat-card="supplies">
+                            <div class="storage-portal-icon sp-icon-gray">
+                                <i class="fa-solid fa-toolbox"></i>
+                            </div>
+                            <h5 class="fw-bold font-cairo text-primary-emphasis mb-0 mt-2">مستلزمات يومية</h5>
+                            <span class="badge bg-secondary-subtle text-secondary-emphasis mt-3 px-3 py-2" id="output-count-supplies" style="font-size: 11px;">0 حركة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Active Logs Table Wrapper -->
+                <div id="output-table-container" class="d-none">
+                    <div class="glass-container">
+                        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                            <h6 class="fw-bold mb-0 text-secondary"><i class="fa-solid fa-list-check me-2"></i>سجل الحركات التاريخي للمواد</h6>
+                            <div class="btn-group btn-group-sm" role="group">
+                                <input type="radio" class="btn-check" name="txTypeFilter" id="txFilterOut" value="out" autocomplete="off" checked>
+                                <label class="btn btn-outline-primary" for="txFilterOut">القسم الثاني: المواد المخرجة (صادر)</label>
+
+                                <input type="radio" class="btn-check" name="txTypeFilter" id="txFilterIn" value="in" autocomplete="off">
+                                <label class="btn btn-outline-success" for="txFilterIn">القسم الأول: المواد الجديدة (وارد)</label>
+
+                                <input type="radio" class="btn-check" name="txTypeFilter" id="txFilterAll" value="all" autocomplete="off">
+                                <label class="btn btn-outline-secondary" for="txFilterAll">عرض الكل</label>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover table-striped align-middle">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center" style="width: 2%;">#</th>
+                                        <th style="width: 10%;">التاريخ والوقت</th>
+                                        <th class="text-center" style="width: 10%;">نوع الحركة</th>
+                                        <th style="width: 13%;">اسم المادة</th>
+                                        <th class="text-center" style="width: 8%;">الكمية الأصلية</th>
+                                        <th class="text-center" style="width: 8%;">كمية الحركة</th>
+                                        <th class="text-center" style="width: 8%;">سعر الوحدة</th>
+                                        <th class="text-center" style="width: 8%;">القيمة الصافية</th>
+                                        <th class="text-center" style="width: 8%;">المسؤول / المشتري</th>
+                                        <th class="text-center" style="width: 8%;">المستلم / المسلّم</th>
+                                        <th style="width: 12%;">السبب والتفاصيل</th>
+                                        <th class="text-center" style="width: 5%;"><i class="fa-solid fa-print"></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="transactions-table-body">
+                                    <!-- Dynamic rendering -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 4: ALERTS PANEL -->
+            <section id="section-alerts" class="app-section d-none">
+                <div class="glass-container mb-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5 class="fw-bold m-0"><i class="fa-solid fa-triangle-exclamation text-warning me-2"></i>مركز التنبيهات وإشعارات المخزون الذكي</h5>
+                            <small class="text-muted">مراقبة فورية للمخزون الحرج، المواد النافدة، والأصناف الراكدة التي لم تستخدم</small>
+                        </div>
+                        <span id="alert-list-badge" class="badge bg-success rounded-pill px-2">لا توجد تنبيهات</span>
+                    </div>
+                </div>
+
+                <div id="alerts-container" class="row">
+                    <!-- Dynamic rendering -->
+                </div>
+            </section>
+
+            <!-- TAB 5: SYSTEM CONFIGURATION & GENERAL LOGS -->
+            <section id="section-config" class="app-section d-none">
+                <div class="row g-4">
+                    <!-- Right column: System Controls -->
+                    <div class="col-lg-5">
+                        <!-- User management -->
+                        <div class="glass-container mb-4">
+                            <h6 class="fw-bold mb-3 border-bottom pb-2 text-secondary">
+                                <i class="fa-solid fa-users text-warning me-2"></i>إدارة مستخدمي المنظومة
+                            </h6>
+                            <div class="mb-3">
+                                <label for="new-user-input" class="form-label small">إضافة مستخدم جديد للنظام</label>
+                                <div class="input-group">
+                                    <input type="text" id="new-user-input" class="form-control form-control-sm" placeholder="اسم الموظف أو المهندس...">
+                                    <button id="add-user-btn" class="btn btn-primary btn-sm">إضافة</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Database operations -->
+                        <div class="glass-container">
+                            <h6 class="fw-bold mb-3 border-bottom pb-2 text-secondary">
+                                <i class="fa-solid fa-database text-warning me-2"></i>أدوات صيانة قاعدة البيانات والنسخ الاحتياطي
+                            </h6>
+                            
+                            <div class="mb-4">
+                                <p class="text-muted small">قم بتصدير نسخة كاملة من بيانات المخزن والعمليات وحفظها في جهازك بصيغة JSON كإجراء احتياطي.</p>
+                                <button id="export-backup-btn" class="btn btn-outline-primary btn-sm w-100">
+                                    <i class="fa-solid fa-cloud-arrow-down me-2"></i>تصدير نسخة احتياطية (Backup)
+                                </button>
+                            </div>
+
+                            <div class="mb-4">
+                                <p class="text-muted small">قم باستيراد نسخة احتياطية محفوظة مسبقاً لتثبيت البيانات الحالية أو نقلها من جهاز آخر.</p>
+                                <div class="input-group input-group-sm">
+                                    <input type="file" id="import-backup-file" class="form-control" accept=".json">
+                                </div>
+                            </div>
+
+                            <div class="border-top pt-3">
+                                <p class="text-danger small">تصفير النظام وإعادة التهيئة للمصنع سيقوم بمسح كافة المواد المدخلة والعمليات. يرجى الحذر!</p>
+                                <button id="reset-db-btn" class="btn btn-outline-danger btn-sm w-100">
+                                    <i class="fa-solid fa-trash-can me-2"></i>تصفير قاعدة البيانات بالكامل
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Left column: Activity logs -->
+                    <div class="col-lg-7">
+                        <div class="glass-container">
+                            <h6 class="fw-bold mb-3 border-bottom pb-2 text-secondary">
+                                <i class="fa-solid fa-clock-rotate-left text-warning me-2"></i>سجل العمليات العام (الأحدث أولاً)
+                            </h6>
+                            <div class="table-responsive" style="max-height: 500px; overflow-y: auto;">
+                                <table class="table table-sm table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 5%;">#</th>
+                                            <th style="width: 25%;">التاريخ والوقت</th>
+                                            <th style="width: 20%;">المستخدم</th>
+                                            <th style="width: 50%;">الإجراء المتخذ</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="logs-table-body">
+                                        <!-- Dynamic rendering -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ============================================== -->
+    <!-- MODALS SECTION -->
+    
+    <!-- 1. ADD MATERIAL MODAL -->
+    <div class="modal fade" id="addMaterialModal" tabindex="-1" aria-labelledby="addMaterialModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title fw-bold text-secondary" id="addMaterialModalLabel">
+                        <i class="fa-solid fa-square-plus text-warning me-2"></i>إدخال وتخزين شحنة مواد جديدة
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="add-material-form">
+                    <div class="modal-body">
+                        <div class="row g-3">
+                            <!-- Row 1: Material & Category -->
+                            <div class="col-md-6">
+                                <label for="add_name" class="form-label fw-semibold">اسم المادة <span class="text-danger">*</span></label>
+                                <input type="text" id="add_name" name="name" class="form-control" placeholder="مثال: حديد تسليح 12 ملم تركيا" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="add_category" class="form-label fw-semibold">قسم المادة <span class="text-danger">*</span></label>
+                                <select id="add_category" name="category" class="form-select" required>
+                                    <option value="" disabled selected>-- اختر القسم المناسب --</option>
+                                    <option value="electrical">مواد كهربائية</option>
+                                    <option value="plumbing">مواد مجاري</option>
+                                    <option value="steel">مواد حديد</option>
+                                    <option value="tiles">مواد بلاط وكاشي وسيراميك</option>
+                                    <option value="gypsum">مواد جبسن بورد</option>
+                                    <option value="cement">مواد إسمنت</option>
+                                    <option value="paint">مواد دهان</option>
+                                    <option value="interior">مواد داخلية (أبواب ونوافذ)</option>
+                                    <option value="supplies">مواد مستلزمات يومية</option>
+                                </select>
+                            </div>
+
+                            <!-- Row 2: Quantity, Unit, Unit Price, Total -->
+                            <div class="col-md-3">
+                                <label for="add_quantity" class="form-label fw-semibold">الكمية <span class="text-danger">*</span></label>
+                                <input type="number" step="any" id="add_quantity" name="quantity" class="form-control" placeholder="0" min="0.01" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="add_unit" class="form-label fw-semibold">الوحدة <span class="text-danger">*</span></label>
+                                <select id="add_unit" name="unit_select" class="form-select" required>
+                                    <option value="" disabled selected>-- الوحدة --</option>
+                                    <option value="قطعة">قطعة</option>
+                                    <option value="حبة">حبة</option>
+                                    <option value="كيس">كيس</option>
+                                    <option value="طن">طن</option>
+                                    <option value="متر">متر</option>
+                                    <option value="متر مربع">متر مربع</option>
+                                    <option value="متر مكعب">متر مكعب</option>
+                                    <option value="لتر">لتر</option>
+                                    <option value="شدة">شدة</option>
+                                    <option value="كغم">كغم</option>
+                                    <option value="لفة">لفة</option>
+                                    <option value="سيت">سيت</option>
+                                    <option value="كرتون">كرتون</option>
+                                    <option value="برميل">برميل</option>
+                                    <option value="custom">أخرى...</option>
+                                </select>
+                                <input type="text" id="add_unit_custom" name="unit_custom" class="form-control mt-2 d-none" placeholder="اكتب مخصص...">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="add_unitPrice" class="form-label fw-semibold">سعر الوحدة <span class="text-danger">*</span></label>
+                                <input type="number" step="any" id="add_unitPrice" name="unitPrice" class="form-control" placeholder="0" min="1" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label fw-semibold text-muted">القيمة الكلية</label>
+                                <input type="text" id="add_totalPrice_display" class="form-control bg-light text-primary fw-bold" readonly value="0 د.ع">
+                            </div>
+
+                            <hr class="my-3">
+
+                            <!-- Row 3: Company, Buyer, Receiver, Invoice -->
+                            <div class="col-md-3">
+                                <label for="add_companyName" class="form-label fw-semibold">المورد / الشركة</label>
+                                <input type="text" id="add_companyName" name="companyName" class="form-control" placeholder="اسم المورد أو المحل">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="add_buyerName" class="form-label fw-semibold">المشتري <span class="text-danger">*</span></label>
+                                <input type="text" id="add_buyerName" name="buyerName" class="form-control" placeholder="اسم المشتري" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="add_receiverName" class="form-label fw-semibold">المستلم <span class="text-danger">*</span></label>
+                                <input type="text" id="add_receiverName" name="receiverName" class="form-control" placeholder="اسم المستلم" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="add_invoiceNumber" class="form-label fw-semibold">رقم الوصل</label>
+                                <input type="text" id="add_invoiceNumber" name="invoiceNumber" class="form-control" placeholder="رقم الفاتورة">
+                            </div>
+
+                            <hr class="my-3">
+
+                            <!-- Row 4: Entry Date, Delivery Cost, Alert, Notes -->
+                            <div class="col-md-3">
+                                <label for="add_entryDate" class="form-label fw-semibold">تاريخ الإدخال</label>
+                                <input type="date" id="add_entryDate" name="entryDate" class="form-control">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="add_deliveryCost" class="form-label fw-semibold">سعر التوصيل</label>
+                                <input type="number" step="any" id="add_deliveryCost" name="deliveryCost" class="form-control" placeholder="0">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="add_alertLimit" class="form-label fw-semibold">حد التنبيه <span class="text-danger">*</span></label>
+                                <input type="number" step="any" id="add_alertLimit" name="alertLimit" class="form-control" placeholder="الحد الأدنى" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="add_notes" class="form-label fw-semibold">ملاحظات</label>
+                                <input type="text" id="add_notes" name="notes" class="form-control" placeholder="ملاحظات...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer bg-light">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                        <button type="submit" class="btn btn-primary">تخزين المادة</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. EDIT MATERIAL MODAL -->
+    <div class="modal fade" id="editMaterialModal" tabindex="-1" aria-labelledby="editMaterialModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title fw-bold text-secondary" id="editMaterialModalLabel">
+                        <i class="fa-solid fa-pen-to-square text-warning me-2"></i>تعديل بيانات مادة مخزونة
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="edit-material-form">
+                    <div class="modal-body">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="edit_name" class="form-label fw-semibold">اسم المادة <span class="text-danger">*</span></label>
+                                <input type="text" id="edit_name" name="name" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="edit_category" class="form-label fw-semibold">قسم المادة <span class="text-danger">*</span></label>
+                                <select id="edit_category" name="category" class="form-select" required>
+                                    <option value="electrical">مواد كهربائية</option>
+                                    <option value="plumbing">مواد مجاري</option>
+                                    <option value="steel">مواد حديد</option>
+                                    <option value="tiles">مواد بلاط وكاشي وسيراميك</option>
+                                    <option value="gypsum">مواد جبسن بورد</option>
+                                    <option value="cement">مواد إسمنت</option>
+                                    <option value="paint">مواد دهان</option>
+                                    <option value="interior">مواد داخلية (أبواب ونوافذ)</option>
+                                    <option value="supplies">مواد مستلزمات يومية</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="edit_quantity" class="form-label fw-semibold">الكمية المتوفرة حالياً <span class="text-danger">*</span></label>
+                                <input type="number" step="any" id="edit_quantity" name="quantity" class="form-control" min="0" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="edit_unit" class="form-label fw-semibold">وحدة القياس <span class="text-danger">*</span></label>
+                                <select id="edit_unit" name="unit_select" class="form-select" required>
+                                    <option value="" disabled selected>-- اختر الوحدة --</option>
+                                    <option value="قطعة">قطعة</option>
+                                    <option value="حبة">حبة</option>
+                                    <option value="كيس">كيس</option>
+                                    <option value="طن">طن</option>
+                                    <option value="متر">متر</option>
+                                    <option value="متر مربع">متر مربع</option>
+                                    <option value="متر مكعب">متر مكعب</option>
+                                    <option value="لتر">لتر</option>
+                                    <option value="شدة">شدة</option>
+                                    <option value="كغم">كغم</option>
+                                    <option value="لفة">لفة</option>
+                                    <option value="سيت">سيت</option>
+                                    <option value="كرتون">كرتون</option>
+                                    <option value="برميل">برميل</option>
+                                    <option value="custom">أخرى (كتابة مخصصة)...</option>
+                                </select>
+                                <input type="text" id="edit_unit_custom" name="unit_custom" class="form-control mt-2 d-none" placeholder="اكتب وحدة القياس المخصصة...">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="edit_unitPrice" class="form-label fw-semibold">سعر الوحدة (د.ع) <span class="text-danger">*</span></label>
+                                <input type="number" step="any" id="edit_unitPrice" name="unitPrice" class="form-control" min="1" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-muted">السعر الإجمالي المحسوب الجديد</label>
+                                <input type="text" id="edit_totalPrice_display" class="form-control bg-light text-primary fw-bold fs-5" readonly>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="edit_alertLimit" class="form-label fw-semibold">حد التنبيه (للكمية الشحيحة) <span class="text-danger">*</span></label>
+                                <input type="number" step="any" id="edit_alertLimit" name="alertLimit" class="form-control" required>
+                            </div>
+
+                            <hr class="my-3">
+
+                            <div class="col-md-6">
+                                <label for="edit_buyerName" class="form-label fw-semibold">اسم المشتري / المسؤول <span class="text-danger">*</span></label>
+                                <input type="text" id="edit_buyerName" name="buyerName" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="edit_receiverName" class="form-label fw-semibold">اسم المستلم في الموقع <span class="text-danger">*</span></label>
+                                <input type="text" id="edit_receiverName" name="receiverName" class="form-control" required>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="edit_companyName" class="form-label fw-semibold">الشركة الموردة</label>
+                                <input type="text" id="edit_companyName" name="companyName" class="form-control">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="edit_invoiceNumber" class="form-label fw-semibold">رقم وصل الشراء</label>
+                                <input type="text" id="edit_invoiceNumber" name="invoiceNumber" class="form-control">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="edit_deliveryCost" class="form-label fw-semibold">سعر التوصيل والتحميل (د.ع)</label>
+                                <input type="number" step="any" id="edit_deliveryCost" name="deliveryCost" class="form-control">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="edit_entryDate" class="form-label fw-semibold">تاريخ الإدخال</label>
+                                <input type="date" id="edit_entryDate" name="entryDate" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="edit_notes" class="form-label fw-semibold">ملاحظات إضافية</label>
+                                <input type="text" id="edit_notes" name="notes" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer bg-light">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                        <button type="submit" class="btn btn-success">تحديث البيانات</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. ISSUE MATERIAL MODAL -->
+    <div class="modal fade" id="issueMaterialModal" tabindex="-1" aria-labelledby="issueMaterialModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title fw-bold text-secondary" id="issueMaterialModalLabel">
+                        <i class="fa-solid fa-file-export text-warning me-2"></i>إخراج وصرف مادة من المستودع
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="issue-material-form">
+                    <div class="modal-body">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label for="issue_materialId" class="form-label fw-semibold">المادة المراد صرفها <span class="text-danger">*</span></label>
+                                <select id="issue_materialId" name="materialId" class="form-select" required>
+                                    <!-- Dynamic elements from stock -->
+                                </select>
+                                <div id="issue_max_available" class="form-text text-primary fw-bold mt-1"></div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="issue_quantity" class="form-label fw-semibold">الكمية الصادرة <span class="text-danger">*</span></label>
+                                <input type="number" step="any" id="issue_quantity" name="quantity" class="form-control" placeholder="0" min="0.01" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="issue_operatorName" class="form-label fw-semibold">اسم الشخص الذي أخرج المواد (المهندس/المشرف) <span class="text-danger">*</span></label>
+                                <input type="text" id="issue_operatorName" name="operatorName" class="form-control" placeholder="من قام بطلب صرف المادة" required>
+                            </div>
+                            
+                            <div class="col-12">
+                                <label for="issue_delivererName" class="form-label fw-semibold">اسم الشخص الذي سلّم المواد (أمين المخزن) <span class="text-danger">*</span></label>
+                                <input type="text" id="issue_delivererName" name="delivererName" class="form-control" placeholder="من قام بتسليم المواد في المستودع" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="issue_reason" class="form-label fw-semibold">سبب الإخراج <span class="text-danger">*</span></label>
+                                <select id="issue_reason" name="reason" class="form-select" required>
+                                    <option value="project" selected>استخدام بالمشروع الإنشائي</option>
+                                    <option value="return">استرجاع للشركة الموردة</option>
+                                </select>
+                            </div>
+
+                            <!-- Conditionally shown for returns -->
+                            <div id="return-only-fields" class="col-12 d-none p-3 border rounded bg-warning-subtle">
+                                <h6 class="fw-bold mb-3 text-warning-emphasis"><i class="fa-solid fa-arrow-rotate-left me-2"></i>تفاصيل الاسترجاع للشركة</h6>
+                                <div class="row g-2">
+                                    <div class="col-12">
+                                        <label for="issue_companyName" class="form-label small fw-semibold">اسم الشركة الموردة <span class="text-danger">*</span></label>
+                                        <input type="text" id="issue_companyName" name="companyName" class="form-control form-control-sm" placeholder="الشركة المستلمة للمواد المرتجعة">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="issue_returnInvoice" class="form-label small fw-semibold">رقم وصل الاسترجاع <span class="text-danger">*</span></label>
+                                        <input type="text" id="issue_returnInvoice" name="returnInvoiceNumber" class="form-control form-control-sm" placeholder="رقم وصل المرتجع">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="issue_deliveryCost" class="form-label small fw-semibold">سعر التوصيل للمرتجع (د.ع)</label>
+                                        <input type="number" step="any" id="issue_deliveryCost" name="deliveryCost" class="form-control form-control-sm" placeholder="0">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer bg-light">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                        <button type="submit" class="btn btn-primary">إتمام الصرف</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div id="toast-container" class="toast-container position-fixed bottom-0 start-0 p-3">
+        <!-- Toast items are rendered dynamically -->
+    </div>
+
+    <!-- ============================================== -->
+    <!-- SCRIPTS LOADING -->
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Chart.js for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- SheetJS (XLSX) for Excel Export -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    
+    <!-- jsPDF for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- App Modules -->
+    <script src="js/database.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/output.js"></script>
+    <script src="js/alerts.js"></script>
+    <script src="js/statistics.js"></script>
+    <script src="js/print.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Service Worker Registration & PWA Installability -->
+    <script>
+        // Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js').then(registration => {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }).catch(err => {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+
+        // PWA Install Prompt Handling
+        let deferredPrompt;
+        const installBtn = document.getElementById('install-app-btn');
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            // Prevent Chrome 67 and earlier from automatically showing the prompt
+            e.preventDefault();
+            // Stash the event so it can be triggered later.
+            deferredPrompt = e;
+            // Update UI to notify the user they can add to home screen
+            if (installBtn) {
+                installBtn.classList.remove('d-none');
+                installBtn.style.display = 'flex';
+            }
+        });
+
+        if (installBtn) {
+            installBtn.addEventListener('click', async () => {
+                if (deferredPrompt) {
+                    // Show the prompt
+                    deferredPrompt.prompt();
+                    // Wait for the user to respond to the prompt
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') {
+                        console.log('User accepted the A2HS prompt');
+                    } else {
+                        console.log('User dismissed the A2HS prompt');
+                    }
+                    // We've used the prompt, and can't use it again, throw it away
+                    deferredPrompt = null;
+                    // Hide the button
+                    installBtn.classList.add('d-none');
+                    installBtn.style.display = '';
+                }
+            });
+        }
+
+        window.addEventListener('appinstalled', () => {
+            // Hide the app-provided install promotion
+            if (installBtn) {
+                installBtn.classList.add('d-none');
+                installBtn.style.display = '';
+            }
+            // Clear the deferredPrompt so it can be garbage collected
+            deferredPrompt = null;
+            console.log('PWA was installed');
+        });
+    </script>
+</body>
+</html>

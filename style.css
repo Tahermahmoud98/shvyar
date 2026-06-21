@@ -1,0 +1,859 @@
+/**
+ * Vanilla CSS Stylesheet - Construction Warehouse Management System
+ * Features premium typography, Glassmorphism, smooth responsive transitions, and full Dark Mode variables.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root, [data-theme="light"] {
+    /* Color Palette */
+    --bg-primary: #f8fafc;
+    --bg-card: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --border-color: #e2e8f0;
+    
+    --sidebar-bg: #0f172a; /* Deep Slate Blue */
+    --sidebar-color: #94a3b8;
+    --sidebar-active-bg: #1e293b;
+    --sidebar-active-color: #ffffff;
+    
+    --primary-color: #1e3a8a; /* Slate Royal Blue */
+    --accent-color: #f97316;  /* Construction Safety Orange */
+    --accent-hover: #ea580c;
+    
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --info: #3b82f6;
+    
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
+}
+
+[data-theme="dark"] {
+    --bg-primary: #090d16;
+    --bg-card: #111827;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --border-color: #1e293b;
+    
+    --sidebar-bg: #070a10;
+    --sidebar-color: #64748b;
+    --sidebar-active-bg: #111827;
+    --sidebar-active-color: #f97316; /* Safety Orange highlights in dark mode */
+    
+    --primary-color: #3b82f6;
+    --accent-color: #f97316;
+    --accent-hover: #fa8231;
+    
+    --success: #059669;
+    --warning: #d97706;
+    --danger: #dc2626;
+    --info: #2563eb;
+    
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+    --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section.app-section {
+    scroll-margin-top: 100px; /* Offset for sticky top navbar */
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Global Reset & Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Kufi Arabic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--sidebar-color);
+}
+
+/* Layout Framework */
+#main-content {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Navigation Scroll styling */
+.header-nav-scroll {
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+.header-nav-scroll::-webkit-scrollbar {
+    display: none; /* Hide scrollbar Chrome/Safari */
+}
+
+/* Horizontal Top Navigation Links */
+.navbar-top .nav-link {
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary) !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+    background-color: transparent;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.navbar-top .nav-link:hover {
+    color: var(--text-primary) !important;
+    background-color: var(--bg-primary);
+    border-color: var(--border-color);
+}
+
+.navbar-top .nav-link.active {
+    color: #ffffff !important;
+    background-color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(249, 115, 22, 0.25);
+}
+
+/* Logo styling */
+.sidebar-logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.sidebar-logo span {
+    color: var(--accent-color);
+}
+
+/* Top Header Navigation */
+.navbar-top {
+    height: 70px;
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: var(--shadow-sm);
+    transition: background-color 0.3s ease;
+}
+
+.user-badge {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    padding: 6px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Cards & Dashboard KPIs */
+.stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: var(--shadow-glass);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-color);
+}
+.stat-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--accent-color);
+}
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background-color: rgba(249, 115, 22, 0.1);
+    color: var(--accent-color);
+}
+.stat-card-title {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+.stat-card-value {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    font-family: 'Outfit', 'Noto Kufi Arabic', sans-serif;
+    margin-top: 8px;
+}
+
+/* Luxury Glassmorphism Container */
+.glass-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: var(--shadow-sm);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Bootstrap Overrides for custom aesthetics */
+.btn-primary {
+    background-color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+.btn-primary:hover {
+    background-color: var(--accent-hover) !important;
+    border-color: var(--accent-hover) !important;
+}
+
+.btn-outline-primary {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+.btn-outline-primary:hover {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+.form-control, .form-select {
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border-radius: 8px;
+    padding: 10px 14px;
+    transition: all 0.2s ease;
+}
+.form-control:focus, .form-select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.25rem rgba(249, 115, 22, 0.15);
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+}
+
+.table {
+    color: var(--text-primary);
+    border-color: var(--border-color);
+    font-size: 0.95rem;
+}
+.table th {
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+    font-weight: 700;
+    border-bottom: 2px solid var(--border-color);
+    text-transform: uppercase;
+}
+.table td {
+    vertical-align: middle;
+}
+
+/* Alert Notification Panel List Card */
+.card-alerts-box {
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-card);
+    transition: transform 0.2s ease;
+}
+.card-alerts-box:hover {
+    transform: scale(1.02);
+}
+
+/* Category Filter Tabs (Storage input view) */
+.category-tab-scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid var(--border-color);
+}
+.category-tab-btn {
+    padding: 8px 16px;
+    border-radius: 30px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-weight: 600;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.category-tab-btn:hover {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+.category-tab-btn.active {
+    background: var(--accent-color);
+    color: #ffffff;
+    border-color: var(--accent-color);
+}
+
+/* Modal styling custom overrides */
+.modal-content {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+}
+.modal-header {
+    border-bottom: 1px solid var(--border-color);
+}
+.modal-footer {
+    border-top: 1px solid var(--border-color);
+}
+
+/* Toasts custom positioning */
+#toast-container {
+    z-index: 1060;
+}
+.toast {
+    font-size: 0.9rem;
+    border-radius: 12px !important;
+}
+
+/* Responsive elements */
+@media (max-width: 991.98px) {
+    #main-content {
+        width: 100%;
+        margin-right: 0 !important;
+    }
+    
+    /* Mobile responsive navbar spacing */
+    .navbar-top {
+        padding: 15px;
+    }
+}
+
+/* ==========================================================================
+   PORTAL / LAUNCHPAD HOMEPAGE STYLES (LUXURIOUS REDESIGN)
+   ========================================================================== */
+
+/* Ambient backdrop blur glows */
+.portal-bg-glow {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    filter: blur(140px);
+    z-index: 0;
+    opacity: 0.12;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+.portal-glow-1 {
+    top: 10%;
+    left: 15%;
+    background: var(--accent-color);
+}
+.portal-glow-2 {
+    bottom: 15%;
+    right: 15%;
+    background: var(--primary-color);
+}
+
+#section-portal {
+    position: relative;
+    overflow: hidden;
+    padding: 50px 20px;
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Grids and Layout containers */
+.portal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+}
+
+.portal-grid-secondary {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto 0 auto;
+    flex-wrap: wrap;
+    z-index: 1;
+    position: relative;
+}
+
+/* Premium Glassmorphic Cards */
+.portal-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none !important;
+    color: inherit !important;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: var(--shadow-sm);
+    min-height: 380px;
+    position: relative;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Custom glow transitions based on target section type */
+.portal-card[data-tab="dashboard"]:hover {
+    border-color: #8b5cf6;
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15);
+    transform: translateY(-8px);
+}
+.portal-card[data-tab="output"]:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+    transform: translateY(-8px);
+}
+.portal-card[data-tab="storage"]:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 20px 40px rgba(249, 115, 22, 0.15);
+    transform: translateY(-8px);
+}
+
+/* Icon Box Design */
+.portal-icon-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.portal-icon-indigo {
+    background: rgba(139, 92, 246, 0.08);
+    color: #8b5cf6;
+}
+.portal-card[data-tab="dashboard"]:hover .portal-icon-indigo {
+    background: #8b5cf6;
+    color: #ffffff;
+    transform: scale(1.12) rotate(6deg);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.35);
+}
+
+.portal-icon-blue {
+    background: rgba(59, 130, 246, 0.08);
+    color: #3b82f6;
+}
+.portal-card[data-tab="output"]:hover .portal-icon-blue {
+    background: #3b82f6;
+    color: #ffffff;
+    transform: scale(1.12) translateY(-4px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.35);
+}
+
+.portal-icon-orange {
+    background: rgba(249, 115, 22, 0.08);
+    color: var(--accent-color);
+}
+.portal-card[data-tab="storage"]:hover .portal-icon-orange {
+    background: var(--accent-color);
+    color: #ffffff;
+    transform: scale(1.12) rotate(-6deg);
+    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.35);
+}
+
+/* Content details inside vertical cards */
+.portal-card-desc {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+/* Button style */
+.portal-card-btn {
+    background: transparent;
+    border: 2px solid var(--border-color);
+    border-radius: 14px;
+    padding: 10px 24px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    margin-top: auto;
+}
+.portal-card-btn i {
+    transition: transform 0.3s ease;
+}
+
+/* Button hover triggers inside parents */
+.portal-card[data-tab="dashboard"]:hover .portal-card-btn {
+    border-color: #8b5cf6;
+    background: #8b5cf6;
+    color: #ffffff;
+}
+.portal-card[data-tab="output"]:hover .portal-card-btn {
+    border-color: #3b82f6;
+    background: #3b82f6;
+    color: #ffffff;
+}
+.portal-card[data-tab="storage"]:hover .portal-card-btn {
+    border-color: var(--accent-color);
+    background: var(--accent-color);
+    color: #ffffff;
+}
+
+.portal-card:hover .portal-card-btn i {
+    transform: translateX(-5px); /* Move leftwards in RTL */
+}
+
+/* Horizontal card styles for secondary portal links (Alerts & Settings) */
+.portal-card-horizontal {
+    flex: 0 1 480px;
+    min-height: auto !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    text-align: right !important;
+    border-radius: 20px !important;
+    padding: 20px 25px !important;
+    width: 100%;
+}
+
+.portal-card-horizontal .portal-icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.portal-icon-red {
+    background: rgba(239, 68, 68, 0.08);
+    color: var(--danger);
+}
+.portal-card-horizontal[data-tab="alerts"]:hover {
+    border-color: var(--danger);
+    box-shadow: 0 12px 25px rgba(239, 68, 68, 0.12);
+    transform: translateY(-5px);
+}
+.portal-card-horizontal[data-tab="alerts"]:hover .portal-icon-red {
+    background: var(--danger);
+    color: #ffffff;
+    transform: scale(1.08);
+}
+
+.portal-icon-gray {
+    background: rgba(100, 116, 139, 0.08);
+    color: #64748b;
+}
+.portal-card-horizontal[data-tab="config"]:hover {
+    border-color: #64748b;
+    box-shadow: 0 12px 25px rgba(100, 116, 139, 0.12);
+    transform: translateY(-5px);
+}
+.portal-card-horizontal[data-tab="config"]:hover .portal-icon-gray {
+    background: #64748b;
+    color: #ffffff;
+    transform: scale(1.08);
+}
+
+/* Dark mode specific glass overlays for portal */
+[data-theme="dark"] .portal-card {
+    background: rgba(17, 24, 39, 0.6);
+    border-color: rgba(255, 255, 255, 0.05);
+}
+[data-theme="dark"] .portal-bg-glow {
+    opacity: 0.18;
+}
+
+/* Responsive breakdowns for portal layout */
+@media (max-width: 991px) {
+    .portal-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .portal-grid-secondary {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .portal-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .portal-grid-secondary {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .portal-card-horizontal {
+        flex: 1 1 auto;
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 15px;
+        padding: 25px !important;
+    }
+    .portal-card-horizontal .d-flex {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .portal-card-horizontal .text-start {
+        text-align: center !important;
+    }
+}
+
+/* ==========================================================================
+   STORAGE SUB-CATEGORY PORTAL STYLES (LUXURY SUB-LAUNCHER)
+   ========================================================================== */
+
+.storage-portal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+    .storage-portal-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .storage-portal-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+.storage-portal-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: var(--shadow-sm);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+/* Custom glow effects for sub-category cards */
+.storage-portal-card[data-storage-cat-card="electrical"]:hover,
+.storage-portal-card[data-dashboard-cat-card="electrical"]:hover,
+.storage-portal-card[data-output-cat-card="electrical"]:hover {
+    border-color: #eab308;
+    box-shadow: 0 15px 30px rgba(234, 179, 8, 0.12);
+    transform: translateY(-5px);
+}
+.storage-portal-card[data-storage-cat-card="plumbing"]:hover,
+.storage-portal-card[data-dashboard-cat-card="plumbing"]:hover,
+.storage-portal-card[data-output-cat-card="plumbing"]:hover {
+    border-color: #2563eb;
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.12);
+    transform: translateY(-5px);
+}
+.storage-portal-card[data-storage-cat-card="steel"]:hover,
+.storage-portal-card[data-dashboard-cat-card="steel"]:hover,
+.storage-portal-card[data-output-cat-card="steel"]:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 15px 30px rgba(249, 115, 22, 0.12);
+    transform: translateY(-5px);
+}
+.storage-portal-card[data-storage-cat-card="tiles"]:hover,
+.storage-portal-card[data-dashboard-cat-card="tiles"]:hover,
+.storage-portal-card[data-output-cat-card="tiles"]:hover {
+    border-color: #06b6d4;
+    box-shadow: 0 15px 30px rgba(6, 182, 212, 0.12);
+    transform: translateY(-5px);
+}
+.storage-portal-card[data-storage-cat-card="gypsum"]:hover,
+.storage-portal-card[data-dashboard-cat-card="gypsum"]:hover,
+.storage-portal-card[data-output-cat-card="gypsum"]:hover {
+    border-color: #a855f7;
+    box-shadow: 0 15px 30px rgba(168, 85, 247, 0.12);
+    transform: translateY(-5px);
+}
+.storage-portal-card[data-storage-cat-card="cement"]:hover,
+.storage-portal-card[data-dashboard-cat-card="cement"]:hover,
+.storage-portal-card[data-output-cat-card="cement"]:hover {
+    border-color: #b45309;
+    box-shadow: 0 15px 30px rgba(180, 83, 9, 0.12);
+    transform: translateY(-5px);
+}
+.storage-portal-card[data-storage-cat-card="paint"]:hover,
+.storage-portal-card[data-dashboard-cat-card="paint"]:hover,
+.storage-portal-card[data-output-cat-card="paint"]:hover {
+    border-color: #ec4899;
+    box-shadow: 0 15px 30px rgba(236, 72, 153, 0.12);
+    transform: translateY(-5px);
+}
+.storage-portal-card[data-storage-cat-card="interior"]:hover,
+.storage-portal-card[data-dashboard-cat-card="interior"]:hover,
+.storage-portal-card[data-output-cat-card="interior"]:hover {
+    border-color: #10b981;
+    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.12);
+    transform: translateY(-5px);
+}
+.storage-portal-card[data-storage-cat-card="supplies"]:hover,
+.storage-portal-card[data-dashboard-cat-card="supplies"]:hover,
+.storage-portal-card[data-output-cat-card="supplies"]:hover {
+    border-color: #64748b;
+    box-shadow: 0 15px 30px rgba(100, 116, 139, 0.12);
+    transform: translateY(-5px);
+}
+
+/* Icon box inside sub-category cards */
+.storage-portal-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.sp-icon-yellow { background: rgba(234, 179, 8, 0.08); color: #eab308; }
+.storage-portal-card[data-storage-cat-card="electrical"]:hover .sp-icon-yellow,
+.storage-portal-card[data-dashboard-cat-card="electrical"]:hover .sp-icon-yellow,
+.storage-portal-card[data-output-cat-card="electrical"]:hover .sp-icon-yellow {
+    background: #eab308; color: #ffffff; transform: scale(1.1) rotate(5deg);
+}
+
+.sp-icon-blue { background: rgba(37, 99, 235, 0.08); color: #2563eb; }
+.storage-portal-card[data-storage-cat-card="plumbing"]:hover .sp-icon-blue,
+.storage-portal-card[data-dashboard-cat-card="plumbing"]:hover .sp-icon-blue,
+.storage-portal-card[data-output-cat-card="plumbing"]:hover .sp-icon-blue {
+    background: #2563eb; color: #ffffff; transform: scale(1.1) translateY(-3px);
+}
+
+.sp-icon-orange { background: rgba(249, 115, 22, 0.08); color: var(--accent-color); }
+.storage-portal-card[data-storage-cat-card="steel"]:hover .sp-icon-orange,
+.storage-portal-card[data-dashboard-cat-card="steel"]:hover .sp-icon-orange,
+.storage-portal-card[data-output-cat-card="steel"]:hover .sp-icon-orange {
+    background: var(--accent-color); color: #ffffff; transform: scale(1.1) rotate(-5deg);
+}
+
+.sp-icon-cyan { background: rgba(6, 182, 212, 0.08); color: #06b6d4; }
+.storage-portal-card[data-storage-cat-card="tiles"]:hover .sp-icon-cyan,
+.storage-portal-card[data-dashboard-cat-card="tiles"]:hover .sp-icon-cyan,
+.storage-portal-card[data-output-cat-card="tiles"]:hover .sp-icon-cyan {
+    background: #06b6d4; color: #ffffff; transform: scale(1.1) rotate(5deg);
+}
+
+.sp-icon-purple { background: rgba(168, 85, 247, 0.08); color: #a855f7; }
+.storage-portal-card[data-storage-cat-card="gypsum"]:hover .sp-icon-purple,
+.storage-portal-card[data-dashboard-cat-card="gypsum"]:hover .sp-icon-purple,
+.storage-portal-card[data-output-cat-card="gypsum"]:hover .sp-icon-purple {
+    background: #a855f7; color: #ffffff; transform: scale(1.1) translateY(-3px);
+}
+
+.sp-icon-bronze { background: rgba(180, 83, 9, 0.08); color: #b45309; }
+.storage-portal-card[data-storage-cat-card="cement"]:hover .sp-icon-bronze,
+.storage-portal-card[data-dashboard-cat-card="cement"]:hover .sp-icon-bronze,
+.storage-portal-card[data-output-cat-card="cement"]:hover .sp-icon-bronze {
+    background: #b45309; color: #ffffff; transform: scale(1.1) rotate(-5deg);
+}
+
+.sp-icon-pink { background: rgba(236, 72, 153, 0.08); color: #ec4899; }
+.storage-portal-card[data-storage-cat-card="paint"]:hover .sp-icon-pink,
+.storage-portal-card[data-dashboard-cat-card="paint"]:hover .sp-icon-pink,
+.storage-portal-card[data-output-cat-card="paint"]:hover .sp-icon-pink {
+    background: #ec4899; color: #ffffff; transform: scale(1.1) rotate(5deg);
+}
+
+.sp-icon-green { background: rgba(16, 185, 129, 0.08); color: #10b981; }
+.storage-portal-card[data-storage-cat-card="interior"]:hover .sp-icon-green,
+.storage-portal-card[data-dashboard-cat-card="interior"]:hover .sp-icon-green,
+.storage-portal-card[data-output-cat-card="interior"]:hover .sp-icon-green {
+    background: #10b981; color: #ffffff; transform: scale(1.1) translateY(-3px);
+}
+
+.sp-icon-gray { background: rgba(100, 116, 139, 0.08); color: #64748b; }
+.storage-portal-card[data-storage-cat-card="supplies"]:hover .sp-icon-gray,
+.storage-portal-card[data-dashboard-cat-card="supplies"]:hover .sp-icon-gray,
+.storage-portal-card[data-output-cat-card="supplies"]:hover .sp-icon-gray {
+    background: #64748b; color: #ffffff; transform: scale(1.1) rotate(-5deg);
+}
+
+[data-theme="dark"] .storage-portal-card {
+    background: rgba(17, 24, 39, 0.5);
+    border-color: rgba(255, 255, 255, 0.04);
+}
